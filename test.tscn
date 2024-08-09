@@ -6,20 +6,20 @@
 [ext_resource type="Script" path="res://test_cam.gd" id="2_ug8c3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pl7ge"]
-albedo_color = Color(0.717647, 0.443137, 0.0352941, 1)
+albedo_color = Color(0, 1, 0, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_g1gam"]
 material = SubResource("StandardMaterial3D_pl7ge")
 size = Vector2(50, 50)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pbu3c"]
-albedo_color = Color(1, 0, 0.345098, 1)
+albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_bfbac"]
 material = SubResource("StandardMaterial3D_pbu3c")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ssh10"]
-albedo_color = Color(0, 0.372549, 0.611765, 1)
+albedo_color = Color(0, 0, 1, 1)
 
 [sub_resource type="PrismMesh" id="PrismMesh_nh52q"]
 material = SubResource("StandardMaterial3D_ssh10")
@@ -33,6 +33,7 @@ viewport_path = NodePath("Resolution")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i863q"]
 resource_local_to_scene = true
 shader = ExtResource("2_gl4yf")
+shader_parameter/col = Vector3(1, 0, 0)
 shader_parameter/base = SubResource("ViewportTexture_1a7j4")
 shader_parameter/resolution = SubResource("ViewportTexture_5k33x")
 
