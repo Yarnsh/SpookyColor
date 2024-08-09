@@ -1,14 +1,18 @@
 shader_type canvas_item;
 
 uniform sampler2D base : source_color, filter_nearest;
-uniform sampler2D resolution : source_color, filter_linear;
+uniform sampler2D resolution : source_color, filter_nearest;
+uniform sampler2D spectrum : source_color, filter_nearest;
 
-uniform vec3 col = vec3(0.0);
+uniform vec3 global_spectrum = vec3(0.0);
+uniform float min_res_scale = 0.0625;
+uniform float max_res_scale = 1.0;
 
 void fragment() {
 	// resolution change
 	float res_scale = 0.0;
 	res_scale += texture(resolution, UV).r;
+	res_scale = min(max_res_scale, max(res_scale, min_res_scale));
 	
 	if (res_scale > 0.5) {res_scale = 1.0;}
 	else if (res_scale > 0.25) {res_scale = 0.5;}
@@ -16,8 +20,9 @@ void fragment() {
 	else if (res_scale > 0.0625) {res_scale = 0.125;}
 	else {res_scale = 0.0625;}
 	
-	vec2 new_uv = ceil((UV * (1.0/SCREEN_PIXEL_SIZE)) * res_scale) * (SCREEN_PIXEL_SIZE / res_scale);
+	vec2 new_uv = round((UV * (1.0/SCREEN_PIXEL_SIZE)) * res_scale) * (SCREEN_PIXEL_SIZE / res_scale);
 	vec3 base_color = texture(base, new_uv).rgb;
+	vec3 col = step(0.01, max(texture(spectrum, new_uv).rgb, global_spectrum));
 	
 	// color removal
 	vec3 grayscale_value = vec3(dot(base_color.rgb, vec3(0.299, 0.587, 0.114)));
