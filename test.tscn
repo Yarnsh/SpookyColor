@@ -1,0 +1,150 @@
+[gd_scene load_steps=15 format=3 uid="uid://cwl2us1o2q61h"]
+
+[ext_resource type="Environment" uid="uid://d2jew0e44lnph" path="res://default_env.tres" id="1_0y777"]
+[ext_resource type="Script" path="res://LightFixer.gd" id="1_yy03n"]
+[ext_resource type="Shader" path="res://final.gdshader" id="2_gl4yf"]
+[ext_resource type="Script" path="res://test_cam.gd" id="2_ug8c3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pl7ge"]
+albedo_color = Color(0.717647, 0.443137, 0.0352941, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_g1gam"]
+material = SubResource("StandardMaterial3D_pl7ge")
+size = Vector2(50, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pbu3c"]
+albedo_color = Color(1, 0, 0.345098, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_bfbac"]
+material = SubResource("StandardMaterial3D_pbu3c")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ssh10"]
+albedo_color = Color(0, 0.372549, 0.611765, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_nh52q"]
+material = SubResource("StandardMaterial3D_ssh10")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1a7j4"]
+viewport_path = NodePath("Color")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_5k33x"]
+viewport_path = NodePath("Resolution")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i863q"]
+resource_local_to_scene = true
+shader = ExtResource("2_gl4yf")
+shader_parameter/base = SubResource("ViewportTexture_1a7j4")
+shader_parameter/resolution = SubResource("ViewportTexture_5k33x")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gjgu0"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SampleScene" type="Node3D" parent="."]
+
+[node name="Meshes1" type="Node3D" parent="SampleScene"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SampleScene/Meshes1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+gi_mode = 0
+mesh = SubResource("QuadMesh_g1gam")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="SampleScene/Meshes1"]
+transform = Transform3D(0.92879, -0.370606, -1.61997e-08, 0, -4.37114e-08, 1, -0.370606, -0.92879, -4.05987e-08, 0.938915, 0.386963, -0.842255)
+gi_mode = 0
+mesh = SubResource("CylinderMesh_bfbac")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="SampleScene/Meshes1"]
+transform = Transform3D(-0.0395213, -0.999219, -4.36772e-08, 0, -4.37114e-08, 1, -0.999219, 0.0395213, 1.72753e-09, -0.981831, 0.386963, 0.296257)
+gi_mode = 0
+mesh = SubResource("PrismMesh_nh52q")
+skeleton = NodePath("../..")
+
+[node name="Meshes2" type="Node3D" parent="SampleScene"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SampleScene/Meshes2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+layers = 2
+gi_mode = 0
+mesh = SubResource("QuadMesh_g1gam")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="SampleScene/Meshes2"]
+transform = Transform3D(0.92879, -0.370606, -1.61997e-08, 0, -4.37114e-08, 1, -0.370606, -0.92879, -4.05987e-08, 0.938915, 0.386963, -0.842255)
+layers = 2
+gi_mode = 0
+mesh = SubResource("CylinderMesh_bfbac")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="SampleScene/Meshes2"]
+transform = Transform3D(-0.0395213, -0.999219, -4.36772e-08, 0, -4.37114e-08, 1, -0.999219, 0.0395213, 1.72753e-09, -0.981831, 0.386963, 0.296257)
+layers = 2
+gi_mode = 0
+mesh = SubResource("PrismMesh_nh52q")
+skeleton = NodePath("../..")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SampleScene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.708084, 1.8999, 2.17245)
+light_bake_mode = 0
+light_cull_mask = 4293918721
+omni_range = 17.632
+script = ExtResource("1_yy03n")
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="SampleScene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01381, 1.8999, 1.25782)
+light_bake_mode = 0
+light_cull_mask = 4293918721
+omni_range = 17.632
+script = ExtResource("1_yy03n")
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="SampleScene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92577, 1.8999, -2.53973)
+light_bake_mode = 0
+light_cull_mask = 4293918721
+omni_range = 17.632
+script = ExtResource("1_yy03n")
+
+[node name="Color" type="SubViewport" parent="."]
+size = Vector2i(1000, 600)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Color"]
+transform = Transform3D(1, 0, 0, 0, 0.958193, 0.286123, 0, -0.286123, 0.958193, 0, 0.880821, 1.69616)
+cull_mask = 1
+environment = ExtResource("1_0y777")
+current = true
+fov = 90.0
+
+[node name="Resolution" type="SubViewport" parent="."]
+size = Vector2i(1000, 600)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Resolution"]
+transform = Transform3D(1, 0, 0, 0, 0.958193, 0.286123, 0, -0.286123, 0.958193, 0, 0.880821, 1.69616)
+cull_mask = 2
+environment = ExtResource("1_0y777")
+current = true
+fov = 90.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_i863q")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_gjgu0")
+
+[node name="RootCam" type="Node3D" parent="." node_paths=PackedStringArray("cams")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0199738, 0.825875, 1.95784)
+script = ExtResource("2_ug8c3")
+cams = [NodePath("../Color/Camera3D"), NodePath("../Resolution/Camera3D")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="RootCam"]
+layers = 2
+light_color = Color(1, 0, 0, 1)
+light_cull_mask = 4293918722
+omni_attenuation = 2.54912
+script = ExtResource("1_yy03n")
