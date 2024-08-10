@@ -7,6 +7,7 @@ var yaw = 0.0
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	get_window().grab_focus() # TODO: why no work ;_;
 
 func _process(delta):
 	global_rotation = Vector3(pitch, yaw, 0.0)

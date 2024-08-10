@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cwl2us1o2q61h"]
+[gd_scene load_steps=29 format=3 uid="uid://cwl2us1o2q61h"]
 
 [ext_resource type="Environment" uid="uid://d2jew0e44lnph" path="res://default_env.tres" id="1_0y777"]
 [ext_resource type="Script" path="res://LightFixer.gd" id="1_yy03n"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://ScreenResolutionHandling.gd" id="2_ijsxb"]
 [ext_resource type="Script" path="res://test_cam.gd" id="2_ug8c3"]
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="5_tr7yy"]
+[ext_resource type="AudioStream" uid="uid://m5hb13jjfmqg" path="res://SFX/footstep.wav" id="7_x4vq0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pl7ge"]
 albedo_color = Color(0, 1, 0, 1)
@@ -168,6 +169,7 @@ omni_range = 17.632
 script = ExtResource("1_yy03n")
 
 [node name="Color" type="SubViewport" parent="."]
+audio_listener_enable_3d = true
 size = Vector2i(1000, 600)
 render_target_update_mode = 4
 script = ExtResource("2_ijsxb")
@@ -180,6 +182,7 @@ current = true
 fov = 90.0
 
 [node name="Resolution" type="SubViewport" parent="."]
+audio_listener_enable_3d = true
 size = Vector2i(1000, 600)
 render_target_update_mode = 4
 script = ExtResource("2_ijsxb")
@@ -192,6 +195,7 @@ current = true
 fov = 90.0
 
 [node name="Spectrum" type="SubViewport" parent="."]
+audio_listener_enable_3d = true
 size = Vector2i(1000, 600)
 render_target_update_mode = 4
 script = ExtResource("2_ijsxb")
@@ -223,3 +227,7 @@ cams = [NodePath("../../Color/Camera3D"), NodePath("../../Resolution/Camera3D"),
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 shape = SubResource("CapsuleShape3D_wg8l2")
+
+[node name="Foot" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
+stream = ExtResource("7_x4vq0")
+volume_db = -24.381
