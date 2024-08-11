@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://1neqraec1bd8"]
+
+[ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_nh6pq"]
+[ext_resource type="Script" path="res://test_cam.gd" id="2_de5r1"]
+[ext_resource type="AudioStream" uid="uid://m5hb13jjfmqg" path="res://SFX/footstep.wav" id="3_o0l5i"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wg8l2"]
+radius = 0.3
+height = 1.8
+
+[node name="Character" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.66834, 4.99603)
+script = ExtResource("1_nh6pq")
+
+[node name="RootCam" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.729163, 0)
+script = ExtResource("2_de5r1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_wg8l2")
+
+[node name="Foot" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_o0l5i")
+volume_db = -24.381
+bus = &"SFX"

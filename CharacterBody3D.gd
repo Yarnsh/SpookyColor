@@ -44,7 +44,10 @@ func _physics_process(delta):
 			velocity += Vector3.BACK.rotated(Vector3.UP, cam.yaw) * SPEED
 			was_moving = true
 		
-		if Input.is_action_just_released("left") or Input.is_action_just_released("right") or Input.is_action_just_released("back") or Input.is_action_just_released("forward"):
+		if (Input.is_action_just_released("left")
+			or Input.is_action_just_released("right")
+			or Input.is_action_just_released("back")
+			or Input.is_action_just_released("forward")):
 			foot_sfx.play()
 		
 		was_on_floor = true
