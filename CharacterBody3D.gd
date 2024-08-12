@@ -3,7 +3,7 @@ extends CharacterBody3D
 @onready var cam = $RootCam
 @onready var foot_sfx = $Foot
 
-const SPEED = 3.0
+const SPEED = 3.0 # TODO: less debug speed, more atmospheric speed
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var was_on_floor = false
