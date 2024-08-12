@@ -5,3 +5,6 @@ Left Gravel Footstep 1 by Ali_6868 -- https://freesound.org/s/384873/ -- License
 
 ocean_loop.wav: 
 EndlessOcean-VeniceBeachStereoRumbly-Loop.wav by stomachache -- https://freesound.org/s/157880/ -- License: Attribution 3.0 (This file was modified from it's original form)
+
+rowboat.glb: 
+"Rowboat" (https://skfb.ly/6RsZn) by Emiliano.Herrera.Galindo is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
