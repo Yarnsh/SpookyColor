@@ -8,3 +8,6 @@ EndlessOcean-VeniceBeachStereoRumbly-Loop.wav by stomachache -- https://freesoun
 
 rowboat.glb: 
 "Rowboat" (https://skfb.ly/6RsZn) by Emiliano.Herrera.Galindo is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+base_humanoid_model.glb (TODO: list all modified derivatives)
+"Base Humanoid Model" (https://skfb.ly/6UHUE) by C. Anastasiadis is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
