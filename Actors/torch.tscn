@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://cy2u6717tawsd"]
+
+[ext_resource type="PackedScene" uid="uid://1tpl4jnx5ptk" path="res://Models/torch.glb" id="1_pogum"]
+[ext_resource type="Script" path="res://LightFixer.gd" id="2_smu0u"]
+
+[sub_resource type="Curve" id="Curve_onfwk"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_kjuxi"]
+curve = SubResource("Curve_onfwk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d2j8d"]
+gravity = Vector3(0, 19.8, 0)
+scale_min = 0.0
+scale_curve = SubResource("CurveTexture_kjuxi")
+turbulence_noise_scale = 6.95
+turbulence_noise_speed_random = 0.0
+turbulence_influence_max = 0.167
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gr5sc"]
+shading_mode = 0
+albedo_color = Color(1, 0.852475, 0.649389, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_211nh"]
+material = SubResource("StandardMaterial3D_gr5sc")
+radius = 0.1
+height = 0.2
+radial_segments = 12
+rings = 6
+
+[node name="Torch" type="Node3D"]
+
+[node name="torch" parent="." instance=ExtResource("1_pogum")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.767805, 0.589157, 1)
+light_bake_mode = 0
+light_cull_mask = 4293918721
+omni_range = 15.0
+script = ExtResource("2_smu0u")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+amount = 32
+lifetime = 0.3
+process_material = SubResource("ParticleProcessMaterial_d2j8d")
+draw_pass_1 = SubResource("SphereMesh_211nh")

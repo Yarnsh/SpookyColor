@@ -25,9 +25,6 @@ func _process(delta):
 		var z = clamp(character.global_position.z, end_z, start_z)
 		z = inv_lerp(start_z, end_z, z)
 		volume_db = lerp(door_volume, min_volume, z)
-		print(z)
 	else:
 		var normalized = Vector2((global_position.x - character.global_position.x) / max_x_dist, (global_position.z - character.global_position.z) / max_z_dist)
 		volume_db = door_volume * (1.0 - min(normalized.length(), 1.0))
-	
-	print(volume_db)
