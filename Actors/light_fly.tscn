@@ -9,8 +9,8 @@ disable_receive_shadows = true
 
 [sub_resource type="SphereMesh" id="SphereMesh_kvyg0"]
 material = SubResource("StandardMaterial3D_32o0o")
-radius = 0.02
-height = 0.04
+radius = 0.04
+height = 0.08
 radial_segments = 8
 rings = 4
 
@@ -22,5 +22,6 @@ script = ExtResource("1_1dfpq")
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 layers = 1048575
 light_color = Color(0.871449, 1, 0.998083, 1)
+light_energy = 0.5
 shadow_enabled = true
 omni_range = 15.0
