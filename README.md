@@ -23,3 +23,6 @@ Deep Boom by Za-Games -- https://freesound.org/s/539968/ -- License: Creative Co
 
 stone_footstep.wav:
 Hiking Boot Footsteps on Stone by Fission9 -- https://freesound.org/s/521590/ -- License: Creative Commons 0 (This file was modified from it's original form)
+
+mummy.glb:
+"Miniature Mummy" (https://skfb.ly/oOux7) by JPDV is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). (This file was modified from it's original form)
