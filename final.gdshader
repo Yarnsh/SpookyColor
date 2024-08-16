@@ -14,11 +14,15 @@ void fragment() {
 	res_scale += texture(resolution, UV).r;
 	res_scale = min(max_res_scale, max(res_scale, min_res_scale));
 	
-	if (res_scale > 0.5) {res_scale = 1.0;}
-	else if (res_scale > 0.25) {res_scale = 0.5;}
-	else if (res_scale > 0.125) {res_scale = 0.25;}
-	else if (res_scale > 0.0625) {res_scale = 0.125;}
-	else {res_scale = 0.0625;}
+	float res_test = 0.5;
+	while (res_scale <= res_test) {
+		res_test = res_test * 0.5;
+	}
+	res_scale = res_test;
+	res_scale = min(max_res_scale, max(res_scale, min_res_scale));
+	
+	// scale so things look the same as 1080p generally
+	res_scale /= (1.0/SCREEN_PIXEL_SIZE.y) / 1080.0;
 	
 	vec2 new_uv = round((UV * (1.0/SCREEN_PIXEL_SIZE)) * res_scale) * (SCREEN_PIXEL_SIZE / res_scale);
 	vec3 base_color = texture(base, new_uv).rgb;

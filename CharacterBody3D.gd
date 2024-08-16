@@ -4,13 +4,17 @@ extends CharacterBody3D
 @onready var view_pos = $RootCam/ViewPos
 @onready var foot_sfx = $Foot
 
+@onready var grassy_foot_step = load("res://SFX/footstep.wav")
+@onready var stony_foot_step = load("res://SFX/stone_footstep.wav")
+@export var grassy_collider : StaticBody3D
+
 const SPEED = 3.0
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var was_on_floor = false
 var was_moving = false
 var foot_start_time = 999999999999.9
-const foot_delay = 500
+const foot_delay = 850
 
 const NORMAL_STATE = 0
 const CUTSCENE_STATE = 1
@@ -29,6 +33,15 @@ func _physics_process(delta):
 	
 	if (state == NORMAL_STATE):
 		if is_on_floor(): # TODO remember how good footsteps happen
+			var col = get_last_slide_collision()
+			if col != null:
+				if col.get_collider() == grassy_collider:
+					if foot_sfx.stream != grassy_foot_step:
+						foot_sfx.stream = grassy_foot_step
+				else:
+					if foot_sfx.stream != stony_foot_step:
+						foot_sfx.stream = stony_foot_step
+			
 			if !was_on_floor or (was_moving and now >= foot_start_time + foot_delay):
 				foot_start_time = now
 				foot_sfx.play()
@@ -37,17 +50,19 @@ func _physics_process(delta):
 				foot_start_time = Time.get_ticks_msec()
 			was_moving = false
 			if Input.is_action_pressed("left"):
-				velocity += Vector3.LEFT.rotated(Vector3.UP, cam.yaw) * SPEED
+				velocity += Vector3.LEFT.rotated(Vector3.UP, cam.yaw)
 				was_moving = true
 			if Input.is_action_pressed("right"):
-				velocity += Vector3.RIGHT.rotated(Vector3.UP, cam.yaw) * SPEED
+				velocity += Vector3.RIGHT.rotated(Vector3.UP, cam.yaw)
 				was_moving = true
 			if Input.is_action_pressed("forward"):
-				velocity += Vector3.FORWARD.rotated(Vector3.UP, cam.yaw) * SPEED
+				velocity += Vector3.FORWARD.rotated(Vector3.UP, cam.yaw)
 				was_moving = true
 			if Input.is_action_pressed("back"):
-				velocity += Vector3.BACK.rotated(Vector3.UP, cam.yaw) * SPEED
+				velocity += Vector3.BACK.rotated(Vector3.UP, cam.yaw)
 				was_moving = true
+			
+			velocity = velocity.normalized() * SPEED
 			
 			if ((Input.is_action_just_released("left")
 				or Input.is_action_just_released("right")

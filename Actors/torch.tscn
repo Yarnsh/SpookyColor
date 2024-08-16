@@ -21,6 +21,7 @@ turbulence_influence_max = 0.167
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gr5sc"]
 shading_mode = 0
 albedo_color = Color(1, 0.852475, 0.649389, 1)
+disable_receive_shadows = true
 
 [sub_resource type="SphereMesh" id="SphereMesh_211nh"]
 material = SubResource("StandardMaterial3D_gr5sc")
@@ -37,10 +38,12 @@ rings = 6
 light_color = Color(1, 0.767805, 0.589157, 1)
 light_bake_mode = 0
 light_cull_mask = 4293918721
+shadow_enabled = true
 omni_range = 15.0
 script = ExtResource("2_smu0u")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+cast_shadow = 0
 amount = 32
 lifetime = 0.3
 process_material = SubResource("ParticleProcessMaterial_d2j8d")

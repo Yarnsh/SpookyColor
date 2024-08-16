@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dabcd1mi7d86"]
+
+[ext_resource type="Script" path="res://Actors/light_fly.gd" id="1_1dfpq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32o0o"]
+shading_mode = 0
+albedo_color = Color(0, 1, 1, 1)
+disable_receive_shadows = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_kvyg0"]
+material = SubResource("StandardMaterial3D_32o0o")
+radius = 0.02
+height = 0.04
+radial_segments = 8
+rings = 4
+
+[node name="LightFly" type="MeshInstance3D"]
+cast_shadow = 0
+mesh = SubResource("SphereMesh_kvyg0")
+script = ExtResource("1_1dfpq")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0.552941, 1, 1, 1)
+shadow_enabled = true
+omni_range = 15.0
