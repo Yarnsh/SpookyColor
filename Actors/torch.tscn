@@ -35,6 +35,7 @@ rings = 6
 [node name="torch" parent="." instance=ExtResource("1_pogum")]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
+layers = 1048575
 light_color = Color(1, 0.767805, 0.589157, 1)
 light_bake_mode = 0
 light_cull_mask = 4293918721

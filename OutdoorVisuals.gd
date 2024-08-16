@@ -2,6 +2,7 @@ extends Area3D
 
 @export var water : Node3D
 @export var color_cam : Camera3D
+@export var meshes : Node3D
 @onready var outdoor_env = load("res://visual_env.tres")
 
 # Called when the node enters the scene tree for the first time.
@@ -17,3 +18,4 @@ func _process(delta):
 func _on_body_entered(body):
 	water.show()
 	color_cam.environment = outdoor_env
+	meshes.show()
