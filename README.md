@@ -20,3 +20,6 @@ Longer Grinding Scrape Sound by qubodup -- https://freesound.org/s/743238/ -- Li
 
 deep_boom.wav:
 Deep Boom by Za-Games -- https://freesound.org/s/539968/ -- License: Creative Commons 0
+
+stone_footstep.wav:
+Hiking Boot Footsteps on Stone by Fission9 -- https://freesound.org/s/521590/ -- License: Creative Commons 0 (This file was modified from it's original form)
