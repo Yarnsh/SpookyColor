@@ -69,15 +69,6 @@ size = Vector3(8, 10, 1)
 
 [node name="Scene" type="Node3D"]
 
-[node name="SkyLight" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.983682, -0.147681, 0.102767, 0.106235, 0.93774, 0.330692, -0.145205, -0.314378, 0.938127, 0, 22.2268, 66.4072)
-light_energy = 0.01
-light_indirect_energy = 0.0
-light_bake_mode = 0
-light_cull_mask = 4293918721
-shadow_enabled = true
-script = ExtResource("1_hxvne")
-
 [node name="StonyCollisions" type="StaticBody3D" parent="."]
 
 [node name="Temple" type="CollisionShape3D" parent="StonyCollisions"]
@@ -179,8 +170,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, -9, -113.4)
 [node name="LightFly5" parent="." instance=ExtResource("15_0l1ny")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.1, -18, -83.2)
 
-[node name="TEMPORARY" parent="." instance=ExtResource("15_0l1ny")]
+[node name="lf" parent="." instance=ExtResource("15_0l1ny")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.9, -18.6, -82.3)
+
+[node name="lf2" parent="." instance=ExtResource("15_0l1ny")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.541, -18.0341, -82.0206)
 
 [node name="DoorLocker" type="Area3D" parent="." node_paths=PackedStringArray("DoorL", "DoorR", "sea_sounds")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.1)
@@ -337,6 +331,15 @@ transform = Transform3D(1.93999, 4.58536, 0.459248, -4.39477, 1.99081, -1.3125, 
 
 [node name="Boulder11" parent="OutsideStuff/PhysicalRocks" instance=ExtResource("8_6xl0r")]
 transform = Transform3D(-2.01159, -1.47342, -0.180425, -1.1284, 1.32036, 1.79815, -0.96448, 1.52829, -1.72745, 32.0379, 3.34302, 44.2682)
+
+[node name="SkyLight" type="DirectionalLight3D" parent="OutsideStuff"]
+transform = Transform3D(0.983682, -0.14768, 0.102767, 0.106235, 0.93774, 0.330692, -0.145205, -0.314378, 0.938127, 0, 22.2268, 66.4072)
+light_energy = 0.01
+light_indirect_energy = 0.0
+light_bake_mode = 0
+light_cull_mask = 4293918721
+shadow_enabled = true
+script = ExtResource("1_hxvne")
 
 [connection signal="body_entered" from="DoorLocker" to="DoorLocker" method="_on_body_entered"]
 [connection signal="body_entered" from="IndoorVisuals" to="IndoorVisuals" method="_on_body_entered"]

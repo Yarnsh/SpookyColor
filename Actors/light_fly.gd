@@ -13,5 +13,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var now = Time.get_ticks_msec()
-	global_position = start_pos + Vector3.ONE * sin(now * SPEED * 0.001) * AMP
+	global_position = start_pos + Vector3.RIGHT * sin(now * SPEED * 0.001) * AMP
 	#TODO: split this on xyz, and also add more noise somehow (use a noise texture somehow?)

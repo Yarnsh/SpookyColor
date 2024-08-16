@@ -1089,7 +1089,7 @@ grow_vertical = 2
 texture = SubResource("PlaceholderTexture2D_gjgu0")
 
 [node name="Character" parent="." instance=ExtResource("5_4lyat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.3331, -14.6963, -82.8186)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25484, 3.39673, 10.3035)
 collision_layer = 2147483649
 
 [node name="RootCam" parent="Character" index="0" node_paths=PackedStringArray("cams")]
@@ -1582,6 +1582,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.71, 2.0943, 1.35596)
 shape = SubResource("BoxShape3D_6wwtk")
 
 [node name="Test1" type="TextureRect" parent="."]
+visible = false
 light_mask = 7
 visibility_layer = 7
 custom_minimum_size = Vector2(300, 200)
@@ -1591,6 +1592,7 @@ texture = SubResource("ViewportTexture_6aa5g")
 expand_mode = 1
 
 [node name="Test2" type="TextureRect" parent="."]
+visible = false
 light_mask = 7
 visibility_layer = 7
 custom_minimum_size = Vector2(300, 200)
@@ -1602,6 +1604,7 @@ texture = SubResource("ViewportTexture_tmct6")
 expand_mode = 1
 
 [node name="Test3" type="TextureRect" parent="."]
+visible = false
 light_mask = 7
 visibility_layer = 7
 custom_minimum_size = Vector2(300, 200)
@@ -1614,7 +1617,7 @@ expand_mode = 1
 
 [node name="Scene" parent="." instance=ExtResource("7_txlb8")]
 
-[node name="OceanSounds" parent="Scene" index="4" node_paths=PackedStringArray("character")]
+[node name="OceanSounds" parent="Scene" index="3" node_paths=PackedStringArray("character")]
 character = NodePath("../../Character")
 
 [node name="IndoorVisuals" parent="Scene" index="15" node_paths=PackedStringArray("color_cam")]
