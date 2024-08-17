@@ -5,6 +5,7 @@ extends Node3D
 @onready var out_t = $"../NailOutPos"
 @onready var power = $Spin/Power
 @onready var outline = $Spin/Outline
+@onready var light = $Spin/Light
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,9 +35,34 @@ func toggle():
 	else:
 		target = in_t
 
-func set_colors(col):
+func set_flags(red, green, blue):
+	var col = Color.BLACK
+	var ol = 0.0
+	if red:
+		col.r = 1.0
+		light.light_color.r = 1.0
+		ol += 0.1
+	else:
+		col.r = 0.0
+		light.light_color.r = 0.0
+	if green:
+		col.g = 1.0
+		light.light_color.g = 1.0
+		ol += 0.4
+	else:
+		col.g = 0.0
+		light.light_color.g = 0.0
+	if blue:
+		col.b = 1.0
+		light.light_color.b = 1.0
+		ol += 0.5
+	else:
+		col.b = 0.0
+		light.light_color.b = 0.0
+	
 	power.mesh.get_active_material().albedo_color = col
 	if col == Color.BLACK:
 		outline.hide()
 	else:
+		outline.mesh.get_active_material().albedo_color = Color8(255 * ol, 255 * ol, 255 * ol)
 		outline.show()

@@ -5,7 +5,7 @@ extends Node3D
 @onready var sfx = $SFX
 var moving = false
 const door_offset = 4.5
-const door_speed = 0.7
+const door_speed = 1.4
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

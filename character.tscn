@@ -152,6 +152,11 @@ cast_shadow = 0
 mesh = SubResource("SphereMesh_dud45")
 skeleton = NodePath("../..")
 
+[node name="Light" type="OmniLight3D" parent="RootCam/Nail/Spin"]
+visible = false
+light_color = Color(1, 0.721569, 0, 1)
+omni_range = 15.0
+
 [node name="NailOutPos" type="Node3D" parent="RootCam"]
 transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, -0.379816)
 
