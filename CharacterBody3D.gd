@@ -9,6 +9,10 @@ extends CharacterBody3D
 @onready var stony_foot_step = load("res://SFX/stone_footstep.wav")
 @export var grassy_collider : StaticBody3D
 
+var red = false
+var green = false
+var blue = false
+
 const SPEED = 3.0
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -86,3 +90,12 @@ func _physics_process(delta):
 		nail.set_in()
 	
 	move_and_slide()
+
+func set_flag(flag):
+	if flag == 0:
+		red = true
+	if flag == 1:
+		green = true
+	if flag == 2:
+		blue = true
+	nail.set_flags(red,green,blue)

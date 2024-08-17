@@ -1088,9 +1088,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("PlaceholderTexture2D_gjgu0")
 
-[node name="Character" parent="." instance=ExtResource("5_4lyat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15877, 0.199129, 9.84611)
+[node name="Character" parent="." node_paths=PackedStringArray("grassy_collider") instance=ExtResource("5_4lyat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.2339, -17.3704, 20.344)
 collision_layer = 2147483649
+grassy_collider = NodePath("../Scene/GrassyCollisions")
 
 [node name="RootCam" parent="Character" index="0" node_paths=PackedStringArray("cams")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.729163, 0)
@@ -1582,6 +1583,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.71, 2.0943, 1.35596)
 shape = SubResource("BoxShape3D_6wwtk")
 
 [node name="Test1" type="TextureRect" parent="."]
+visible = false
 light_mask = 7
 visibility_layer = 7
 custom_minimum_size = Vector2(300, 200)
@@ -1591,6 +1593,7 @@ texture = SubResource("ViewportTexture_6aa5g")
 expand_mode = 1
 
 [node name="Test2" type="TextureRect" parent="."]
+visible = false
 light_mask = 7
 visibility_layer = 7
 custom_minimum_size = Vector2(300, 200)
@@ -1602,6 +1605,7 @@ texture = SubResource("ViewportTexture_tmct6")
 expand_mode = 1
 
 [node name="Test3" type="TextureRect" parent="."]
+visible = false
 light_mask = 7
 visibility_layer = 7
 custom_minimum_size = Vector2(300, 200)
@@ -1614,38 +1618,26 @@ expand_mode = 1
 
 [node name="Scene" parent="." instance=ExtResource("7_txlb8")]
 
-[node name="OceanSounds" parent="Scene" index="3" node_paths=PackedStringArray("character")]
+[node name="OceanSounds" parent="Scene" index="2" node_paths=PackedStringArray("character")]
 character = NodePath("../../Character")
 
-[node name="IndoorVisuals" parent="Scene" index="10" node_paths=PackedStringArray("color_cam")]
+[node name="IndoorVisuals" parent="Scene" index="9" node_paths=PackedStringArray("color_cam")]
 color_cam = NodePath("../../Color/Camera3D")
 
-[node name="OutdoorVisuals" parent="Scene" index="11" node_paths=PackedStringArray("color_cam")]
+[node name="OutdoorVisuals" parent="Scene" index="10" node_paths=PackedStringArray("color_cam")]
 color_cam = NodePath("../../Color/Camera3D")
 
 [node name="PathFollow3D" parent="Scene/FliesPath1" index="0"]
 transform = Transform3D(-0.997922, -0.00223856, -0.0643766, 0, 0.999396, -0.0347519, 0.0644155, -0.0346797, -0.997319, -1.11298, -2.44746, -0.457588)
 
 [node name="PathFollow3D4" parent="Scene/FliesPath1" index="3"]
-transform = Transform3D(-0.16367, 0.977803, 0.130813, -0.880528, -0.085003, -0.46631, -0.44484, -0.191505, 0.874896, -112.706, 8.46045, 0.165644)
+transform = Transform3D(-0.16367, 0.977803, 0.130813, -0.880527, -0.085003, -0.46631, -0.44484, -0.191505, 0.874896, -112.706, 8.46045, 0.165644)
 
 [node name="PathFollow3D9" parent="Scene/FliesPath1" index="8"]
-transform = Transform3D(0.144063, 0.181359, -0.972807, 0.637327, 0.735025, 0.231411, 0.757007, -0.653334, -0.00969491, -52.8954, 9.87053, -0.973649)
+transform = Transform3D(0.144063, 0.181359, -0.972807, 0.637327, 0.735025, 0.231411, 0.757007, -0.653333, -0.00969491, -52.8954, 9.87053, -0.973649)
 
 [node name="PathFollow3D10" parent="Scene/FliesPath1" index="9"]
 transform = Transform3D(0.144063, 0.181359, -0.972807, 0.637327, 0.735026, 0.231411, 0.757007, -0.653334, -0.00969503, -24.4946, 3.11455, -0.690608)
-
-[node name="PathFollow3D2" parent="Scene/SanctumLight" index="1"]
-transform = Transform3D(0.0447202, 0.154697, -0.986949, -0.964669, 0.263454, -0.00241608, 0.259642, 0.952187, 0.161013, -5.0467, 2.5214, -3.16474)
-
-[node name="PathFollow3D" parent="Scene/CaveBug" index="0"]
-transform = Transform3D(0.509486, 0.034986, -0.859768, 1.86265e-09, 0.999173, 0.0406587, 0.860479, -0.020715, 0.509064, 0.450211, 5.46288, -23.7133)
-
-[node name="PathFollow3D2" parent="Scene/CaveBug" index="1"]
-transform = Transform3D(0.47023, 0.544241, 0.694754, 0.624723, -0.761314, 0.173551, 0.623381, 0.35242, -0.697994, 55.5822, 5.01515, -52.1298)
-
-[node name="PathFollow3D3" parent="Scene/CaveBug" index="2"]
-transform = Transform3D(-0.43673, 0.729801, 0.525982, 0.0741395, -0.553501, 0.829542, 0.896532, 0.401282, 0.187623, 10.011, -8.70856, -36.2727)
 
 [connection signal="body_entered" from="GhostTrigger" to="GhostTrigger" method="_on_body_entered"]
 [connection signal="animation_finished" from="GhostTrigger/ghost/AnimationPlayer" to="GhostTrigger" method="_on_animation_player_animation_finished"]
@@ -1653,3 +1645,5 @@ transform = Transform3D(-0.43673, 0.729801, 0.525982, 0.0741395, -0.553501, 0.82
 [editable path="Character"]
 [editable path="Scene"]
 [editable path="Scene/OutdoorArea"]
+[editable path="Scene/GreenPickup"]
+[editable path="Scene/BluePickup"]

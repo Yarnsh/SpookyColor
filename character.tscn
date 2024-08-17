@@ -135,7 +135,7 @@ visible = false
 script = ExtResource("3_w2jul")
 
 [node name="Nail" parent="RootCam/Nail" instance=ExtResource("3_0hen0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.934888, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.992325, 0)
 
 [node name="Spin" type="Node3D" parent="RootCam/Nail"]
 script = ExtResource("4_6os5a")
@@ -147,6 +147,7 @@ mesh = SubResource("ArrayMesh_fct53")
 skeleton = NodePath("../Power")
 
 [node name="Power" type="MeshInstance3D" parent="RootCam/Nail/Spin"]
+visible = false
 layers = 4
 cast_shadow = 0
 mesh = SubResource("SphereMesh_dud45")

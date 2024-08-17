@@ -7,6 +7,8 @@ extends Node3D
 @onready var outline = $Spin/Outline
 @onready var light = $Spin/Light
 
+@onready var on_off_dist = in_t.position.distance_to(out_t.position)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -18,10 +20,14 @@ func _process(delta):
 		rate = 20
 	transform = transform.interpolate_with(target.transform, (rate * delta)*(rate * delta))
 	
-	if target == in_t and position.distance_squared_to(target.position) < 0.1:
-		hide()
+	if target == in_t:
+		light.omni_range = 15.0 * (target.position.distance_to(position) / on_off_dist)
+		if position.distance_squared_to(target.position) < 0.1:
+			hide()
 	else:
-		show()
+		light.omni_range = 15.0 * (1.0 - (target.position.distance_to(position) / on_off_dist))
+		if position.distance_squared_to(target.position) < 0.1:
+			show()
 
 func set_out():
 	target = out_t
@@ -41,7 +47,7 @@ func set_flags(red, green, blue):
 	if red:
 		col.r = 1.0
 		light.light_color.r = 1.0
-		ol += 0.1
+		ol += 0.01
 	else:
 		col.r = 0.0
 		light.light_color.r = 0.0
@@ -60,9 +66,16 @@ func set_flags(red, green, blue):
 		col.b = 0.0
 		light.light_color.b = 0.0
 	
-	power.mesh.get_active_material().albedo_color = col
+	power.mesh.surface_get_material(0).albedo_color = col
 	if col == Color.BLACK:
 		outline.hide()
+		power.hide()
 	else:
-		outline.mesh.get_active_material().albedo_color = Color8(255 * ol, 255 * ol, 255 * ol)
+		outline.mesh.surface_get_material(0).set_shader_parameter("albedo", Color8(int(255 * ol), int(255 * ol), int(255 * ol)))
 		outline.show()
+		power.show()
+	
+	if ol > 0.2:
+		light.show()
+	else:
+		light.hide()
