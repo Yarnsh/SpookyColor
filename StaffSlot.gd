@@ -46,7 +46,9 @@ func _process(delta):
 	if character != null and interacting:
 		var from = character.cam.quaternion
 		var to = Basis.looking_at(nail.global_position - character.cam.global_position).get_rotation_quaternion()
-		character.cam.quaternion = from.slerp(to, 0.1) # TODO: make this not framerate dependent
+		
+		var rate = 50
+		character.cam.quaternion = from.slerp(to, (rate * delta)*(rate * delta))
 	
 	if moving:
 		DoorR.global_position.x = min(DoorR.global_position.x + door_speed * delta, r_start + door_offset)

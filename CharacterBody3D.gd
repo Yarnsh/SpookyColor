@@ -3,6 +3,7 @@ extends CharacterBody3D
 @onready var cam = $RootCam
 @onready var view_pos = $RootCam/ViewPos
 @onready var foot_sfx = $Foot
+@onready var nail = $RootCam/Nail
 
 @onready var grassy_foot_step = load("res://SFX/footstep.wav")
 @onready var stony_foot_step = load("res://SFX/stone_footstep.wav")
@@ -32,6 +33,11 @@ func _physics_process(delta):
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	
 	if (state == NORMAL_STATE):
+		if Input.is_action_pressed("Use_Nail"):
+			nail.set_out()
+		else:
+			nail.set_in()
+		
 		if is_on_floor(): # TODO remember how good footsteps happen
 			var col = get_last_slide_collision()
 			if col != null:
@@ -77,6 +83,6 @@ func _physics_process(delta):
 			was_on_floor = false
 	
 	elif (state == CUTSCENE_STATE):
-		pass
+		nail.set_in()
 	
 	move_and_slide()

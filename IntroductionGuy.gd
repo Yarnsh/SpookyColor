@@ -18,10 +18,11 @@ func _process(delta):
 	if character != null and interacting:
 		var from = character.cam.quaternion
 		var to = Basis.looking_at(global_position - character.cam.global_position).get_rotation_quaternion()
-		character.cam.quaternion = from.slerp(to, 0.1) # TODO: make this not framerate dependent
+		var rate = 50
+		character.cam.quaternion = from.slerp(to, (rate * delta)*(rate * delta))
 		
 		from = quaternion
-		quaternion = from.slerp(to, 0.1) # TODO: make this not framerate dependent
+		quaternion = from.slerp(to, (rate * delta)*(rate * delta))
 		global_rotation = Vector3(0.0, global_rotation.y, 0.0)
 
 func interact(c):

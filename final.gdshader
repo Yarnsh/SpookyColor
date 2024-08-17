@@ -16,7 +16,7 @@ void fragment() {
 	
 	float res_test = 0.5;
 	while (res_scale <= res_test) {
-		res_test = res_test * 0.5;
+		res_test = res_test - 0.0625;
 	}
 	res_scale = res_test;
 	res_scale = min(max_res_scale, max(res_scale, min_res_scale));
@@ -29,7 +29,8 @@ void fragment() {
 	vec3 col = step(0.01, max(texture(spectrum, new_uv).rgb, global_spectrum));
 	
 	// color removal
-	vec3 grayscale_value = vec3(dot(base_color.rgb, vec3(0.299, 0.587, 0.114)));
+	vec3 grayscale_value = vec3(dot(base_color.rgb, vec3(.45, .5, .1)));
+	//vec3 grayscale_value = vec3(dot(base_color.rgb, vec3(0.299, 0.587, 0.114)));
 	// This has a side effect of making the grayscale darker if any of the colors are on
 	// figure out a fix later maybe
 	vec3 movb = max(vec3(1.0) - col, base_color);
