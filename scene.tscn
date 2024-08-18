@@ -1020,7 +1020,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.016, -17.282, -90.4274)
 curve = SubResource("Curve3D_ys14q")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="FliesPath1"]
-transform = Transform3D(-0.997922, -0.00223856, -0.0643766, 0, 0.999396, -0.0347519, 0.0644155, -0.0346797, -0.997319, -1.11298, -2.44746, -0.457588)
+transform = Transform3D(-0.997922, -0.00223856, -0.0643765, 0, 0.999396, -0.0347518, 0.0644155, -0.0346797, -0.997319, -1.11298, -2.44746, -0.457588)
 script = ExtResource("20_hio2d")
 
 [node name="LightFly" parent="FliesPath1/PathFollow3D" instance=ExtResource("15_0l1ny")]
@@ -1059,7 +1059,7 @@ script = ExtResource("20_hio2d")
 skeleton = NodePath("../..")
 
 [node name="PathFollow3D6" type="PathFollow3D" parent="FliesPath1"]
-transform = Transform3D(0.57849, -0.781609, 0.233317, -0.814669, -0.567926, 0.117362, 0.0407753, -0.257969, -0.965292, -131.745, 5.31784, 5.52934)
+transform = Transform3D(0.57849, -0.781609, 0.233317, -0.814669, -0.567926, 0.117362, 0.0407753, -0.257969, -0.965291, -131.745, 5.31784, 5.52934)
 progress = 194.375
 script = ExtResource("20_hio2d")
 
@@ -1531,7 +1531,7 @@ transform = Transform3D(-0.540651, 0.055135, -0.839438, -0.0451585, 0.994509, 0.
 curve = SubResource("Curve3D_tfol0")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="CaveBug2"]
-transform = Transform3D(0.941063, 0.0135632, -0.337959, 0, 0.999195, 0.0401002, 0.338232, -0.0377368, 0.940305, 17.7316, 10.0102, -24.1667)
+transform = Transform3D(0.941062, 0.0135632, -0.337959, 0, 0.999195, 0.0401002, 0.338232, -0.0377368, 0.940305, 17.7316, 10.0102, -24.1667)
 script = ExtResource("20_hio2d")
 SPEED = 3.0
 

@@ -1,5 +1,6 @@
 extends Area3D
 
+@onready var game_scene = $"../.."
 @export var DoorL : Node3D
 @export var DoorR : Node3D
 @export var sea_sounds : AudioStreamPlayer3D
@@ -25,7 +26,16 @@ func _process(delta):
 			boom.play()
 			AudioServer.set_bus_effect_enabled(1, 0, true)
 
-
 func _on_body_entered(body):
 	if !activated:
 		activated = true
+		game_scene.door_locked = true
+		game_scene.update_player_stuff()
+
+func set_finished():
+	activated = true
+	DoorR.global_position.x = 0
+	DoorL.global_position.x = 0
+	set_process(false)
+	sea_sounds.stop()
+	AudioServer.set_bus_effect_enabled(1, 0, true)

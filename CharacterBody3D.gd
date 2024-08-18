@@ -15,7 +15,7 @@ var red = false
 var green = false
 var blue = false
 
-const SPEED = 3.0
+var SPEED = 3.0
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var was_on_floor = false
@@ -41,6 +41,10 @@ func _physics_process(delta):
 		print(game_scene.get_flags())
 		get_tree().current_scene.start_game(game_scene.get_flags())
 		return
+	if Input.is_action_pressed("speed_up"):
+		SPEED = 12.0
+	else:
+		SPEED = 3.0
 	
 	if (state == NORMAL_STATE):
 		if Input.is_action_pressed("Use_Nail"):
@@ -108,4 +112,4 @@ func set_flag(flag):
 
 func kill():
 	# TODO: show a death screen of some kind and return to a checkpoint
-	get_tree().current_scene.call_deferred("start_game")
+	get_tree().current_scene.call_deferred("start_game", game_scene.get_flags())

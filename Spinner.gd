@@ -1,5 +1,6 @@
 extends Node3D
 
+@onready var game_scene = $"../.."
 @export var DoorL : Node3D
 @export var DoorR : Node3D
 @onready var sfx = $SFX
@@ -33,3 +34,15 @@ func interact(c):
 		if child == sfx:
 			continue
 		child.disable()
+	game_scene.spinner_solved = true
+	game_scene.update_player_stuff()
+
+func set_finished():
+	for child in get_children():
+		if child == sfx:
+			continue
+		child.pos = 0
+		child.disable()
+	DoorR.global_position.x = door_offset
+	DoorL.global_position.x = -door_offset
+	global_position.x = door_offset

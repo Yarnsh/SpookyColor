@@ -1091,7 +1091,7 @@ grow_vertical = 2
 texture = SubResource("PlaceholderTexture2D_gjgu0")
 
 [node name="Character" parent="." node_paths=PackedStringArray("grassy_collider") instance=ExtResource("5_60aaj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.986851, 3.65255, 15.7939)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.9533, -17.4359, 15.7939)
 collision_layer = 2147483649
 grassy_collider = NodePath("../Scene/GrassyCollisions")
 
@@ -1644,20 +1644,17 @@ transform = Transform3D(0.57849, -0.781609, 0.233317, -0.814669, -0.567926, 0.11
 [node name="PathFollow3D10" parent="Scene/FliesPath1" index="9"]
 transform = Transform3D(0.144162, 0.18128, -0.972807, 0.63773, 0.734676, 0.231411, 0.756649, -0.653749, -0.00969514, -24.495, 3.11466, -0.690614)
 
-[node name="PathFollow3D2" parent="Scene/SanctumLight" index="1"]
-transform = Transform3D(0.0447202, 0.154697, -0.986949, -0.964669, 0.263454, -0.00241601, 0.259643, 0.952187, 0.161013, -5.04634, 2.52138, -3.16478)
-
 [node name="PathFollow3D5" parent="Scene/CaveBug" index="3"]
 transform = Transform3D(-0.03952, 0.187168, 0.981531, 0.563056, -0.807323, 0.176619, 0.825472, 0.559637, -0.073481, 17.8984, 0.555406, -38.1515)
 
 [node name="PathFollow3D" parent="Scene/CaveBug2" index="0"]
-transform = Transform3D(0.941062, 0.0135632, -0.337959, 0, 0.999194, 0.0401002, 0.338231, -0.0377368, 0.940305, 17.7316, 10.0102, -24.1667)
+transform = Transform3D(0.941062, 0.0135631, -0.337959, 0, 0.999194, 0.0401002, 0.338231, -0.0377368, 0.940304, 17.7316, 10.0102, -24.1667)
 
 [node name="PathFollow3D2" parent="Scene/CaveBug2" index="1"]
-transform = Transform3D(0.350569, -0.339686, 0.872762, -0.932434, -0.213711, 0.291361, 0.0875473, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
+transform = Transform3D(0.350569, -0.339686, 0.872762, -0.932433, -0.213711, 0.291361, 0.0875472, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
 
 [node name="PathFollow3D3" parent="Scene/CaveBug2" index="2"]
-transform = Transform3D(0.165184, 0.79942, 0.577617, -0.985486, 0.110566, 0.128802, 0.0391022, -0.590511, 0.806081, 0.73114, -4.10966, -49.8044)
+transform = Transform3D(0.165184, 0.79942, 0.577617, -0.985485, 0.110566, 0.128802, 0.0391021, -0.590511, 0.806081, 0.73114, -4.10966, -49.8044)
 
 [connection signal="body_entered" from="GhostTrigger" to="GhostTrigger" method="_on_body_entered"]
 [connection signal="animation_finished" from="GhostTrigger/ghost/AnimationPlayer" to="GhostTrigger" method="_on_animation_player_animation_finished"]
