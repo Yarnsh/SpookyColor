@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+@onready var game_scene = $".."
+
 @onready var cam = $RootCam
 @onready var view_pos = $RootCam/ViewPos
 @onready var foot_sfx = $Foot
@@ -35,6 +37,10 @@ func _physics_process(delta):
 			DisplayServer.window_set_size(Vector2i(1000, 600)) # TODO: use configured res
 		else:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	if Input.is_action_just_pressed("restart"):
+		print(game_scene.get_flags())
+		get_tree().current_scene.start_game(game_scene.get_flags())
+		return
 	
 	if (state == NORMAL_STATE):
 		if Input.is_action_pressed("Use_Nail"):
@@ -99,3 +105,7 @@ func set_flag(flag):
 	if flag == 2:
 		blue = true
 	nail.set_flags(red,green,blue)
+
+func kill():
+	# TODO: show a death screen of some kind and return to a checkpoint
+	get_tree().current_scene.call_deferred("start_game")

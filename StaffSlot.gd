@@ -1,5 +1,6 @@
 extends StaticBody3D
 
+@onready var game_scene = $"../.."
 @export var DoorL : Node3D
 @export var DoorR : Node3D
 @onready var nail = $Nail
@@ -66,8 +67,18 @@ func interact(c):
 		character.state = character.CUTSCENE_STATE
 		nail_sound.play()
 		door_open_sound.play()
+		game_scene.nail_taken = true
+		game_scene.update_player_stuff()
 	elif nail_done:
 		character.state = character.NORMAL_STATE
 		character.cam.set_button_visible(false)
 		character = null
 		nail.hide()
+
+func set_finished():
+	character = null
+	nail.hide()
+	nail_done = true
+	set_collision_layer_value(2, false)
+	DoorR.global_position.x = r_start + door_offset
+	DoorL.global_position.x = l_start - door_offset

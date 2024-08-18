@@ -17,6 +17,11 @@ func _ready():
 	pitch = global_rotation.x
 	yaw = global_rotation.y
 
+func set_grot(grot):
+	global_rotation = grot
+	pitch = global_rotation.x
+	yaw = global_rotation.y
+
 func _process(delta):
 	if character.state == character.NORMAL_STATE:
 		global_rotation = Vector3(pitch, yaw, 0.0)

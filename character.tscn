@@ -59,6 +59,7 @@ radius = 0.3
 height = 1.8
 
 [node name="Character" type="CharacterBody3D"]
+collision_layer = 5
 script = ExtResource("1_nh6pq")
 
 [node name="RootCam" type="Node3D" parent="."]
@@ -130,7 +131,6 @@ vertical_alignment = 1
 transform = Transform3D(0.664463, -0.664463, -0.34202, 0.707107, 0.707107, 0, 0.241845, -0.241845, 0.939693, 0, 0, -0.7)
 
 [node name="Nail" type="Node3D" parent="RootCam"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 visible = false
 script = ExtResource("3_w2jul")
 

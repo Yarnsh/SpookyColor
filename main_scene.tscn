@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://hghf53tjyueh"]
+
+[ext_resource type="Script" path="res://main_scene.gd" id="1_7rukl"]
+[ext_resource type="PackedScene" uid="uid://cwl2us1o2q61h" path="res://game_scene.tscn" id="2_bflre"]
+
+[node name="MainScene" type="Node3D"]
+script = ExtResource("1_7rukl")
+game_prefab = ExtResource("2_bflre")
