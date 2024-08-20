@@ -82,3 +82,7 @@ func set_finished():
 	set_collision_layer_value(2, false)
 	DoorR.global_position.x = r_start + door_offset
 	DoorL.global_position.x = l_start - door_offset
+
+func unlock():
+	DoorR.global_position.x = r_start + door_offset
+	DoorL.global_position.x = l_start - door_offset

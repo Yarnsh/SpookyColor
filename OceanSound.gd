@@ -4,11 +4,12 @@ extends AudioStreamPlayer3D
 @export var character : CharacterBody3D
 
 const door_volume = -2
-const min_volume = -10
+const min_volume = -40
 const max_x_dist = 30.0
 const max_z_dist = 75.0
 var start_z = 0
 var end_z = 1
+var ending = false
 
 func _ready():
 	# grab area collision shape for volume calculation
@@ -25,6 +26,6 @@ func _process(delta):
 		var z = clamp(character.global_position.z, end_z, start_z)
 		z = inv_lerp(start_z, end_z, z)
 		volume_db = lerp(door_volume, min_volume, z)
-	else:
+	elif !ending: # during the ending we dont bother with the coast closeness stuff
 		var normalized = Vector2((global_position.x - character.global_position.x) / max_x_dist, (global_position.z - character.global_position.z) / max_z_dist)
 		volume_db = door_volume * (1.0 - min(normalized.length(), 1.0))

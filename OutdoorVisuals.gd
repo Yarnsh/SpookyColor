@@ -22,5 +22,5 @@ func _on_body_entered(body):
 
 func set_active():
 	water.show()
-	color_cam.environment = outdoor_env
-	meshes.show()
+	#color_cam.environment = outdoor_env
+	#meshes.show()

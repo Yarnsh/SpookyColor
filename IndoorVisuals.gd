@@ -22,5 +22,5 @@ func _on_body_entered(body):
 
 func set_active():
 	water.hide()
-	color_cam.environment = indoor_env
-	meshes.hide()
+	#color_cam.environment = indoor_env
+	#meshes.hide()

@@ -8,3 +8,4 @@ func _ready():
 func kill(body):
 	if body is CharacterBody3D:
 		body.kill()
+		# TODO: supply a different death noise based on what death we got

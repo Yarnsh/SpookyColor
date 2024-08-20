@@ -18,6 +18,8 @@ func interact(c):
 	hide()
 	game_scene.colors[flag] = true
 	game_scene.update_player_stuff()
+	if game_scene.colors[0] and game_scene.colors[1] and game_scene.colors[2]:
+		game_scene.start_exit_sequence()
 
 func set_finished():
 	set_collision_layer_value(2, false)

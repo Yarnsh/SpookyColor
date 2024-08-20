@@ -1,8 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://cwl2us1o2q61h"]
+[gd_scene load_steps=23 format=3 uid="uid://cwl2us1o2q61h"]
 
 [ext_resource type="Script" path="res://game_scene.gd" id="1_hm2jl"]
 [ext_resource type="Script" path="res://ScreenResolutionHandling.gd" id="1_yuvdf"]
-[ext_resource type="Environment" uid="uid://dwl1k4slfqgem" path="res://visual_env.tres" id="2_7pqth"]
 [ext_resource type="Environment" uid="uid://d2jew0e44lnph" path="res://default_env.tres" id="3_p61g4"]
 [ext_resource type="Shader" path="res://final.gdshader" id="4_ocbyf"]
 [ext_resource type="PackedScene" uid="uid://1neqraec1bd8" path="res://character.tscn" id="5_60aaj"]
@@ -1051,7 +1050,7 @@ script = ExtResource("1_yuvdf")
 [node name="Camera3D" type="Camera3D" parent="Color"]
 transform = Transform3D(1, 0, 0, 0, 0.958193, 0.286123, 0, -0.286123, 0.958193, 0.00377429, -11.7229, -123.715)
 cull_mask = 1
-environment = ExtResource("2_7pqth")
+environment = ExtResource("3_p61g4")
 current = true
 fov = 90.0
 
@@ -1632,9 +1631,6 @@ color_cam = NodePath("../../Color/Camera3D")
 [node name="PathFollow3D" parent="Scene/FliesPath1" index="0"]
 transform = Transform3D(-0.997921, -0.00223856, -0.0643765, 0, 0.999396, -0.0347518, 0.0644154, -0.0346797, -0.997318, -1.11298, -2.44746, -0.457588)
 
-[node name="PathFollow3D4" parent="Scene/FliesPath1" index="3"]
-transform = Transform3D(-0.163671, 0.977801, 0.130826, -0.880521, -0.0849959, -0.466323, -0.444851, -0.191519, 0.874887, -112.706, 8.46043, 0.165807)
-
 [node name="PathFollow3D5" parent="Scene/FliesPath1" index="4"]
 transform = Transform3D(-0.162071, 0.98107, 0.106002, -0.969483, -0.138284, -0.202435, -0.183945, -0.135576, 0.973541, -112.162, 10.6862, -11.5416)
 
@@ -1644,14 +1640,14 @@ transform = Transform3D(0.57849, -0.781609, 0.233317, -0.814669, -0.567926, 0.11
 [node name="PathFollow3D10" parent="Scene/FliesPath1" index="9"]
 transform = Transform3D(0.144162, 0.18128, -0.972807, 0.63773, 0.734676, 0.231411, 0.756649, -0.653749, -0.00969514, -24.495, 3.11466, -0.690614)
 
-[node name="PathFollow3D5" parent="Scene/CaveBug" index="3"]
-transform = Transform3D(-0.03952, 0.187168, 0.981531, 0.563056, -0.807323, 0.176619, 0.825472, 0.559637, -0.073481, 17.8984, 0.555406, -38.1515)
+[node name="PathFollow3D2" parent="Scene/SanctumLight" index="1"]
+transform = Transform3D(0.0447202, 0.154697, -0.986949, -0.964669, 0.263454, -0.00241601, 0.259643, 0.952187, 0.161013, -5.04634, 2.52138, -3.16478)
 
 [node name="PathFollow3D" parent="Scene/CaveBug2" index="0"]
-transform = Transform3D(0.941062, 0.0135631, -0.337959, 0, 0.999194, 0.0401002, 0.338231, -0.0377368, 0.940304, 17.7316, 10.0102, -24.1667)
+transform = Transform3D(0.941061, 0.0135631, -0.337959, 0, 0.999194, 0.0401001, 0.338231, -0.0377368, 0.940304, 17.7316, 10.0102, -24.1667)
 
 [node name="PathFollow3D2" parent="Scene/CaveBug2" index="1"]
-transform = Transform3D(0.350569, -0.339686, 0.872762, -0.932433, -0.213711, 0.291361, 0.0875472, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
+transform = Transform3D(0.350568, -0.339686, 0.872762, -0.932433, -0.213711, 0.291361, 0.0875472, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
 
 [node name="PathFollow3D3" parent="Scene/CaveBug2" index="2"]
 transform = Transform3D(0.165184, 0.79942, 0.577617, -0.985485, 0.110566, 0.128802, 0.0391021, -0.590511, 0.806081, 0.73114, -4.10966, -49.8044)

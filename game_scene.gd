@@ -13,6 +13,8 @@ extends Node3D
 @onready var green_pickup = $Scene/GreenPickup
 @onready var blue_pickup = $Scene/BluePickup
 @onready var spinner = $Scene/Spinner
+@onready var ocean_sounds = $Scene/OceanSounds
+@onready var finish_trigger = $Scene/Finish
 
 var outdoor_visuals = true
 var nail_taken = false
@@ -54,6 +56,8 @@ func apply_flags(flags):
 	if colors[2]:
 		blue_pickup.set_finished()
 		character.set_flag(2)
+	if colors[0] and colors[1] and colors[2]:
+		start_exit_sequence()
 	
 	spinner_solved = flags.get("spinner_solved", false)
 	if spinner_solved:
@@ -69,3 +73,12 @@ func get_flags():
 		"colors": colors,
 		"spinner_solved": spinner_solved
 	}
+
+func start_exit_sequence():
+	print("ENDING TIME")
+	nail_slot.unlock()
+	ocean_sounds.ending = true
+	ocean_sounds.volume_db = -40.0
+	ocean_sounds.play()
+	finish_trigger.monitoring = true
+	pass # TODO: reopen door out, change the triggers to restart the water sounds, setup the trigger for the credits kill

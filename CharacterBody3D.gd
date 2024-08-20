@@ -42,7 +42,7 @@ func _physics_process(delta):
 		get_tree().current_scene.start_game(game_scene.get_flags())
 		return
 	if Input.is_action_pressed("speed_up"):
-		SPEED = 12.0
+		SPEED = 22.0
 	else:
 		SPEED = 3.0
 	
@@ -112,4 +112,5 @@ func set_flag(flag):
 
 func kill():
 	# TODO: show a death screen of some kind and return to a checkpoint
+	# TODO: play a different death noise based on what death we got
 	get_tree().current_scene.call_deferred("start_game", game_scene.get_flags())
