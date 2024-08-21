@@ -1,6 +1,7 @@
 extends Node3D
 
-@export var cams : Array[Node3D]
+@onready var main_scene = $"../../.."
+@export var cams : Array[Camera3D]
 @onready var cast = $ShapeCast3D
 @onready var interact_button = $InteractButton
 @onready var interact_button2 = $InteractButton2
@@ -16,6 +17,12 @@ func _ready():
 	cast.add_exception(character)
 	pitch = global_rotation.x
 	yaw = global_rotation.y
+	set_fov(main_scene.get_fov())
+	main_scene.settings.connect("fov_changed", set_fov)
+
+func set_fov(fov):
+	for cam in cams:
+		cam.fov = fov
 
 func set_grot(grot):
 	global_rotation = grot
