@@ -54,6 +54,8 @@ func _physics_process(delta):
 		last_interactable.interact(character)
 
 func _input(event):
+	if main_scene.mode != 0:
+		return
 	if event is InputEventMouseMotion:
 		pitch -= event.relative.y * 0.01
 		yaw -= event.relative.x * 0.01

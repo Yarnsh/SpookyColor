@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+@onready var main_scene = $"../.."
 @onready var game_scene = $".."
 
 @onready var cam = $RootCam
@@ -55,7 +56,7 @@ func _physics_process(delta):
 		SPEED = 4.0
 	
 	if (state == NORMAL_STATE):
-		if Input.is_action_pressed("Use_Nail"):
+		if Input.is_action_pressed("Use_Nail") and main_scene.mode == 0:
 			nail.set_out()
 		else:
 			nail.set_in()
@@ -77,18 +78,19 @@ func _physics_process(delta):
 			if !was_moving:
 				foot_start_time = Time.get_ticks_msec()
 			was_moving = false
-			if Input.is_action_pressed("left"):
-				velocity += Vector3.LEFT.rotated(Vector3.UP, cam.yaw)
-				was_moving = true
-			if Input.is_action_pressed("right"):
-				velocity += Vector3.RIGHT.rotated(Vector3.UP, cam.yaw)
-				was_moving = true
-			if Input.is_action_pressed("forward"):
-				velocity += Vector3.FORWARD.rotated(Vector3.UP, cam.yaw)
-				was_moving = true
-			if Input.is_action_pressed("back"):
-				velocity += Vector3.BACK.rotated(Vector3.UP, cam.yaw)
-				was_moving = true
+			if main_scene.mode == 0:
+				if Input.is_action_pressed("left"):
+					velocity += Vector3.LEFT.rotated(Vector3.UP, cam.yaw)
+					was_moving = true
+				if Input.is_action_pressed("right"):
+					velocity += Vector3.RIGHT.rotated(Vector3.UP, cam.yaw)
+					was_moving = true
+				if Input.is_action_pressed("forward"):
+					velocity += Vector3.FORWARD.rotated(Vector3.UP, cam.yaw)
+					was_moving = true
+				if Input.is_action_pressed("back"):
+					velocity += Vector3.BACK.rotated(Vector3.UP, cam.yaw)
+					was_moving = true
 			
 			velocity = velocity.normalized() * SPEED
 			

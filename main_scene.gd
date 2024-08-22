@@ -12,7 +12,7 @@ var loaded_flags = {}
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	get_window().grab_focus() # TODO: why no work ;_;
+	get_window().grab_focus()
 	
 	loaded_flags = load_flags()
 	if loaded_flags != {}:
