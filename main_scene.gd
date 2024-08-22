@@ -8,15 +8,20 @@ var game_scene = null
 @onready var controls = $Menus/Controls
 
 var mode = 1
+var loaded_flags = {}
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_window().grab_focus() # TODO: why no work ;_;
 	
-	# TODO: load checkpoints from file, if present give a "continue" button
+	loaded_flags = load_flags()
+	if loaded_flags != {}:
+		main.resume_button.text = "Continue"
+		main.resume_button.disabled = false
 
 func resume():
-	# TODO: if a game is not running start a new one from loaded flags
+	if game_scene == null:
+		start_game(loaded_flags)
 	set_mode(0)
 
 func start_game(flags):
@@ -63,3 +68,19 @@ func _input(event):
 			set_mode(1)
 		elif mode == 3:
 			set_mode(2)
+
+func load_flags():
+	if not FileAccess.file_exists("user://save.dat"):
+		save_flags({})
+		return {}
+
+	var file := FileAccess.open("user://save.dat", FileAccess.READ)
+	var flags: Dictionary = file.get_var(true)
+	file.close()
+	
+	return flags
+
+func save_flags(flags):
+	var file := FileAccess.open("user://save.dat", FileAccess.WRITE)
+	file.store_var(flags, true)
+	file.close()
