@@ -2,6 +2,8 @@ extends PanelContainer
 
 signal fov_changed(fov)
 
+@onready var main_scene = $"../.."
+
 @onready var fullscreen = $All/Options/Controls/Fullscreen
 @onready var resolution_x = $All/Options/Controls/Resolution/X
 @onready var resolution_y = $All/Options/Controls/Resolution/Y
@@ -12,13 +14,13 @@ signal fov_changed(fov)
 @onready var ambient_volume = $All/Options/Controls/AmbientVolume
 
 @onready var apply_button = $All/Buttons/Apply
-@onready var cancel_button = $All/Buttons/Cancel
 
 var last_settings = {}
 
 func _ready():
 	set_settings_from_dict(read_from_file())
 	apply_current_settings()
+	apply_button.disabled = true
 
 func get_current_settings_dict():
 	return {
@@ -60,12 +62,11 @@ func _on_apply_pressed():
 	apply_current_settings()
 	apply_button.disabled = true
 	write_to_file(last_settings)
-	# TODO: also close menu
 
 func _on_cancel_pressed():
 	set_settings_from_dict(last_settings)
 	apply_button.disabled = true
-	# TODO: also close menu
+	main_scene.set_mode(1)
 
 func _on_change(value):
 	apply_button.disabled = false
@@ -87,13 +88,8 @@ func read_from_file():
 		return {}
 	return result
 
-func _input(event):
-	if event.is_action_pressed("menu"):
-		visible = !visible
-		if visible:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		else:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
 func back():
 	main_scene.set_mode(1)
+
+func _on_controls_pressed():
+	main_scene.set_mode(3)

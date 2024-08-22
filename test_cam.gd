@@ -12,8 +12,6 @@ var pitch = 0.0
 var yaw = 0.0
 
 func _ready():
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	get_window().grab_focus() # TODO: why no work ;_;
 	cast.add_exception(character)
 	pitch = global_rotation.x
 	yaw = global_rotation.y
