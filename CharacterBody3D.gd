@@ -11,11 +11,14 @@ extends CharacterBody3D
 @onready var stony_foot_step = load("res://SFX/stone_footstep.wav")
 @export var grassy_collider : StaticBody3D
 
+@onready var interact_1 = $"RootCam/InteractButton"
+@onready var interact_2 = $"RootCam/InteractButton2"
+
 var red = false
 var green = false
 var blue = false
 
-var SPEED = 3.0
+var SPEED = 4.0
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var was_on_floor = false
@@ -26,6 +29,11 @@ const foot_delay = 850
 const NORMAL_STATE = 0
 const CUTSCENE_STATE = 1
 var state = NORMAL_STATE
+
+func _process(delta):
+	# bit of a waste to do this every frame but honestly who cares anymore
+	interact_1.text = InputMap.action_get_events("interact")[0].as_text()
+	interact_2.text = InputMap.action_get_events("interact")[0].as_text()
 
 func _physics_process(delta):
 	var now = Time.get_ticks_msec()
@@ -44,7 +52,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("speed_up"):
 		SPEED = 22.0
 	else:
-		SPEED = 3.0
+		SPEED = 4.0
 	
 	if (state == NORMAL_STATE):
 		if Input.is_action_pressed("Use_Nail"):
