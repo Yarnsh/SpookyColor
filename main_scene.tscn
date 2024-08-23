@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://hghf53tjyueh"]
+[gd_scene load_steps=12 format=3 uid="uid://hghf53tjyueh"]
 
 [ext_resource type="Script" path="res://main_scene.gd" id="1_7rukl"]
 [ext_resource type="PackedScene" uid="uid://cwl2us1o2q61h" path="res://game_scene.tscn" id="2_bflre"]
@@ -8,8 +8,12 @@
 [ext_resource type="Script" path="res://ControlChangeButton.gd" id="5_wjbri"]
 [ext_resource type="Script" path="res://PopupPanel.gd" id="6_xu1ap"]
 [ext_resource type="Script" path="res://DeathScene.gd" id="8_6hb5i"]
+[ext_resource type="Script" path="res://Credits.gd" id="9_2pnau"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ev5d"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqcix"]
 bg_color = Color(0, 0, 0, 1)
 
 [node name="MainScene" type="Node3D"]
@@ -451,6 +455,46 @@ text = "Back to Menu"
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="Menus/DeathScene"]
 
+[node name="Credits" type="PanelContainer" parent="Menus"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fqcix")
+script = ExtResource("9_2pnau")
+
+[node name="Node" type="Node" parent="Menus/Credits"]
+
+[node name="Credits" type="RichTextLabel" parent="Menus/Credits/Node"]
+visible = false
+custom_minimum_size = Vector2(300, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_right = 150.0
+offset_bottom = 368.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[center]
+[b]Game by Yarnsh[/b]
+
+Sounds from freesound.org
+Some models from sketchfab.com
+Materials from freepbr.com
+
+Check out the detailed attributions on the github page or in the attributions.txt file
+
+[b]Playtesters[/b]
+Pirgah
+
+
+Thanks for playing ╰(✿´⌣`✿)╯♡
+[/center]"
+fit_content = true
+
 [connection signal="pressed" from="Menus/Main/VBoxContainer/VBoxContainer/Continue" to="Menus/Main" method="resume"]
 [connection signal="pressed" from="Menus/Main/VBoxContainer/VBoxContainer/NewGame" to="Menus/Main" method="new_game"]
 [connection signal="pressed" from="Menus/Main/VBoxContainer/VBoxContainer/Settings" to="Menus/Main" method="settings"]
@@ -476,3 +520,4 @@ text = "Back to Menu"
 [connection signal="pressed" from="Menus/Controls/All/Buttons/Back" to="Menus/Controls" method="back"]
 [connection signal="pressed" from="Menus/DeathScene/VBoxContainer/Continue" to="Menus/DeathScene" method="_on_continue_pressed"]
 [connection signal="pressed" from="Menus/DeathScene/VBoxContainer/Menu" to="Menus/DeathScene" method="_on_menu_pressed"]
+[connection signal="visibility_changed" from="Menus/Credits" to="Menus/Credits" method="_on_visibility_changed"]

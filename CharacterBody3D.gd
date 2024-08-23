@@ -47,8 +47,7 @@ func _physics_process(delta):
 		else:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	if Input.is_action_just_pressed("restart"):
-		print(game_scene.get_flags())
-		get_tree().current_scene.start_game(game_scene.get_flags())
+		get_tree().current_scene.show_credits()
 		return
 	if Input.is_action_pressed("speed_up"):
 		SPEED = 22.0

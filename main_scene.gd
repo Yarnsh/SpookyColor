@@ -7,6 +7,7 @@ var game_scene = null
 @onready var settings = $Menus/Settings
 @onready var controls = $Menus/Controls
 @onready var death = $Menus/DeathScene
+@onready var credits = $Menus/Credits
 
 var mode = 1
 var loaded_flags = {}
@@ -63,6 +64,7 @@ func set_mode(new_mode):
 	settings.hide()
 	controls.hide()
 	death.hide()
+	credits.hide()
 	# mode 0 is no menus open, the actual game
 	if mode == 1:
 		main.show()
@@ -72,6 +74,8 @@ func set_mode(new_mode):
 		controls.show()
 	elif mode == 4:
 		death.show()
+	elif mode == 5:
+		credits.show()
 
 func _input(event):
 	if event.is_action_pressed("menu"):
@@ -104,3 +108,8 @@ func show_death(description, sound):
 	call_deferred("stop_game")
 	death.start_death(description, sound)
 	set_mode(4)
+
+func show_credits():
+	call_deferred("stop_game")
+	credits.start_credits()
+	set_mode(5)
