@@ -120,6 +120,6 @@ func set_flag(flag):
 		blue = true
 	nail.set_flags(red,green,blue)
 
-func kill():
+func kill(description, sound):
 	main_scene.loaded_flags = game_scene.get_flags()
-	main_scene.show_death("Hehe haha :)", null)
+	main_scene.show_death(description, sound)

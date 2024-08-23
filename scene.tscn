@@ -1617,6 +1617,7 @@ omni_range = 100.0
 [node name="WaterDeathZone" type="Area3D" parent="DeathZones"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -19.7045, 0)
 script = ExtResource("32_5cj6n")
+death_text = "Lost to the inky depths."
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeathZones/WaterDeathZone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.09341, -6.14216, 73.7299)
@@ -1625,6 +1626,7 @@ shape = SubResource("BoxShape3D_rhb28")
 [node name="CaveDeathZone" type="Area3D" parent="DeathZones"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -169.56, -19.7045, -152.403)
 script = ExtResource("32_5cj6n")
+death_text = "A deep pit, but not bottomless."
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeathZones/CaveDeathZone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.2276, -9.97808, 42.335)

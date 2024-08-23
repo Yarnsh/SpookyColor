@@ -1,5 +1,6 @@
 extends Area3D
 
+@export var death_text = ";_;"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -7,5 +8,4 @@ func _ready():
 
 func kill(body):
 	if body is CharacterBody3D:
-		body.kill()
-		# TODO: supply a different death noise based on what death we got
+		body.kill(death_text, null) #TODO noise
