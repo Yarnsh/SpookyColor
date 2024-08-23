@@ -121,6 +121,5 @@ func set_flag(flag):
 	nail.set_flags(red,green,blue)
 
 func kill():
-	# TODO: show a death screen of some kind and return to a checkpoint
-	# TODO: play a different death noise based on what death we got
-	get_tree().current_scene.call_deferred("start_game", game_scene.get_flags())
+	main_scene.loaded_flags = game_scene.get_flags()
+	main_scene.show_death("Hehe haha :)", null)

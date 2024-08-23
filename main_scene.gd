@@ -6,6 +6,7 @@ var game_scene = null
 @onready var main = $Menus/Main
 @onready var settings = $Menus/Settings
 @onready var controls = $Menus/Controls
+@onready var death = $Menus/DeathScene
 
 var mode = 1
 var loaded_flags = {}
@@ -19,15 +20,26 @@ func _ready():
 		main.resume_button.text = "Continue"
 		main.resume_button.disabled = false
 
+func stop_game():
+	if game_scene != null:
+		remove_child(game_scene)
+		game_scene.free()
+	main.resume_button.text = "Continue"
+
+func back_to_checkpoint():
+	if game_scene == null:
+		start_game(loaded_flags)
+	else:
+		start_game(game_scene.get_flags())
+	set_mode(0)
+
 func resume():
 	if game_scene == null:
 		start_game(loaded_flags)
 	set_mode(0)
 
 func start_game(flags):
-	if game_scene != null:
-		remove_child(game_scene)
-		game_scene.free()
+	stop_game()
 	
 	game_scene = game_prefab.instantiate()
 	add_child(game_scene)
@@ -50,6 +62,7 @@ func set_mode(new_mode):
 	main.hide()
 	settings.hide()
 	controls.hide()
+	death.hide()
 	# mode 0 is no menus open, the actual game
 	if mode == 1:
 		main.show()
@@ -57,6 +70,8 @@ func set_mode(new_mode):
 		settings.show()
 	elif mode == 3:
 		controls.show()
+	elif mode == 4:
+		death.show()
 
 func _input(event):
 	if event.is_action_pressed("menu"):
@@ -84,3 +99,8 @@ func save_flags(flags):
 	var file := FileAccess.open("user://save.dat", FileAccess.WRITE)
 	file.store_var(flags, true)
 	file.close()
+
+func show_death(description, sound):
+	call_deferred("stop_game")
+	death.start_death(description, sound)
+	set_mode(4)

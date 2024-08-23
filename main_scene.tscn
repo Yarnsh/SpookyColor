@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://hghf53tjyueh"]
+[gd_scene load_steps=10 format=3 uid="uid://hghf53tjyueh"]
 
 [ext_resource type="Script" path="res://main_scene.gd" id="1_7rukl"]
 [ext_resource type="PackedScene" uid="uid://cwl2us1o2q61h" path="res://game_scene.tscn" id="2_bflre"]
@@ -7,6 +7,10 @@
 [ext_resource type="Script" path="res://ControlsMenu.gd" id="4_rl0j1"]
 [ext_resource type="Script" path="res://ControlChangeButton.gd" id="5_wjbri"]
 [ext_resource type="Script" path="res://PopupPanel.gd" id="6_xu1ap"]
+[ext_resource type="Script" path="res://DeathScene.gd" id="8_6hb5i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ev5d"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="MainScene" type="Node3D"]
 script = ExtResource("1_7rukl")
@@ -405,6 +409,48 @@ text = "Press any button"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="DeathScene" type="PanelContainer" parent="Menus"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6ev5d")
+script = ExtResource("8_6hb5i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menus/DeathScene"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Menus/DeathScene/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "YOU HAVE DIED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="Menus/DeathScene/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "What a dead guy you are."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Continue" type="Button" parent="Menus/DeathScene/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Continue"
+
+[node name="Menu" type="Button" parent="Menus/DeathScene/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Back to Menu"
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="Menus/DeathScene"]
+
 [connection signal="pressed" from="Menus/Main/VBoxContainer/VBoxContainer/Continue" to="Menus/Main" method="resume"]
 [connection signal="pressed" from="Menus/Main/VBoxContainer/VBoxContainer/NewGame" to="Menus/Main" method="new_game"]
 [connection signal="pressed" from="Menus/Main/VBoxContainer/VBoxContainer/Settings" to="Menus/Main" method="settings"]
@@ -428,3 +474,5 @@ vertical_alignment = 1
 [connection signal="pressed" from="Menus/Controls/All/Options/Controls/Right" to="Menus/Controls/All/Options/Controls/Right" method="_on_pressed"]
 [connection signal="pressed" from="Menus/Controls/All/Buttons/Reset" to="Menus/Controls" method="reset"]
 [connection signal="pressed" from="Menus/Controls/All/Buttons/Back" to="Menus/Controls" method="back"]
+[connection signal="pressed" from="Menus/DeathScene/VBoxContainer/Continue" to="Menus/DeathScene" method="_on_continue_pressed"]
+[connection signal="pressed" from="Menus/DeathScene/VBoxContainer/Menu" to="Menus/DeathScene" method="_on_menu_pressed"]
