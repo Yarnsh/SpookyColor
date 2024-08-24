@@ -1629,16 +1629,7 @@ color_cam = NodePath("../../Color/Camera3D")
 color_cam = NodePath("../../Color/Camera3D")
 
 [node name="PathFollow3D" parent="Scene/FliesPath1" index="0"]
-transform = Transform3D(-0.99792, -0.00223856, -0.0643764, 0, 0.999396, -0.0347518, 0.0644154, -0.0346797, -0.997317, -1.11298, -2.44746, -0.457588)
-
-[node name="PathFollow3D2" parent="Scene/FliesPath1" index="1"]
-transform = Transform3D(-0.00716614, -0.00261997, 0.999971, -0.745071, 0.666976, -0.00359193, -0.666947, -0.745075, -0.0067317, -45.2725, -0.0247246, 8.34229)
-
-[node name="PathFollow3D3" parent="Scene/FliesPath1" index="2"]
-transform = Transform3D(-0.00716628, -0.00262, 0.999971, -0.745071, 0.666976, -0.00359202, -0.666947, -0.745075, -0.00673182, -87.3188, 0.126312, 8.62535)
-
-[node name="PathFollow3D4" parent="Scene/FliesPath1" index="3"]
-transform = Transform3D(-0.163671, 0.977801, 0.130826, -0.880521, -0.0849959, -0.466323, -0.444851, -0.191519, 0.874887, -112.706, 8.46043, 0.165807)
+transform = Transform3D(-0.99792, -0.00223856, -0.0643764, 0, 0.999396, -0.0347518, 0.0644153, -0.0346797, -0.997317, -1.11298, -2.44746, -0.457588)
 
 [node name="PathFollow3D5" parent="Scene/FliesPath1" index="4"]
 transform = Transform3D(-0.162071, 0.98107, 0.106002, -0.969483, -0.138284, -0.202435, -0.183945, -0.135576, 0.973541, -112.162, 10.6862, -11.5416)
@@ -1646,53 +1637,14 @@ transform = Transform3D(-0.162071, 0.98107, 0.106002, -0.969483, -0.138284, -0.2
 [node name="PathFollow3D6" parent="Scene/FliesPath1" index="5"]
 transform = Transform3D(0.57849, -0.781609, 0.233316, -0.814669, -0.567926, 0.117362, 0.0407753, -0.257969, -0.96529, -131.745, 5.31784, 5.52934)
 
-[node name="PathFollow3D7" parent="Scene/FliesPath1" index="6"]
-transform = Transform3D(0.246337, -0.322997, -0.913778, 0.630716, 0.769295, -0.101897, 0.735877, -0.551234, 0.393225, -121.099, 19.0183, 7.2642)
-
-[node name="PathFollow3D8" parent="Scene/FliesPath1" index="7"]
-transform = Transform3D(0.246337, -0.322997, -0.913778, 0.630715, 0.769295, -0.101897, 0.735877, -0.551233, 0.393225, -105.023, 20.8458, 0.302335)
-
-[node name="PathFollow3D9" parent="Scene/FliesPath1" index="8"]
-transform = Transform3D(0.144162, 0.18128, -0.972807, 0.63773, 0.734675, 0.231411, 0.756649, -0.653748, -0.00969514, -52.8957, 9.87062, -0.973656)
-
 [node name="PathFollow3D10" parent="Scene/FliesPath1" index="9"]
 transform = Transform3D(0.144162, 0.18128, -0.972807, 0.63773, 0.734676, 0.231411, 0.756649, -0.653749, -0.00969514, -24.495, 3.11466, -0.690614)
-
-[node name="PathFollow3D" parent="Scene/EntranceLight" index="0"]
-transform = Transform3D(0.0051251, -0.0647964, 0.997885, 3.72529e-09, 0.997898, 0.0647973, -0.999987, -0.000332089, 0.00511433, 54.024, 1.80309, 3.18185)
-
-[node name="PathFollow3D" parent="Scene/SanctumLight" index="0"]
-transform = Transform3D(0.0051251, -0.0647964, 0.997885, 3.72529e-09, 0.997898, 0.0647973, -0.999987, -0.000332089, 0.00511433, 54.024, 1.80309, 3.18185)
 
 [node name="PathFollow3D2" parent="Scene/SanctumLight" index="1"]
 transform = Transform3D(0.0447202, 0.154697, -0.986949, -0.964669, 0.263454, -0.00241601, 0.259643, 0.952187, 0.161013, -5.04634, 2.52138, -3.16478)
 
-[node name="PathFollow3D3" parent="Scene/SanctumLight" index="2"]
-transform = Transform3D(0.529289, -0.590268, -0.609454, -0.66129, 0.163026, -0.7322, 0.531552, 0.790572, -0.304051, 64.6681, 5.89313, 8.82499)
-
-[node name="PathFollow3D4" parent="Scene/SanctumLight" index="3"]
-transform = Transform3D(-0.348076, -0.279446, -0.894847, 0.505574, -0.859786, 0.0718396, -0.789453, -0.427406, 0.440551, 22.0311, 3.72394, 0.309802)
-
-[node name="PathFollow3D" parent="Scene/SpinnerLight" index="0"]
-transform = Transform3D(0.0051251, -0.0647964, 0.997885, 3.72529e-09, 0.997898, 0.0647973, -0.999987, -0.000332089, 0.00511433, 54.024, 1.80309, 3.18185)
-
-[node name="PathFollow3D" parent="Scene/CaveBug" index="0"]
-transform = Transform3D(0.509485, 0.034986, -0.859768, 1.86265e-09, 0.999173, 0.0406588, 0.86048, -0.020715, 0.509064, 0.450211, 5.46288, -23.7133)
-
-[node name="PathFollow3D6" parent="Scene/CaveBug" index="1"]
-transform = Transform3D(0.509485, 0.034986, -0.859768, 1.86264e-09, 0.999173, 0.0406588, 0.860479, -0.020715, 0.509064, 45.1178, 2.97491, -50.2753)
-
-[node name="PathFollow3D2" parent="Scene/CaveBug" index="2"]
-transform = Transform3D(0.470061, 0.544381, 0.694759, 0.624957, -0.761123, 0.173547, 0.623273, 0.352617, -0.69799, 55.5821, 5.01516, -52.1298)
-
 [node name="PathFollow3D5" parent="Scene/CaveBug" index="3"]
 transform = Transform3D(-0.03952, 0.187168, 0.981531, 0.563056, -0.807323, 0.176619, 0.825472, 0.559637, -0.073481, 17.8984, 0.555406, -38.1515)
-
-[node name="PathFollow3D3" parent="Scene/CaveBug" index="4"]
-transform = Transform3D(-0.436955, 0.729664, 0.525985, 0.0743138, -0.55348, 0.82954, 0.896408, 0.40156, 0.187622, 10.011, -8.70863, -36.2727)
-
-[node name="PathFollow3D4" parent="Scene/CaveBug" index="5"]
-transform = Transform3D(-0.397616, 0.765588, -0.505743, -0.603102, -0.633459, -0.484763, -0.691497, 0.112265, 0.713601, 24.3034, 3.25168, -55.8508)
 
 [node name="PathFollow3D" parent="Scene/CaveBug2" index="0"]
 transform = Transform3D(0.941061, 0.0135631, -0.337959, 0, 0.999193, 0.0401001, 0.338231, -0.0377367, 0.940303, 17.7316, 10.0102, -24.1667)
@@ -1703,6 +1655,86 @@ transform = Transform3D(0.350568, -0.339686, 0.872762, -0.932432, -0.213711, 0.2
 [node name="PathFollow3D3" parent="Scene/CaveBug2" index="2"]
 transform = Transform3D(0.165184, 0.79942, 0.577617, -0.985485, 0.110566, 0.128802, 0.0391021, -0.590511, 0.806081, 0.73114, -4.10966, -49.8044)
 
+[node name="final_spook" parent="Scene" index="29"]
+visible = true
+
+[node name="Skeleton3D" parent="Scene/final_spook/Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4" index="2"]
+bones/0/position = Vector3(0, 0, 0)
+bones/0/rotation = Quaternion(-8.55714e-09, 1.71143e-08, -2.92898e-16, 1)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/position = Vector3(0.0120395, 6.97298, -0.126996)
+bones/1/rotation = Quaternion(1.93819e-09, -2.25477e-09, -4.37015e-18, 1)
+bones/2/position = Vector3(1.64624e-08, 11.519, -0.552291)
+bones/2/rotation = Quaternion(-0.0239525, 2.79733e-08, -1.38206e-09, 0.999713)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/position = Vector3(-9.80542e-10, 13.4543, 6.11979e-07)
+bones/3/rotation = Quaternion(-3.72529e-09, 4.09782e-08, -4.19944e-16, 1)
+bones/3/scale = Vector3(1, 1, 1)
+bones/4/position = Vector3(-1.18979e-09, 15.3763, 7.9178e-07)
+bones/4/rotation = Quaternion(0, -3.46438e-08, 4.35076e-17, 1)
+bones/4/scale = Vector3(1, 1, 1)
+bones/5/position = Vector3(1.21048e-10, 17.2984, -6.39566e-07)
+bones/5/rotation = Quaternion(0.0239525, 1.04264e-08, 2.60555e-09, 0.999713)
+bones/6/position = Vector3(-1.76312e-08, 0.701034, 0.145731)
+bones/6/rotation = Quaternion(1.86589e-09, -5.96046e-08, 1.11216e-16, 1)
+bones/7/position = Vector3(-0.223267, -187.607, 4.97079)
+bones/7/scale = Vector3(1, 1, 1)
+bones/8/position = Vector3(6.48218, 13.8887, 0.0344114)
+bones/8/rotation = Quaternion(0.604036, 0.369244, -0.600778, 0.371301)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/position = Vector3(8.01682e-06, 14.9112, 6.71297e-06)
+bones/9/rotation = Quaternion(0.323647, 0.169522, -0.059059, 0.928993)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/position = Vector3(-7.62939e-06, 31.0326, 1.50204e-05)
+bones/10/rotation = Quaternion(-0.0228759, -0.0819617, 0.267853, 0.959695)
+bones/10/scale = Vector3(1, 1, 1)
+bones/11/position = Vector3(-6.85453e-06, 32.1791, 4.92632e-05)
+bones/11/rotation = Quaternion(-6.0536e-08, -7.45058e-09, -8.75443e-08, 1)
+bones/11/scale = Vector3(1, 1, 1)
+bones/12/position = Vector3(-6.48219, 13.9076, -0.360464)
+bones/12/rotation = Quaternion(0.585242, -0.380852, 0.618075, 0.361147)
+bones/13/position = Vector3(-4.27663e-06, 14.9112, 1.65254e-05)
+bones/13/rotation = Quaternion(0.315811, -0.112663, 0.0377969, 0.941351)
+bones/13/scale = Vector3(1, 1, 1)
+bones/14/position = Vector3(5.72205e-06, 30.7893, -1.78814e-07)
+bones/14/rotation = Quaternion(-0.000488155, 0.00204723, -0.231898, 0.972738)
+bones/14/scale = Vector3(1, 1, 1)
+bones/15/position = Vector3(-1.34408e-05, 31.8881, 8.70228e-06)
+bones/15/rotation = Quaternion(1.88127e-07, -1.04308e-07, 2.10479e-07, 1)
+bones/15/scale = Vector3(1, 1, 1)
+bones/16/position = Vector3(12.3462, -6.39384, 0.399258)
+bones/16/rotation = Quaternion(-0.000415052, -0.00449176, 0.995751, -0.0919788)
+bones/16/scale = Vector3(1, 1, 1)
+bones/17/position = Vector3(4.99873e-06, 58.2359, 3.03263e-07)
+bones/17/rotation = Quaternion(-0.100604, 0.00116948, -0.0115672, 0.994859)
+bones/17/scale = Vector3(1, 1, 1)
+bones/18/position = Vector3(4.53182e-05, 53.397, -2.14577e-06)
+bones/18/rotation = Quaternion(0.491216, -0.193255, 0.112768, 0.841809)
+bones/19/position = Vector3(6.19888e-06, 22.5208, 9.53674e-06)
+bones/19/rotation = Quaternion(0.315075, 0.00776859, -0.00258011, 0.949031)
+bones/20/position = Vector3(36.8348, -19.3062, 8.28692)
+bones/20/rotation = Quaternion(0.0675706, 0.666866, 0.7022, 0.240082)
+bones/20/scale = Vector3(1, 1, 1)
+bones/21/position = Vector3(-12.3462, -6.39383, 0.777992)
+bones/21/rotation = Quaternion(0.00095089, -0.0102942, 0.995709, 0.0919593)
+bones/21/scale = Vector3(1, 1, 1)
+bones/22/position = Vector3(-5.47268e-06, 58.2456, 1.10736e-06)
+bones/22/rotation = Quaternion(-0.100857, -0.00119143, 0.0117502, 0.994831)
+bones/23/position = Vector3(2.28733e-06, 53.5361, -1.58548e-05)
+bones/23/rotation = Quaternion(0.506539, 0.183432, -0.111262, 0.8351)
+bones/24/position = Vector3(-3.93391e-06, 23.1083, 2.5034e-05)
+bones/24/rotation = Quaternion(0.303835, 0.0114004, -0.00363669, 0.952649)
+bones/24/scale = Vector3(1, 1, 1)
+bones/25/position = Vector3(-36.6627, -19.1365, 7.07715)
+bones/25/rotation = Quaternion(-0.0790484, 0.670163, 0.700984, -0.230769)
+bones/25/scale = Vector3(1, 1, 1)
+
+[node name="Object_7" parent="Scene/final_spook/Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D" index="0"]
+surface_material_override/0 = null
+
+[node name="Object_7_001" parent="Scene/final_spook/Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D" index="1"]
+layers = 1
+
 [connection signal="body_entered" from="GhostTrigger" to="GhostTrigger" method="_on_body_entered"]
 [connection signal="animation_finished" from="GhostTrigger/ghost/AnimationPlayer" to="GhostTrigger" method="_on_animation_player_animation_finished"]
 
@@ -1711,3 +1743,4 @@ transform = Transform3D(0.165184, 0.79942, 0.577617, -0.985485, 0.110566, 0.1288
 [editable path="Scene/OutdoorArea"]
 [editable path="Scene/GreenPickup"]
 [editable path="Scene/BluePickup"]
+[editable path="Scene/final_spook"]
