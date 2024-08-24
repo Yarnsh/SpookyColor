@@ -87,13 +87,17 @@ func _input(event):
 			set_mode(1)
 		elif mode == 3:
 			set_mode(2)
+	
+	if event.is_action_pressed("PreGreen"):
+		loaded_flags = load_flags("user://save_pregreen.dat")
+		start_game(loaded_flags)
 
-func load_flags():
-	if not FileAccess.file_exists("user://save.dat"):
+func load_flags(path = "user://save.dat"):
+	if not FileAccess.file_exists(path):
 		save_flags({})
 		return {}
 
-	var file := FileAccess.open("user://save.dat", FileAccess.READ)
+	var file := FileAccess.open(path, FileAccess.READ)
 	var flags: Dictionary = file.get_var(true)
 	file.close()
 	
