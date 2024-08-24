@@ -7,6 +7,7 @@ extends Area3D
 var final_spook_anim : AnimationPlayer
 @export var finish_blocker : StaticBody3D
 @onready var sun_anim = $AnimationPlayer
+@onready var env = $"../WorldEnvironment"
 var character = null
 var start_time = 0
 const cutscene_time = 5.0
@@ -19,13 +20,14 @@ func _process(delta):
 	if character != null:
 		var now = float(Time.get_ticks_msec()) / 1000.0
 		# TODO: move more darkness into place to block view
-		var from = character.cam.quaternion
-		var to = Basis.looking_at(sun.global_basis.z).get_rotation_quaternion()
-		var rate = 50
-		character.cam.quaternion = from.slerp(to, (rate * delta)*(rate * delta))
 		
 		if now > start_time + cutscene_time:
 			character.state = character.NORMAL_STATE
+		else:
+			var from = character.cam.quaternion
+			var to = Basis.looking_at(sun.global_basis.z).get_rotation_quaternion()
+			var rate = 50
+			character.cam.quaternion = from.slerp(to, (rate * delta)*(rate * delta))
 
 func _on_body_entered(body):
 	set_deferred("monitoring", false)
