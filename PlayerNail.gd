@@ -6,8 +6,10 @@ extends Node3D
 @onready var power = $Spin/Power
 @onready var outline = $Spin/Outline
 @onready var light = $Spin/Light
+@onready var anim = $SunFinale
 
 @onready var on_off_dist = in_t.position.distance_to(out_t.position)
+@export var light_range = 15.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,11 +23,11 @@ func _process(delta):
 	transform = transform.interpolate_with(target.transform, (rate * delta)*(rate * delta))
 	
 	if target == in_t:
-		light.omni_range = 15.0 * (target.position.distance_to(position) / on_off_dist)
+		light.omni_range = light_range * (target.position.distance_to(position) / on_off_dist)
 		if position.distance_squared_to(target.position) < 0.1:
 			hide()
 	else:
-		light.omni_range = 15.0 * (1.0 - (target.position.distance_to(position) / on_off_dist))
+		light.omni_range = light_range * (1.0 - (target.position.distance_to(position) / on_off_dist))
 		if position.distance_squared_to(target.position) < 0.1:
 			show()
 

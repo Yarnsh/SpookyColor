@@ -7,6 +7,7 @@ extends CharacterBody3D
 @onready var view_pos = $RootCam/ViewPos
 @onready var foot_sfx = $Foot
 @onready var nail = $RootCam/Nail
+var nail_toggle = false
 
 @onready var grassy_foot_step = load("res://SFX/footstep.wav")
 @onready var stony_foot_step = load("res://SFX/stone_footstep.wav")
@@ -30,6 +31,7 @@ const foot_delay = 850
 const NORMAL_STATE = 0
 const CUTSCENE_STATE = 1
 var state = NORMAL_STATE
+var cutscene_nail = false
 
 func _process(delta):
 	# bit of a waste to do this every frame but honestly who cares anymore
@@ -55,7 +57,11 @@ func _physics_process(delta):
 		SPEED = 4.0
 	
 	if (state == NORMAL_STATE):
-		if Input.is_action_pressed("Use_Nail") and main_scene.mode == 0:
+		if (red or green or blue) and Input.is_action_just_pressed("Use_Nail") and main_scene.mode == 0:
+			nail_toggle = !nail_toggle
+		if !(red or green or blue):
+			nail_toggle = false
+		if nail_toggle:
 			nail.set_out()
 		else:
 			nail.set_in()
@@ -66,6 +72,7 @@ func _physics_process(delta):
 				if col.get_collider() == grassy_collider:
 					if foot_sfx.stream != grassy_foot_step:
 						foot_sfx.stream = grassy_foot_step
+						AudioServer.set_bus_effect_enabled(1, 0, false)
 				else:
 					if foot_sfx.stream != stony_foot_step:
 						foot_sfx.stream = stony_foot_step
@@ -106,7 +113,16 @@ func _physics_process(delta):
 			was_on_floor = false
 	
 	elif (state == CUTSCENE_STATE):
-		nail.set_in()
+		if is_on_floor():
+			velocity.x = 0.0
+			velocity.z = 0.0
+		else:
+			velocity.y -= gravity * delta
+		
+		if cutscene_nail:
+			nail.set_out()
+		else:
+			nail.set_in()
 	
 	move_and_slide()
 

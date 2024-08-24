@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://cwl2us1o2q61h"]
+[gd_scene load_steps=27 format=3 uid="uid://cwl2us1o2q61h"]
 
 [ext_resource type="Script" path="res://game_scene.gd" id="1_hm2jl"]
 [ext_resource type="Script" path="res://ScreenResolutionHandling.gd" id="1_yuvdf"]
+[ext_resource type="Environment" uid="uid://dwl1k4slfqgem" path="res://visual_env.tres" id="3_jua2l"]
 [ext_resource type="Environment" uid="uid://d2jew0e44lnph" path="res://default_env.tres" id="3_p61g4"]
 [ext_resource type="Shader" path="res://final.gdshader" id="4_ocbyf"]
 [ext_resource type="PackedScene" uid="uid://1neqraec1bd8" path="res://character.tscn" id="5_60aaj"]
@@ -1038,6 +1039,67 @@ viewport_path = NodePath("Resolution")
 [sub_resource type="ViewportTexture" id="ViewportTexture_pnw47"]
 viewport_path = NodePath("Spectrum")
 
+[sub_resource type="Animation" id="Animation_d8r5y"]
+resource_name = "Finish"
+length = 40.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:material:shader_parameter/global_spectrum")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.9, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:material:shader_parameter/min_res_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 9.5, 18.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.1, 0.1, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_wf1sp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:material:shader_parameter/global_spectrum")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:material:shader_parameter/min_res_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_utdd1"]
+_data = {
+"Finish": SubResource("Animation_d8r5y"),
+"RESET": SubResource("Animation_wf1sp")
+}
+
 [node name="GameScene" type="Node3D"]
 script = ExtResource("1_hm2jl")
 
@@ -1048,9 +1110,9 @@ render_target_update_mode = 4
 script = ExtResource("1_yuvdf")
 
 [node name="Camera3D" type="Camera3D" parent="Color"]
-transform = Transform3D(1, 0, 0, 0, 0.958193, 0.286123, 0, -0.286123, 0.958193, 0.00377429, -11.7229, -123.715)
+transform = Transform3D(-0.999501, 0.00904227, -0.0302815, 0.00851773, 0.999812, 0.0174066, 0.0304332, 0.01714, -0.99939, 0.00377429, 20.7491, 68.0624)
 cull_mask = 1
-environment = ExtResource("3_p61g4")
+environment = ExtResource("3_jua2l")
 current = true
 fov = 90.0
 
@@ -1629,31 +1691,22 @@ color_cam = NodePath("../../Color/Camera3D")
 color_cam = NodePath("../../Color/Camera3D")
 
 [node name="PathFollow3D" parent="Scene/FliesPath1" index="0"]
-transform = Transform3D(-0.99792, -0.00223856, -0.0643764, 0, 0.999396, -0.0347518, 0.0644153, -0.0346797, -0.997317, -1.11298, -2.44746, -0.457588)
-
-[node name="PathFollow3D5" parent="Scene/FliesPath1" index="4"]
-transform = Transform3D(-0.162071, 0.98107, 0.106002, -0.969483, -0.138284, -0.202435, -0.183945, -0.135576, 0.973541, -112.162, 10.6862, -11.5416)
+transform = Transform3D(-0.997919, -0.00223856, -0.0643764, 0, 0.999396, -0.0347518, 0.0644153, -0.0346797, -0.997316, -1.11298, -2.44746, -0.457588)
 
 [node name="PathFollow3D6" parent="Scene/FliesPath1" index="5"]
-transform = Transform3D(0.57849, -0.781609, 0.233316, -0.814669, -0.567926, 0.117362, 0.0407753, -0.257969, -0.96529, -131.745, 5.31784, 5.52934)
+transform = Transform3D(0.57849, -0.781609, 0.233316, -0.814669, -0.567926, 0.117362, 0.0407753, -0.257969, -0.965289, -131.745, 5.31784, 5.52934)
 
 [node name="PathFollow3D10" parent="Scene/FliesPath1" index="9"]
 transform = Transform3D(0.144162, 0.18128, -0.972807, 0.63773, 0.734676, 0.231411, 0.756649, -0.653749, -0.00969514, -24.495, 3.11466, -0.690614)
 
-[node name="PathFollow3D2" parent="Scene/SanctumLight" index="1"]
-transform = Transform3D(0.0447202, 0.154697, -0.986949, -0.964669, 0.263454, -0.00241601, 0.259643, 0.952187, 0.161013, -5.04634, 2.52138, -3.16478)
-
-[node name="PathFollow3D5" parent="Scene/CaveBug" index="3"]
-transform = Transform3D(-0.03952, 0.187168, 0.981531, 0.563056, -0.807323, 0.176619, 0.825472, 0.559637, -0.073481, 17.8984, 0.555406, -38.1515)
-
 [node name="PathFollow3D" parent="Scene/CaveBug2" index="0"]
-transform = Transform3D(0.941061, 0.0135631, -0.337959, 0, 0.999193, 0.0401001, 0.338231, -0.0377367, 0.940303, 17.7316, 10.0102, -24.1667)
+transform = Transform3D(0.941061, 0.0135631, -0.337958, 0, 0.999192, 0.0401001, 0.338231, -0.0377367, 0.940302, 17.7316, 10.0102, -24.1667)
 
 [node name="PathFollow3D2" parent="Scene/CaveBug2" index="1"]
-transform = Transform3D(0.350568, -0.339686, 0.872762, -0.932432, -0.213711, 0.291361, 0.0875471, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
+transform = Transform3D(0.350568, -0.339686, 0.872762, -0.932431, -0.213711, 0.291361, 0.087547, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
 
-[node name="PathFollow3D3" parent="Scene/CaveBug2" index="2"]
-transform = Transform3D(0.165184, 0.79942, 0.577617, -0.985485, 0.110566, 0.128802, 0.0391021, -0.590511, 0.806081, 0.73114, -4.10966, -49.8044)
+[node name="Finish" parent="Scene" index="28" node_paths=PackedStringArray("shader_anim")]
+shader_anim = NodePath("../../ShaderFinish")
 
 [node name="final_spook" parent="Scene" index="29"]
 visible = true
@@ -1666,74 +1719,58 @@ bones/1/position = Vector3(0.0120395, 6.97298, -0.126996)
 bones/1/rotation = Quaternion(1.93819e-09, -2.25477e-09, -4.37015e-18, 1)
 bones/2/position = Vector3(1.64624e-08, 11.519, -0.552291)
 bones/2/rotation = Quaternion(-0.0239525, 2.79733e-08, -1.38206e-09, 0.999713)
-bones/2/scale = Vector3(1, 1, 1)
 bones/3/position = Vector3(-9.80542e-10, 13.4543, 6.11979e-07)
 bones/3/rotation = Quaternion(-3.72529e-09, 4.09782e-08, -4.19944e-16, 1)
-bones/3/scale = Vector3(1, 1, 1)
 bones/4/position = Vector3(-1.18979e-09, 15.3763, 7.9178e-07)
 bones/4/rotation = Quaternion(0, -3.46438e-08, 4.35076e-17, 1)
-bones/4/scale = Vector3(1, 1, 1)
 bones/5/position = Vector3(1.21048e-10, 17.2984, -6.39566e-07)
 bones/5/rotation = Quaternion(0.0239525, 1.04264e-08, 2.60555e-09, 0.999713)
 bones/6/position = Vector3(-1.76312e-08, 0.701034, 0.145731)
 bones/6/rotation = Quaternion(1.86589e-09, -5.96046e-08, 1.11216e-16, 1)
 bones/7/position = Vector3(-0.223267, -187.607, 4.97079)
-bones/7/scale = Vector3(1, 1, 1)
 bones/8/position = Vector3(6.48218, 13.8887, 0.0344114)
 bones/8/rotation = Quaternion(0.604036, 0.369244, -0.600778, 0.371301)
-bones/8/scale = Vector3(1, 1, 1)
 bones/9/position = Vector3(8.01682e-06, 14.9112, 6.71297e-06)
 bones/9/rotation = Quaternion(0.323647, 0.169522, -0.059059, 0.928993)
-bones/9/scale = Vector3(1, 1, 1)
 bones/10/position = Vector3(-7.62939e-06, 31.0326, 1.50204e-05)
 bones/10/rotation = Quaternion(-0.0228759, -0.0819617, 0.267853, 0.959695)
-bones/10/scale = Vector3(1, 1, 1)
 bones/11/position = Vector3(-6.85453e-06, 32.1791, 4.92632e-05)
 bones/11/rotation = Quaternion(-6.0536e-08, -7.45058e-09, -8.75443e-08, 1)
-bones/11/scale = Vector3(1, 1, 1)
 bones/12/position = Vector3(-6.48219, 13.9076, -0.360464)
 bones/12/rotation = Quaternion(0.585242, -0.380852, 0.618075, 0.361147)
 bones/13/position = Vector3(-4.27663e-06, 14.9112, 1.65254e-05)
 bones/13/rotation = Quaternion(0.315811, -0.112663, 0.0377969, 0.941351)
-bones/13/scale = Vector3(1, 1, 1)
 bones/14/position = Vector3(5.72205e-06, 30.7893, -1.78814e-07)
 bones/14/rotation = Quaternion(-0.000488155, 0.00204723, -0.231898, 0.972738)
-bones/14/scale = Vector3(1, 1, 1)
 bones/15/position = Vector3(-1.34408e-05, 31.8881, 8.70228e-06)
 bones/15/rotation = Quaternion(1.88127e-07, -1.04308e-07, 2.10479e-07, 1)
-bones/15/scale = Vector3(1, 1, 1)
 bones/16/position = Vector3(12.3462, -6.39384, 0.399258)
 bones/16/rotation = Quaternion(-0.000415052, -0.00449176, 0.995751, -0.0919788)
-bones/16/scale = Vector3(1, 1, 1)
 bones/17/position = Vector3(4.99873e-06, 58.2359, 3.03263e-07)
 bones/17/rotation = Quaternion(-0.100604, 0.00116948, -0.0115672, 0.994859)
-bones/17/scale = Vector3(1, 1, 1)
 bones/18/position = Vector3(4.53182e-05, 53.397, -2.14577e-06)
 bones/18/rotation = Quaternion(0.491216, -0.193255, 0.112768, 0.841809)
 bones/19/position = Vector3(6.19888e-06, 22.5208, 9.53674e-06)
-bones/19/rotation = Quaternion(0.315075, 0.00776859, -0.00258011, 0.949031)
 bones/20/position = Vector3(36.8348, -19.3062, 8.28692)
 bones/20/rotation = Quaternion(0.0675706, 0.666866, 0.7022, 0.240082)
-bones/20/scale = Vector3(1, 1, 1)
 bones/21/position = Vector3(-12.3462, -6.39383, 0.777992)
 bones/21/rotation = Quaternion(0.00095089, -0.0102942, 0.995709, 0.0919593)
-bones/21/scale = Vector3(1, 1, 1)
 bones/22/position = Vector3(-5.47268e-06, 58.2456, 1.10736e-06)
 bones/22/rotation = Quaternion(-0.100857, -0.00119143, 0.0117502, 0.994831)
 bones/23/position = Vector3(2.28733e-06, 53.5361, -1.58548e-05)
 bones/23/rotation = Quaternion(0.506539, 0.183432, -0.111262, 0.8351)
 bones/24/position = Vector3(-3.93391e-06, 23.1083, 2.5034e-05)
 bones/24/rotation = Quaternion(0.303835, 0.0114004, -0.00363669, 0.952649)
-bones/24/scale = Vector3(1, 1, 1)
 bones/25/position = Vector3(-36.6627, -19.1365, 7.07715)
 bones/25/rotation = Quaternion(-0.0790484, 0.670163, 0.700984, -0.230769)
-bones/25/scale = Vector3(1, 1, 1)
 
-[node name="Object_7" parent="Scene/final_spook/Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D" index="0"]
-surface_material_override/0 = null
-
-[node name="Object_7_001" parent="Scene/final_spook/Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D" index="1"]
+[node name="Object_7_001" parent="Scene/final_spook/Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D" index="0"]
 layers = 1
+
+[node name="ShaderFinish" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_utdd1")
+}
 
 [connection signal="body_entered" from="GhostTrigger" to="GhostTrigger" method="_on_body_entered"]
 [connection signal="animation_finished" from="GhostTrigger/ghost/AnimationPlayer" to="GhostTrigger" method="_on_animation_player_animation_finished"]
@@ -1743,4 +1780,3 @@ layers = 1
 [editable path="Scene/OutdoorArea"]
 [editable path="Scene/GreenPickup"]
 [editable path="Scene/BluePickup"]
-[editable path="Scene/final_spook"]
