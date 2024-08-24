@@ -26,3 +26,6 @@ Hiking Boot Footsteps on Stone by Fission9 -- https://freesound.org/s/521590/ --
 
 mummy.glb:
 "Miniature Mummy" (https://skfb.ly/oOux7) by JPDV is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). (This file was modified from it's original form)
+
+buzz.wav:
+Buzzed_09.mp3 by lazr2012 -- https://freesound.org/s/170685/ -- License: Creative Commons 0 (Converted to wav)
