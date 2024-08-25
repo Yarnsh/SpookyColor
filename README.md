@@ -29,3 +29,6 @@ mummy.glb:
 
 buzz.wav:
 Buzzed_09.mp3 by lazr2012 -- https://freesound.org/s/170685/ -- License: Creative Commons 0 (Converted to wav)
+
+whisper.wav:
+Four_Voices_Whispering_4.wav by geoneo0 -- https://freesound.org/s/193809/ -- License: Creative Commons 0 (This file was modified from it's original form)
