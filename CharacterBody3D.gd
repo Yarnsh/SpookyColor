@@ -4,6 +4,7 @@ extends CharacterBody3D
 @onready var game_scene = $".."
 
 @onready var cam = $RootCam
+@onready var final_anim = $RootCam/Final
 @onready var view_pos = $RootCam/ViewPos
 @onready var foot_sfx = $Foot
 @onready var nail = $RootCam/Nail

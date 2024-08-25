@@ -8,6 +8,7 @@ var final_spook_anim : AnimationPlayer
 @export var finish_blocker : StaticBody3D
 @onready var sun_anim = $AnimationPlayer
 @onready var env = $"../WorldEnvironment"
+@export var final_noise : AudioStreamPlayer3D
 var character = null
 var start_time = 0
 const cutscene_time = 5.0
@@ -42,9 +43,11 @@ func _on_body_entered(body):
 	start_time = float(Time.get_ticks_msec()) / 1000.0
 
 func sun_done(something):
+	character.final_anim.play("hide")
 	final_spook_anim.play("Object_4Action")
 	final_spook_anim.animation_finished.connect(finish)
 	final_spook.show()
+	final_noise.play()
 
 func finish(something):
 	main_scene.show_credits()
