@@ -49,15 +49,6 @@ func _physics_process(delta):
 	var now = Time.get_ticks_msec()
 	
 	# debug stuff
-	if Input.is_action_just_pressed("change_windowed"): # can probably keep this and not just have it be debug
-		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
-			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-			DisplayServer.window_set_size(Vector2i(1000, 600)) # TODO: use configured res
-		else:
-			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	if Input.is_action_just_pressed("restart"):
-		get_tree().current_scene.show_credits()
-		return
 	if Input.is_action_pressed("speed_up"):
 		SPEED = 22.0
 	else:

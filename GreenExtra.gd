@@ -5,7 +5,7 @@ extends Node3D
 @export var presanctum : Node3D
 @export var sanctum_puzzle : Node3D
 
-func trigger():
+func trigger(char):
 	for thing in stuff:
 		thing.hide()
 	buganim.play("BugsLeave")

@@ -504,7 +504,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.6, 5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [2.0, 8.0, -20.0]
+"values": [2.0, 6.0, -20.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -3497,7 +3497,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.016, -17.282, -90.4274)
 curve = SubResource("Curve3D_ys14q")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Scene/FliesPath1"]
-transform = Transform3D(-0.997917, -0.00223856, -0.0643762, 0, 0.999396, -0.0347517, 0.0644152, -0.0346797, -0.997314, -1.11298, -2.44746, -0.457588)
+transform = Transform3D(-0.997917, -0.00223856, -0.0643762, 0, 0.999396, -0.0347517, 0.0644151, -0.0346797, -0.997314, -1.11298, -2.44746, -0.457588)
 script = ExtResource("29_2inc6")
 
 [node name="LightFly" parent="Scene/FliesPath1/PathFollow3D" instance=ExtResource("30_fdp0v")]
@@ -3520,7 +3520,7 @@ script = ExtResource("29_2inc6")
 skeleton = NodePath("../..")
 
 [node name="PathFollow3D4" type="PathFollow3D" parent="Scene/FliesPath1"]
-transform = Transform3D(-0.659126, 0.69621, 0.28433, 0.100011, 0.455873, -0.884407, -0.745352, -0.5545, -0.370107, -112.317, 9.81793, 10.2543)
+transform = Transform3D(-0.659126, 0.696209, 0.28433, 0.100011, 0.455873, -0.884407, -0.745352, -0.554499, -0.370107, -112.317, 9.81793, 10.2543)
 progress = 136.095
 script = ExtResource("29_2inc6")
 
@@ -3544,7 +3544,7 @@ script = ExtResource("29_2inc6")
 skeleton = NodePath("../..")
 
 [node name="PathFollow3D7" type="PathFollow3D" parent="Scene/FliesPath1"]
-transform = Transform3D(0.391469, -0.318588, 0.86328, -0.776976, -0.617076, 0.124605, 0.493012, -0.719528, -0.489101, -140.186, 5.51924, 10.5442)
+transform = Transform3D(0.391469, -0.318588, 0.86328, -0.776976, -0.617076, 0.124605, 0.493012, -0.719527, -0.489101, -140.186, 5.51924, 10.5442)
 progress = 236.442
 script = ExtResource("29_2inc6")
 
@@ -4040,7 +4040,7 @@ transform = Transform3D(-0.540651, 0.055135, -0.839438, -0.0451585, 0.994509, 0.
 curve = SubResource("Curve3D_tfol0")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Scene/CaveBug2"]
-transform = Transform3D(0.941061, 0.0135631, -0.337957, 0, 0.99919, 0.0401, 0.338231, -0.0377366, 0.9403, 17.7316, 10.0102, -24.1667)
+transform = Transform3D(0.941061, 0.0135631, -0.337957, 0, 0.99919, 0.0401, 0.338231, -0.0377366, 0.940299, 17.7316, 10.0102, -24.1667)
 script = ExtResource("29_2inc6")
 SPEED = 3.0
 
@@ -4049,7 +4049,7 @@ transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 0)
 skeleton = NodePath("../../../FliesPath1")
 
 [node name="PathFollow3D2" type="PathFollow3D" parent="Scene/CaveBug2"]
-transform = Transform3D(0.350567, -0.339686, 0.872762, -0.932428, -0.213711, 0.291361, 0.0875468, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
+transform = Transform3D(0.350566, -0.339686, 0.872762, -0.932428, -0.213711, 0.291361, 0.0875467, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
 progress = 93.3312
 script = ExtResource("29_2inc6")
 SPEED = 3.0
@@ -5210,9 +5210,204 @@ transform = Transform3D(-0.227892, 0, -0.973686, 0, 1, 0, 0.973686, 0, -0.227892
 size = Vector3(4.59839, 0.287598, 3.89783)
 texture_albedo = ExtResource("31_wp3va")
 
+[node name="Decal77" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.227892, 0, -0.973686, 0, 1, 0, 0.973686, 0, -0.227892, 58.6333, -15.025, 13.3619)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal78" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.227892, 0, -0.973686, 0, 1, 0, 0.973686, 0, -0.227892, -31.4734, -15.025, -12.9822)
+size = Vector3(11.8544, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal79" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.169676, 0, -0.9855, 0, 1, 0, 0.9855, 0, 0.169676, -29.1805, -15.025, -12.9822)
+size = Vector3(11.8544, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal81" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.917581, 0, 0.397548, 0, 1, 0, -0.397548, 0, 0.917581, 37.5578, -15.025, -12.9822)
+size = Vector3(11.8544, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal82" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.736274, 0, -0.676683, 0, 1, 0, 0.676683, 0, 0.736274, 56.6063, -15.025, -42.3483)
+size = Vector3(11.8544, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal83" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.234057, 0, -0.972223, 0, 1, 0, 0.972223, 0, -0.234057, 61.3789, -15.025, -40.6353)
+size = Vector3(11.8544, 0.287598, 8.55096)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal80" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.169676, 0, -0.9855, -0.717303, 0.685729, -0.1235, 0.675786, 0.727857, 0.116352, -29.1805, -15.025, -16.9749)
+size = Vector3(11.8544, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal75" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.871685, 0, -0.490067, 0, 1, 0, 0.490067, 0, -0.871685, -60.8686, -15.025, 15.2551)
+size = Vector3(10.8578, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal76" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.952947, 0, 0.303135, 0.198759, 0.755042, 0.624826, -0.22888, 0.655677, -0.719515, 27.0807, -15.025, 11.0915)
+size = Vector3(10.8578, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal19" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.994213, 0, -0.107426, 0, 1, 0, 0.107426, 0, -0.994213, 13.8058, -15.025, 6.62178)
+size = Vector3(4.59839, 0.287598, 9.40359)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal16" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.231323, 0, -0.972877, 0, 1, 0, 0.972877, 0, 0.231323, 13.2951, -15.025, 2.79176)
+size = Vector3(7.13233, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal17" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.464255, 0, 0.885702, 0, 1, 0, -0.885702, 0, 0.464255, 17.7966, -15.025, 3.50761)
+size = Vector3(9.37292, 0.287598, 7.13202)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal18" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.308055, -0.748134, 0.587705, 0.347325, 0.663548, 0.662623, -0.885702, 0, 0.464255, 22.795, -15.4961, 3.50761)
+size = Vector3(9.37292, 0.287598, 7.13202)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal20" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.971491, 0, -0.237076, 0, 1, 0, 0.237076, 0, 0.971491, -44.1824, -15.025, 4.65637)
+size = Vector3(4.59839, 0.287598, 9.40359)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal21" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.113308, 0, 0.99356, 0, 1, 0, -0.99356, 0, 0.113308, -45.0046, -15.025, 8.43178)
+size = Vector3(7.13233, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal22" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.737784, 0, -0.675036, 0, 1, 0, 0.675036, 0, -0.737784, -48.9944, -15.025, 6.22777)
+size = Vector3(9.37292, 0.287598, 7.13202)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal23" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.590894, 0.703546, -0.3948, 0.347325, 0.663548, 0.662623, 0.728155, 0.254416, -0.636446, -53.6949, -15.4961, 4.528)
+size = Vector3(9.37292, 0.287598, 7.13202)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal24" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.65819, 0, -0.752852, 0, 1, 0, 0.752852, 0, 0.65819, -75.4802, -15.025, -30.6673)
+size = Vector3(4.59839, 0.287598, 9.40359)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal25" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.664318, 0, 0.74745, 0, 1, 0, -0.74745, 0, 0.664318, -78.3249, -15.025, -28.0524)
+size = Vector3(7.13233, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal26" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.991821, 0, -0.127636, 0, 1, 0, 0.127636, 0, -0.991821, -80.3201, -15.025, -32.1506)
+size = Vector3(9.37292, 0.287598, 7.13202)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal27" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.90224, 0.429059, 0.0432669, 0.347325, 0.663548, 0.662623, 0.255595, 0.612873, -0.747702, -83.1867, -15.4961, -36.2453)
+size = Vector3(9.37292, 0.287598, 7.13202)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal28" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.483389, 0, 0.875406, 0, 1, 0, -0.875406, 0, -0.483389, -44.3711, -15.025, -27.2401)
+size = Vector3(4.59839, 0.287598, 9.40359)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal29" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.807836, 0, -0.589408, 0, 1, 0, 0.589408, 0, -0.807836, -41.0362, -15.025, -29.1916)
+size = Vector3(7.13233, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal30" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.996312, 0, -0.0857997, 0, 1, 0, 0.0857997, 0, 0.996312, -39.9563, -15.025, -24.7632)
+size = Vector3(9.37292, 0.287598, 7.13202)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal31" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.935933, -0.289191, -0.20099, 0.347325, 0.663548, 0.662623, -0.0582584, -0.68998, 0.72148, -38.0242, -15.4961, -20.1535)
+size = Vector3(9.37292, 0.287598, 7.13202)
+texture_albedo = ExtResource("31_wp3va")
+
 [node name="Decal2" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
 transform = Transform3D(0.656428, 0, -0.754389, 0, 1, 0, 0.754389, 0, 0.656428, 44.367, -15.025, 0.224609)
 size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal32" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.00609156, 0, -0.999982, 0, 1, 0, 0.999982, 0, -0.00609156, 43.5958, -15.025, 6.44774)
+size = Vector3(11.4761, 0.287598, 9.72577)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal33" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.180056, 0, 0.983657, 0, 1, 0, -0.983657, 0, 0.180056, 47.6996, -15.025, -3.39963)
+size = Vector3(11.4761, 0.287598, 5.34921)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal34" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.984022, 0, 0.178047, 0, 1, 0, -0.178047, 0, -0.984022, 72.6632, -15.025, 7.59454)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal35" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.620696, 0, 0.784052, 0, 1, 0, -0.784052, 0, -0.620696, 69.3726, -15.025, 2.25658)
+size = Vector3(11.4761, 0.287598, 9.72577)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal36" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.474749, 0, -0.880122, 0, 1, 0, 0.880122, 0, 0.474749, 72.3298, -15.025, 12.5068)
+size = Vector3(11.4761, 0.287598, 5.34921)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal37" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.617928, 0, 0.786235, 0, 1, 0, -0.786235, 0, -0.617928, 45.7585, -15.025, -53.0852)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal38" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.0560312, 0, 0.998429, 0, 1, 0, -0.998429, 0, 0.0560312, 46.8396, -15.025, -59.2621)
+size = Vector3(11.4761, 0.287598, 9.72577)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal39" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.228963, 0, -0.973435, 0, 1, 0, 0.973435, 0, -0.228963, 42.2491, -15.025, -49.632)
+size = Vector3(11.4761, 0.287598, 5.34921)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal40" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.752311, 0, -0.658808, 0, 1, 0, 0.658808, 0, 0.752311, -15.6942, -15.025, -55.8729)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal41" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.129037, 0, -0.99164, 0, 1, 0, 0.99164, 0, 0.129037, -15.6177, -15.025, -49.6027)
+size = Vector3(11.4761, 0.287598, 9.72577)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal42" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.0455378, 0, 0.998963, 0, 1, 0, -0.998963, 0, 0.0455378, -12.8817, -15.025, -59.9141)
+size = Vector3(11.4761, 0.287598, 5.34921)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal43" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.752311, 0, -0.658808, 0, 1, 0, 0.658808, 0, 0.752311, -76.7147, -15.025, 6.32281)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal44" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.129037, 0, -0.99164, 0, 1, 0, 0.99164, 0, 0.129037, -76.6382, -15.025, 12.5931)
+size = Vector3(11.4761, 0.287598, 9.72577)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal45" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.0455378, 0, 0.998963, 0, 1, 0, -0.998963, 0, 0.0455378, -73.9022, -15.025, 2.28165)
+size = Vector3(11.4761, 0.287598, 5.34921)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal3" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
@@ -5233,6 +5428,151 @@ texture_albedo = ExtResource("31_wp3va")
 [node name="Decal6" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
 transform = Transform3D(0.869823, 0, 0.493365, 0, 1, 0, -0.493365, 0, 0.869823, -15.5282, -15.025, -27.7062)
 size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal48" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.552184, 0, 0.833722, 0, 1, 0, -0.833722, 0, -0.552184, -12.537, -15.025, -28.4995)
+size = Vector3(10.5848, 0.287598, 5.46942)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal49" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.967197, 0, 0.254028, 0, 1, 0, -0.254028, 0, -0.967197, -18.3246, -15.025, -25.4242)
+size = Vector3(5.2016, 0.287598, 16.787)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal46" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.747554, 0.511248, 0.424014, -0.444695, 0.859433, -0.252232, -0.493365, 0, 0.869823, -20.8077, -15.2789, -24.5334)
+size = Vector3(6.86511, 0.287598, 9.90741)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal47" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.660639, -0.650496, 0.374716, 0.565816, 0.75951, 0.320932, -0.493365, 2.42983e-09, 0.869823, -7.90854, -15.2789, -24.5334)
+size = Vector3(6.86511, 0.287598, 9.90741)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal50" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.856502, 0, -0.516144, 0, 1, 0, 0.516144, 0, -0.856502, 77.9696, -15.025, -24.5864)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal51" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.573991, 0, -0.818862, 0, 1, 0, 0.818862, 0, 0.573991, 75.0003, -15.025, -23.7145)
+size = Vector3(10.5848, 0.287598, 5.46942)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal52" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.973563, 0, -0.228419, 0, 1, 0, 0.228419, 0, 0.973563, 80.7048, -15.025, -26.9414)
+size = Vector3(5.2016, 0.287598, 16.787)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal53" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.734276, -0.51107, -0.446818, -0.444695, 0.859433, -0.252232, 0.512918, 0.0134899, -0.858332, 83.1635, -15.2789, -27.8974)
+size = Vector3(6.86511, 0.287598, 9.90741)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal54" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.647391, 0.65027, -0.397536, 0.565816, 0.75951, 0.320932, 0.510625, -0.017164, -0.859633, 70.2688, -15.2789, -27.5571)
+size = Vector3(6.86511, 0.287598, 9.90741)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal55" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.684725, 0, 0.728802, 0, 1, 0, -0.728802, 0, -0.684725, 44.0737, -15.025, -25.2769)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal56" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.679838, 0, -0.733362, 0, 1, 0, 0.733362, 0, -0.679838, 42.5968, -15.025, -27.9964)
+size = Vector3(10.5848, 0.287598, 5.46942)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal57" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.0185695, 0, -0.999828, 0, 1, 0, 0.999828, 0, -0.0185695, 46.9512, -15.025, -23.0981)
+size = Vector3(5.2016, 0.287598, 16.787)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal58" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.655867, -0.120667, 0.74517, -0.444695, 0.859433, -0.252232, -0.609988, -0.496804, -0.617334, 48.4029, -15.2789, -20.8954)
+size = Vector3(6.86511, 0.287598, 9.90741)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal59" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.635353, 0.153533, 0.756806, 0.565816, 0.75951, 0.320932, -0.525528, 0.632118, -0.569428, 45.3584, -15.2789, -33.4301)
+size = Vector3(6.86511, 0.287598, 9.90741)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal60" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.684725, 0, 0.728802, 0, 1, 0, -0.728802, 0, -0.684725, -41.14, -15.025, -52.3703)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal61" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.679838, 0, -0.733362, 0, 1, 0, 0.733362, 0, -0.679838, -42.6168, -15.025, -55.0899)
+size = Vector3(10.5848, 0.287598, 5.46942)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal62" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.0185695, 0, -0.999828, 0, 1, 0, 0.999828, 0, -0.0185695, -38.2625, -15.025, -50.1916)
+size = Vector3(5.2016, 0.287598, 16.787)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal63" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.655867, -0.120667, 0.74517, -0.444695, 0.859433, -0.252232, -0.609988, -0.496804, -0.617334, -36.8107, -15.2789, -47.9889)
+size = Vector3(6.86511, 0.287598, 9.90741)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal64" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.635353, 0.153533, 0.756806, 0.565816, 0.75951, 0.320932, -0.525528, 0.632118, -0.569428, -39.8553, -15.2789, -60.5236)
+size = Vector3(6.86511, 0.287598, 9.90741)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal65" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.684725, 0, 0.728802, 0, 1, 0, -0.728802, 0, -0.684725, 72.7053, -15.025, -52.3703)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal66" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.679838, 0, -0.733362, 0, 1, 0, 0.733362, 0, -0.679838, 71.2284, -15.025, -55.0899)
+size = Vector3(10.5848, 0.287598, 5.46942)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal67" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.0185695, 0, -0.999828, 0, 1, 0, 0.999828, 0, -0.0185695, 75.5828, -15.025, -50.1916)
+size = Vector3(5.2016, 0.287598, 16.787)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal68" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.655867, -0.120667, 0.74517, -0.444695, 0.859433, -0.252232, -0.609988, -0.496804, -0.617334, 77.0345, -15.2789, -47.9889)
+size = Vector3(6.86511, 0.287598, 9.90741)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal69" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.635353, 0.153533, 0.756806, 0.565816, 0.75951, 0.320932, -0.525528, 0.632118, -0.569428, 73.99, -15.2789, -60.5236)
+size = Vector3(6.86511, 0.287598, 9.90741)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal70" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.911238, 0, 0.41188, 0, 1, 0, -0.41188, 0, 0.911238, 15.8196, -15.025, -54.8395)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal71" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.47375, 0, 0.88066, 0, 1, 0, -0.88066, 0, -0.47375, 18.8708, -15.025, -55.3563)
+size = Vector3(10.5848, 0.287598, 5.46942)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal72" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.939961, 0, 0.341282, 0, 1, 0, -0.341282, 0, -0.939961, 12.8265, -15.025, -52.8224)
+size = Vector3(5.2016, 0.287598, 16.787)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal73" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.789481, 0.509112, 0.342819, -0.444695, 0.859433, -0.252232, -0.423044, 0.0466824, 0.904906, 10.2724, -15.2789, -52.162)
+size = Vector3(6.86511, 0.287598, 9.90741)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal74" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.702929, -0.647778, 0.293726, 0.565816, 0.75951, 0.320932, -0.430981, -0.0593973, 0.900405, 23.1177, -15.2789, -50.9842)
+size = Vector3(6.86511, 0.287598, 9.90741)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal7" type="Decal" parent="Scene/SanctumPuzzle/Blood"]

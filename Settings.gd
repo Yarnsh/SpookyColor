@@ -93,3 +93,8 @@ func back():
 
 func _on_controls_pressed():
 	main_scene.set_mode(3)
+
+func _input(event):
+	if event.is_action_pressed("change_windowed"):
+		fullscreen.button_pressed = !fullscreen.button_pressed
+		_on_apply_pressed()

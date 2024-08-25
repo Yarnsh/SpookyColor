@@ -7,6 +7,8 @@ extends Node3D
 @onready var interact_button2 = $InteractButton2
 @onready var character = $".."
 @onready var subtitles = $Subtitles
+@onready var subtitles2 = $Subtitles2
+@onready var subs2player = $Subs2
 var last_interactable = null
 var pitch = 0.0
 var yaw = 0.0
@@ -69,6 +71,10 @@ func set_subtitles(text):
 	else:
 		subtitles.show()
 		set_button_visible(true)
+
+func set_popup(text):
+	subtitles2.text = text
+	subs2player.play("play")
 
 func set_button_visible(v):
 	interact_button2.visible = v

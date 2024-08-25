@@ -22,10 +22,10 @@ func interact(c):
 	if game_scene.colors[0] and game_scene.colors[1] and game_scene.colors[2]:
 		game_scene.start_exit_sequence()
 	if extra_trigger != null:
-		extra_trigger.trigger()
+		extra_trigger.trigger(c)
 
 func set_finished():
 	set_collision_layer_value(2, false)
 	hide()
 	if extra_trigger != null:
-		extra_trigger.trigger()
+		extra_trigger.trigger(null)

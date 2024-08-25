@@ -16,7 +16,7 @@ func _process(delta):
 	if char != null:
 		death.global_position = char.global_position
 		if Time.get_ticks_msec() - start > 2250:
-			char.kill("The denizens of this place know better than you.", null)
+			char.kill("The mistakes of those before you mark the path", null)
 
 
 func _on_body_entered(body):
