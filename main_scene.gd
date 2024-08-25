@@ -41,6 +41,7 @@ func resume():
 
 func start_game(flags):
 	stop_game()
+	AudioServer.set_bus_effect_enabled(1, 0, false)
 	
 	game_scene = game_prefab.instantiate()
 	add_child(game_scene)
@@ -89,8 +90,8 @@ func _input(event):
 			set_mode(2)
 	
 	if event.is_action_pressed("PreGreen"):
-		loaded_flags = load_flags("user://save_pregreen.dat")
-		start_game(loaded_flags)
+		game_scene.update_player_stuff()
+		save_flags(game_scene.get_flags())
 
 func load_flags(path = "user://save.dat"):
 	if not FileAccess.file_exists(path):

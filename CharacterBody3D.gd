@@ -9,6 +9,8 @@ extends CharacterBody3D
 @onready var nail = $RootCam/Nail
 var nail_toggle = false
 
+@onready var sfx_player = $SFXPlayer
+
 @onready var grassy_foot_step = load("res://SFX/footstep.wav")
 @onready var stony_foot_step = load("res://SFX/stone_footstep.wav")
 @export var grassy_collider : StaticBody3D
@@ -32,6 +34,11 @@ const NORMAL_STATE = 0
 const CUTSCENE_STATE = 1
 var state = NORMAL_STATE
 var cutscene_nail = false
+
+func play_sfx(sound, db):
+	sfx_player.stream = sound
+	sfx_player.volume_db = db
+	sfx_player.play()
 
 func _process(delta):
 	# bit of a waste to do this every frame but honestly who cares anymore
