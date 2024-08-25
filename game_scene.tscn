@@ -1,4 +1,4 @@
-[gd_scene load_steps=151 format=3 uid="uid://cwl2us1o2q61h"]
+[gd_scene load_steps=157 format=3 uid="uid://cwl2us1o2q61h"]
 
 [ext_resource type="Script" path="res://game_scene.gd" id="1_hm2jl"]
 [ext_resource type="Script" path="res://ScreenResolutionHandling.gd" id="1_yuvdf"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://1neqraec1bd8" path="res://character.tscn" id="5_60aaj"]
 [ext_resource type="Script" path="res://GhostTrigger.gd" id="6_yv3wu"]
 [ext_resource type="AudioStream" uid="uid://ch3p4mtlrqx7o" path="res://SFX/whisper.wav" id="8_8y0h2"]
-[ext_resource type="PackedScene" uid="uid://filfepwe8h8v" path="res://Actors/walk_ghost.tscn" id="8_tqyha"]
 [ext_resource type="Shader" path="res://water.gdshader" id="9_nphpt"]
 [ext_resource type="AudioStream" uid="uid://bn568ag8hxuij" path="res://SFX/ocean_loop.wav" id="10_mt0np"]
 [ext_resource type="Script" path="res://OceanSound.gd" id="11_s5emw"]
@@ -46,9 +45,11 @@
 [ext_resource type="Script" path="res://DeathZone.gd" id="41_inlno"]
 [ext_resource type="Script" path="res://BlueExtra.gd" id="42_4hb6p"]
 [ext_resource type="Script" path="res://Finish.gd" id="42_38swx"]
+[ext_resource type="PackedScene" uid="uid://cxmw35i74cbow" path="res://Actors/ghost.tscn" id="46_dbkb6"]
 [ext_resource type="Script" path="res://PreSanctumWarning.gd" id="47_mdcc4"]
 [ext_resource type="Script" path="res://PreLightSanctum.gd" id="47_pp0fn"]
 [ext_resource type="Script" path="res://PreSanctumDeath.gd" id="48_fislt"]
+[ext_resource type="Script" path="res://SanctumPuzzle.gd" id="50_5rpru"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_1a7j4"]
 viewport_path = NodePath("Color")
@@ -150,7 +151,7 @@ size = Vector3(8, 10, 1)
 [sub_resource type="Curve3D" id="Curve3D_ys14q"]
 bake_interval = 12.0
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.11298, -2.44746, -0.457588, 0, 0, 0, 0, 0, 0, -0.784927, -2.27037, 4.62459, 0, 0, 0, 0, 0, 0, 1.3232, -0.908758, 10.3532, 0, 0, 0, 0, 0, 0, -3.7643, 0.4834, 8.67245, 0, 0, 0, 0, 0, 0, -16.2315, -0.129044, 8.14679, 0, 0, 0, 0, 0, 0, -108.342, 0.20183, 8.76688, 0, 0, 0, 0, 0, 0, -113.124, 7.12159, 5.34996, 0, 0, 0, 0, 0, 0, -111.178, 10.5853, -10.9735, 0, 0, 0, 0, 0, 0, -134.047, 10.805, -14.0517, 0, 0, 0, 0, 0, 0, -135.521, 8.84276, -10.8953, 0, 0, 0, 0, 0, 0, -128.514, 5.73189, -0.68309, 0, 0, 0, 0, 0, 0, -137.515, 4.69992, 15.9042, 0, 0, 0, 0, 0, 0, -138.789, 9.68033, 15.1679, 0, 0, 0, 0, 0, 0, -136.782, 17.2694, 14.0132, 0, 0, 0, 0, 0, 0, -100.845, 21.2768, -1.45152, 0, 0, 0, 0, 0, 0, -1.11298, -2.44746, -0.457588),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.11298, -2.44746, -0.457588, 0, 0, 0, 0, 0, 0, -0.784927, -2.27037, 4.62459, 0, 0, 0, 0, 0, 0, 1.3232, -0.908758, 10.3532, 0, 0, 0, 0, 0, 0, -3.7643, 0.4834, 8.67245, 0, 0, 0, 0, 0, 0, -16.2315, -0.129044, 8.14679, 0, 0, 0, 0, 0, 0, -108.342, 0.20183, 8.76688, 0, 0, 0, 0, 0, 0, -113.124, 7.12159, 5.34996, 0, 0, 0, 0, 0, 0, -111.286, 11.7918, 15.5476, 0, 0, 0, 0, 0, 0, -135.256, 11.9268, -5.89625, 0, 0, 0, 0, 0, 0, -126.915, 11.5614, 21.5261, 0, 0, 0, 0, 0, 0, -127.087, 7.50056, 3.24677, 0, 0, 0, 0, 0, 0, -140.34, 5.58763, 10.7554, 0, 0, 0, 0, 0, 0, -138.789, 9.68033, 15.1679, 0, 0, 0, 0, 0, 0, -136.782, 17.2694, 14.0132, 0, 0, 0, 0, 0, 0, -100.845, 21.2768, -1.45152, 0, 0, 0, 0, 0, 0, -1.11298, -2.44746, -0.457588),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 16
@@ -1918,374 +1919,6 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="Animation" id="Animation_u8lv2"]
-resource_name = "mixamo_com"
-length = 0.001
-tracks/0/type = "position_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:_rootJoint")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0)
-tracks/1/type = "rotation_3d"
-tracks/1/imported = true
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:_rootJoint")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, -8.55714e-09, 1.71143e-08, -2.92898e-16, 1)
-tracks/2/type = "scale_3d"
-tracks/2/imported = true
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:_rootJoint")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, 1, 1, 1)
-tracks/3/type = "position_3d"
-tracks/3/imported = true
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Hips_00")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, 0.0120395, 6.97298, -0.126996)
-tracks/4/type = "rotation_3d"
-tracks/4/imported = true
-tracks/4/enabled = true
-tracks/4/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Hips_00")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, 1.93819e-09, -2.25477e-09, -4.37015e-18, 1)
-tracks/5/type = "position_3d"
-tracks/5/imported = true
-tracks/5/enabled = true
-tracks/5/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Spine_01")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(0, 1, 1.64624e-08, 11.519, -0.552291)
-tracks/6/type = "rotation_3d"
-tracks/6/imported = true
-tracks/6/enabled = true
-tracks/6/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Spine_01")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(0, 1, -0.0239525, 2.79733e-08, -1.38206e-09, 0.999713)
-tracks/7/type = "position_3d"
-tracks/7/imported = true
-tracks/7/enabled = true
-tracks/7/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Spine1_02")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = PackedFloat32Array(0, 1, -9.80542e-10, 13.4543, 6.11979e-07)
-tracks/8/type = "rotation_3d"
-tracks/8/imported = true
-tracks/8/enabled = true
-tracks/8/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Spine1_02")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = PackedFloat32Array(0, 1, -3.72529e-09, 4.09782e-08, -4.19944e-16, 1)
-tracks/9/type = "position_3d"
-tracks/9/imported = true
-tracks/9/enabled = true
-tracks/9/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Spine2_03")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = PackedFloat32Array(0, 1, -1.18979e-09, 15.3763, 7.9178e-07)
-tracks/10/type = "rotation_3d"
-tracks/10/imported = true
-tracks/10/enabled = true
-tracks/10/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Spine2_03")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = PackedFloat32Array(0, 1, 0, -3.46438e-08, 4.35076e-17, 1)
-tracks/11/type = "position_3d"
-tracks/11/imported = true
-tracks/11/enabled = true
-tracks/11/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Neck_04")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = PackedFloat32Array(0, 1, 1.21048e-10, 17.2984, -6.39566e-07)
-tracks/12/type = "rotation_3d"
-tracks/12/imported = true
-tracks/12/enabled = true
-tracks/12/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Neck_04")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = PackedFloat32Array(0, 1, 0.0239525, 1.04264e-08, 2.60555e-09, 0.999713)
-tracks/13/type = "position_3d"
-tracks/13/imported = true
-tracks/13/enabled = true
-tracks/13/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Head_05")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = PackedFloat32Array(0, 1, -1.76312e-08, 0.701034, 0.145731)
-tracks/14/type = "rotation_3d"
-tracks/14/imported = true
-tracks/14/enabled = true
-tracks/14/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Head_05")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = PackedFloat32Array(0, 1, 1.86589e-09, -5.96046e-08, 1.11216e-16, 1)
-tracks/15/type = "scale_3d"
-tracks/15/imported = true
-tracks/15/enabled = true
-tracks/15/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Head_05")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = PackedFloat32Array(0, 1, 1, 1, 1)
-tracks/16/type = "position_3d"
-tracks/16/imported = true
-tracks/16/enabled = true
-tracks/16/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_HeadTop_End_06")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = PackedFloat32Array(0, 1, -0.223267, -187.607, 4.97079)
-tracks/17/type = "position_3d"
-tracks/17/imported = true
-tracks/17/enabled = true
-tracks/17/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftShoulder_07")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = PackedFloat32Array(0, 1, 6.48218, 13.8887, 0.0344114)
-tracks/18/type = "rotation_3d"
-tracks/18/imported = true
-tracks/18/enabled = true
-tracks/18/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftShoulder_07")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = PackedFloat32Array(0, 1, 0.604036, 0.369244, -0.600778, 0.371301)
-tracks/19/type = "position_3d"
-tracks/19/imported = true
-tracks/19/enabled = true
-tracks/19/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftArm_08")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = PackedFloat32Array(0, 1, 8.01682e-06, 14.9112, 6.71297e-06)
-tracks/20/type = "rotation_3d"
-tracks/20/imported = true
-tracks/20/enabled = true
-tracks/20/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftArm_08")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = PackedFloat32Array(0, 1, 0.323647, 0.169522, -0.059059, 0.928993)
-tracks/21/type = "position_3d"
-tracks/21/imported = true
-tracks/21/enabled = true
-tracks/21/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftForeArm_09")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/keys = PackedFloat32Array(0, 1, -7.62939e-06, 31.0326, 1.50204e-05)
-tracks/22/type = "rotation_3d"
-tracks/22/imported = true
-tracks/22/enabled = true
-tracks/22/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftForeArm_09")
-tracks/22/interp = 1
-tracks/22/loop_wrap = true
-tracks/22/keys = PackedFloat32Array(0, 1, -0.0228759, -0.0819617, 0.267853, 0.959695)
-tracks/23/type = "position_3d"
-tracks/23/imported = true
-tracks/23/enabled = true
-tracks/23/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftHand_010")
-tracks/23/interp = 1
-tracks/23/loop_wrap = true
-tracks/23/keys = PackedFloat32Array(0, 1, -6.85453e-06, 32.1791, 4.92632e-05)
-tracks/24/type = "rotation_3d"
-tracks/24/imported = true
-tracks/24/enabled = true
-tracks/24/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftHand_010")
-tracks/24/interp = 1
-tracks/24/loop_wrap = true
-tracks/24/keys = PackedFloat32Array(0, 1, -6.0536e-08, -7.45058e-09, -8.75443e-08, 1)
-tracks/25/type = "position_3d"
-tracks/25/imported = true
-tracks/25/enabled = true
-tracks/25/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightShoulder_011")
-tracks/25/interp = 1
-tracks/25/loop_wrap = true
-tracks/25/keys = PackedFloat32Array(0, 1, -6.48219, 13.9076, -0.360464)
-tracks/26/type = "rotation_3d"
-tracks/26/imported = true
-tracks/26/enabled = true
-tracks/26/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightShoulder_011")
-tracks/26/interp = 1
-tracks/26/loop_wrap = true
-tracks/26/keys = PackedFloat32Array(0, 1, 0.585242, -0.380852, 0.618075, 0.361147)
-tracks/27/type = "position_3d"
-tracks/27/imported = true
-tracks/27/enabled = true
-tracks/27/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightArm_012")
-tracks/27/interp = 1
-tracks/27/loop_wrap = true
-tracks/27/keys = PackedFloat32Array(0, 1, -4.27663e-06, 14.9112, 1.65254e-05)
-tracks/28/type = "rotation_3d"
-tracks/28/imported = true
-tracks/28/enabled = true
-tracks/28/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightArm_012")
-tracks/28/interp = 1
-tracks/28/loop_wrap = true
-tracks/28/keys = PackedFloat32Array(0, 1, 0.315811, -0.112663, 0.0377969, 0.941351)
-tracks/29/type = "position_3d"
-tracks/29/imported = true
-tracks/29/enabled = true
-tracks/29/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightForeArm_013")
-tracks/29/interp = 1
-tracks/29/loop_wrap = true
-tracks/29/keys = PackedFloat32Array(0, 1, 5.72205e-06, 30.7893, -1.78814e-07)
-tracks/30/type = "rotation_3d"
-tracks/30/imported = true
-tracks/30/enabled = true
-tracks/30/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightForeArm_013")
-tracks/30/interp = 1
-tracks/30/loop_wrap = true
-tracks/30/keys = PackedFloat32Array(0, 1, -0.000488155, 0.00204723, -0.231898, 0.972738)
-tracks/31/type = "position_3d"
-tracks/31/imported = true
-tracks/31/enabled = true
-tracks/31/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightHand_014")
-tracks/31/interp = 1
-tracks/31/loop_wrap = true
-tracks/31/keys = PackedFloat32Array(0, 1, -1.34408e-05, 31.8881, 8.70228e-06)
-tracks/32/type = "rotation_3d"
-tracks/32/imported = true
-tracks/32/enabled = true
-tracks/32/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightHand_014")
-tracks/32/interp = 1
-tracks/32/loop_wrap = true
-tracks/32/keys = PackedFloat32Array(0, 1, 1.88127e-07, -1.04308e-07, 2.10479e-07, 1)
-tracks/33/type = "position_3d"
-tracks/33/imported = true
-tracks/33/enabled = true
-tracks/33/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftUpLeg_015")
-tracks/33/interp = 1
-tracks/33/loop_wrap = true
-tracks/33/keys = PackedFloat32Array(0, 1, 12.3462, -6.39384, 0.399258)
-tracks/34/type = "rotation_3d"
-tracks/34/imported = true
-tracks/34/enabled = true
-tracks/34/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftUpLeg_015")
-tracks/34/interp = 1
-tracks/34/loop_wrap = true
-tracks/34/keys = PackedFloat32Array(0, 1, 0.000415052, 0.00449176, -0.995751, 0.0919787)
-tracks/35/type = "position_3d"
-tracks/35/imported = true
-tracks/35/enabled = true
-tracks/35/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftLeg_016")
-tracks/35/interp = 1
-tracks/35/loop_wrap = true
-tracks/35/keys = PackedFloat32Array(0, 1, 4.99873e-06, 58.2359, 3.03263e-07)
-tracks/36/type = "rotation_3d"
-tracks/36/imported = true
-tracks/36/enabled = true
-tracks/36/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftLeg_016")
-tracks/36/interp = 1
-tracks/36/loop_wrap = true
-tracks/36/keys = PackedFloat32Array(0, 1, -0.100604, 0.00116948, -0.0115672, 0.994859)
-tracks/37/type = "position_3d"
-tracks/37/imported = true
-tracks/37/enabled = true
-tracks/37/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftFoot_017")
-tracks/37/interp = 1
-tracks/37/loop_wrap = true
-tracks/37/keys = PackedFloat32Array(0, 1, 4.53182e-05, 53.397, -2.14577e-06)
-tracks/38/type = "rotation_3d"
-tracks/38/imported = true
-tracks/38/enabled = true
-tracks/38/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftFoot_017")
-tracks/38/interp = 1
-tracks/38/loop_wrap = true
-tracks/38/keys = PackedFloat32Array(0, 1, 0.491216, -0.193255, 0.112768, 0.841809)
-tracks/39/type = "position_3d"
-tracks/39/imported = true
-tracks/39/enabled = true
-tracks/39/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftToeBase_018")
-tracks/39/interp = 1
-tracks/39/loop_wrap = true
-tracks/39/keys = PackedFloat32Array(0, 1, 6.19888e-06, 22.5208, 9.53674e-06)
-tracks/40/type = "position_3d"
-tracks/40/imported = true
-tracks/40/enabled = true
-tracks/40/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftToe_End_019")
-tracks/40/interp = 1
-tracks/40/loop_wrap = true
-tracks/40/keys = PackedFloat32Array(0, 1, 36.8348, -19.3062, 8.28692)
-tracks/41/type = "rotation_3d"
-tracks/41/imported = true
-tracks/41/enabled = true
-tracks/41/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftToe_End_019")
-tracks/41/interp = 1
-tracks/41/loop_wrap = true
-tracks/41/keys = PackedFloat32Array(0, 1, 0.0675706, 0.666866, 0.7022, 0.240082)
-tracks/42/type = "position_3d"
-tracks/42/imported = true
-tracks/42/enabled = true
-tracks/42/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightUpLeg_020")
-tracks/42/interp = 1
-tracks/42/loop_wrap = true
-tracks/42/keys = PackedFloat32Array(0, 1, -12.3462, -6.39383, 0.777992)
-tracks/43/type = "rotation_3d"
-tracks/43/imported = true
-tracks/43/enabled = true
-tracks/43/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightUpLeg_020")
-tracks/43/interp = 1
-tracks/43/loop_wrap = true
-tracks/43/keys = PackedFloat32Array(0, 1, 0.00095089, -0.0102942, 0.995709, 0.0919593)
-tracks/44/type = "position_3d"
-tracks/44/imported = true
-tracks/44/enabled = true
-tracks/44/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightLeg_021")
-tracks/44/interp = 1
-tracks/44/loop_wrap = true
-tracks/44/keys = PackedFloat32Array(0, 1, -5.47268e-06, 58.2456, 1.10736e-06)
-tracks/45/type = "rotation_3d"
-tracks/45/imported = true
-tracks/45/enabled = true
-tracks/45/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightLeg_021")
-tracks/45/interp = 1
-tracks/45/loop_wrap = true
-tracks/45/keys = PackedFloat32Array(0, 1, -0.100857, -0.00119143, 0.0117502, 0.994831)
-tracks/46/type = "position_3d"
-tracks/46/imported = true
-tracks/46/enabled = true
-tracks/46/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightFoot_022")
-tracks/46/interp = 1
-tracks/46/loop_wrap = true
-tracks/46/keys = PackedFloat32Array(0, 1, 2.28733e-06, 53.5361, -1.58548e-05)
-tracks/47/type = "rotation_3d"
-tracks/47/imported = true
-tracks/47/enabled = true
-tracks/47/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightFoot_022")
-tracks/47/interp = 1
-tracks/47/loop_wrap = true
-tracks/47/keys = PackedFloat32Array(0, 1, 0.506539, 0.183432, -0.111262, 0.8351)
-tracks/48/type = "position_3d"
-tracks/48/imported = true
-tracks/48/enabled = true
-tracks/48/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightToeBase_023")
-tracks/48/interp = 1
-tracks/48/loop_wrap = true
-tracks/48/keys = PackedFloat32Array(0, 1, -3.93391e-06, 23.1083, 2.5034e-05)
-tracks/49/type = "rotation_3d"
-tracks/49/imported = true
-tracks/49/enabled = true
-tracks/49/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightToeBase_023")
-tracks/49/interp = 1
-tracks/49/loop_wrap = true
-tracks/49/keys = PackedFloat32Array(0, 1, 0.303835, 0.0114004, -0.00363669, 0.952649)
-tracks/50/type = "position_3d"
-tracks/50/imported = true
-tracks/50/enabled = true
-tracks/50/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightToe_End_024")
-tracks/50/interp = 1
-tracks/50/loop_wrap = true
-tracks/50/keys = PackedFloat32Array(0, 1, -36.6627, -19.1365, 7.07715)
-tracks/51/type = "rotation_3d"
-tracks/51/imported = true
-tracks/51/enabled = true
-tracks/51/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightToe_End_024")
-tracks/51/interp = 1
-tracks/51/loop_wrap = true
-tracks/51/keys = PackedFloat32Array(0, 1, 0.0790484, -0.670163, -0.700984, 0.230769)
-
 [sub_resource type="Animation" id="Animation_8imyf"]
 resource_name = "Object_4Action_001"
 length = 8.33333
@@ -2665,6 +2298,30 @@ tracks/52/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/53/type = "value"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("../AudioStreamPlayer3D:volume_db")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-40.0, -1.0]
+}
+tracks/54/type = "value"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("../AudioStreamPlayer3D:pitch_scale")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.01, 3.0]
+}
 
 [sub_resource type="Animation" id="Animation_6ugws"]
 length = 0.001
@@ -2680,6 +2337,398 @@ tracks/0/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AudioStreamPlayer3D:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AudioStreamPlayer3D:pitch_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.3]
+}
+
+[sub_resource type="Animation" id="Animation_u8lv2"]
+resource_name = "mixamo_com"
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:_rootJoint")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:_rootJoint")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -8.55714e-09, 1.71143e-08, -2.92898e-16, 1)
+tracks/2/type = "scale_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:_rootJoint")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 1, 1, 1)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Hips_00")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.0120395, 6.97298, -0.126996)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Hips_00")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 1.93819e-09, -2.25477e-09, -4.37015e-18, 1)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Spine_01")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 1.64624e-08, 11.519, -0.552291)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Spine_01")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.0239525, 2.79733e-08, -1.38206e-09, 0.999713)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Spine1_02")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, -9.80542e-10, 13.4543, 6.11979e-07)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Spine1_02")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -3.72529e-09, 4.09782e-08, -4.19944e-16, 1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Spine2_03")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -1.18979e-09, 15.3763, 7.9178e-07)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Spine2_03")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, -3.46438e-08, 4.35076e-17, 1)
+tracks/11/type = "position_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Neck_04")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 1.21048e-10, 17.2984, -6.39566e-07)
+tracks/12/type = "rotation_3d"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Neck_04")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0.0239525, 1.04264e-08, 2.60555e-09, 0.999713)
+tracks/13/type = "position_3d"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Head_05")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, -1.76312e-08, 0.701034, 0.145731)
+tracks/14/type = "rotation_3d"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Head_05")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 1.86589e-09, -5.96046e-08, 1.11216e-16, 1)
+tracks/15/type = "scale_3d"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_Head_05")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 1, 1, 1)
+tracks/16/type = "position_3d"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_HeadTop_End_06")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, -0.223267, -187.607, 4.97079)
+tracks/17/type = "position_3d"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftShoulder_07")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, 6.48218, 13.8887, 0.0344114)
+tracks/18/type = "rotation_3d"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftShoulder_07")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0.604036, 0.369244, -0.600778, 0.371301)
+tracks/19/type = "position_3d"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftArm_08")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, 8.01682e-06, 14.9112, 6.71297e-06)
+tracks/20/type = "rotation_3d"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftArm_08")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, 0.323647, 0.169522, -0.059059, 0.928993)
+tracks/21/type = "position_3d"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftForeArm_09")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, -7.62939e-06, 31.0326, 1.50204e-05)
+tracks/22/type = "rotation_3d"
+tracks/22/imported = true
+tracks/22/enabled = true
+tracks/22/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftForeArm_09")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = PackedFloat32Array(0, 1, -0.0228759, -0.0819617, 0.267853, 0.959695)
+tracks/23/type = "position_3d"
+tracks/23/imported = true
+tracks/23/enabled = true
+tracks/23/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftHand_010")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = PackedFloat32Array(0, 1, -6.85453e-06, 32.1791, 4.92632e-05)
+tracks/24/type = "rotation_3d"
+tracks/24/imported = true
+tracks/24/enabled = true
+tracks/24/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftHand_010")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = PackedFloat32Array(0, 1, -6.0536e-08, -7.45058e-09, -8.75443e-08, 1)
+tracks/25/type = "position_3d"
+tracks/25/imported = true
+tracks/25/enabled = true
+tracks/25/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightShoulder_011")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = PackedFloat32Array(0, 1, -6.48219, 13.9076, -0.360464)
+tracks/26/type = "rotation_3d"
+tracks/26/imported = true
+tracks/26/enabled = true
+tracks/26/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightShoulder_011")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = PackedFloat32Array(0, 1, 0.585242, -0.380852, 0.618075, 0.361147)
+tracks/27/type = "position_3d"
+tracks/27/imported = true
+tracks/27/enabled = true
+tracks/27/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightArm_012")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = PackedFloat32Array(0, 1, -4.27663e-06, 14.9112, 1.65254e-05)
+tracks/28/type = "rotation_3d"
+tracks/28/imported = true
+tracks/28/enabled = true
+tracks/28/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightArm_012")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = PackedFloat32Array(0, 1, 0.315811, -0.112663, 0.0377969, 0.941351)
+tracks/29/type = "position_3d"
+tracks/29/imported = true
+tracks/29/enabled = true
+tracks/29/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightForeArm_013")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = PackedFloat32Array(0, 1, 5.72205e-06, 30.7893, -1.78814e-07)
+tracks/30/type = "rotation_3d"
+tracks/30/imported = true
+tracks/30/enabled = true
+tracks/30/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightForeArm_013")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = PackedFloat32Array(0, 1, -0.000488155, 0.00204723, -0.231898, 0.972738)
+tracks/31/type = "position_3d"
+tracks/31/imported = true
+tracks/31/enabled = true
+tracks/31/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightHand_014")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = PackedFloat32Array(0, 1, -1.34408e-05, 31.8881, 8.70228e-06)
+tracks/32/type = "rotation_3d"
+tracks/32/imported = true
+tracks/32/enabled = true
+tracks/32/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightHand_014")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = PackedFloat32Array(0, 1, 1.88127e-07, -1.04308e-07, 2.10479e-07, 1)
+tracks/33/type = "position_3d"
+tracks/33/imported = true
+tracks/33/enabled = true
+tracks/33/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftUpLeg_015")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = PackedFloat32Array(0, 1, 12.3462, -6.39384, 0.399258)
+tracks/34/type = "rotation_3d"
+tracks/34/imported = true
+tracks/34/enabled = true
+tracks/34/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftUpLeg_015")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = PackedFloat32Array(0, 1, 0.000415052, 0.00449176, -0.995751, 0.0919787)
+tracks/35/type = "position_3d"
+tracks/35/imported = true
+tracks/35/enabled = true
+tracks/35/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftLeg_016")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = PackedFloat32Array(0, 1, 4.99873e-06, 58.2359, 3.03263e-07)
+tracks/36/type = "rotation_3d"
+tracks/36/imported = true
+tracks/36/enabled = true
+tracks/36/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftLeg_016")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = PackedFloat32Array(0, 1, -0.100604, 0.00116948, -0.0115672, 0.994859)
+tracks/37/type = "position_3d"
+tracks/37/imported = true
+tracks/37/enabled = true
+tracks/37/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftFoot_017")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = PackedFloat32Array(0, 1, 4.53182e-05, 53.397, -2.14577e-06)
+tracks/38/type = "rotation_3d"
+tracks/38/imported = true
+tracks/38/enabled = true
+tracks/38/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftFoot_017")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = PackedFloat32Array(0, 1, 0.491216, -0.193255, 0.112768, 0.841809)
+tracks/39/type = "position_3d"
+tracks/39/imported = true
+tracks/39/enabled = true
+tracks/39/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftToeBase_018")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = PackedFloat32Array(0, 1, 6.19888e-06, 22.5208, 9.53674e-06)
+tracks/40/type = "position_3d"
+tracks/40/imported = true
+tracks/40/enabled = true
+tracks/40/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftToe_End_019")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = PackedFloat32Array(0, 1, 36.8348, -19.3062, 8.28692)
+tracks/41/type = "rotation_3d"
+tracks/41/imported = true
+tracks/41/enabled = true
+tracks/41/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_LeftToe_End_019")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = PackedFloat32Array(0, 1, 0.0675706, 0.666866, 0.7022, 0.240082)
+tracks/42/type = "position_3d"
+tracks/42/imported = true
+tracks/42/enabled = true
+tracks/42/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightUpLeg_020")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = PackedFloat32Array(0, 1, -12.3462, -6.39383, 0.777992)
+tracks/43/type = "rotation_3d"
+tracks/43/imported = true
+tracks/43/enabled = true
+tracks/43/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightUpLeg_020")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = PackedFloat32Array(0, 1, 0.00095089, -0.0102942, 0.995709, 0.0919593)
+tracks/44/type = "position_3d"
+tracks/44/imported = true
+tracks/44/enabled = true
+tracks/44/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightLeg_021")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = PackedFloat32Array(0, 1, -5.47268e-06, 58.2456, 1.10736e-06)
+tracks/45/type = "rotation_3d"
+tracks/45/imported = true
+tracks/45/enabled = true
+tracks/45/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightLeg_021")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = PackedFloat32Array(0, 1, -0.100857, -0.00119143, 0.0117502, 0.994831)
+tracks/46/type = "position_3d"
+tracks/46/imported = true
+tracks/46/enabled = true
+tracks/46/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightFoot_022")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = PackedFloat32Array(0, 1, 2.28733e-06, 53.5361, -1.58548e-05)
+tracks/47/type = "rotation_3d"
+tracks/47/imported = true
+tracks/47/enabled = true
+tracks/47/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightFoot_022")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/keys = PackedFloat32Array(0, 1, 0.506539, 0.183432, -0.111262, 0.8351)
+tracks/48/type = "position_3d"
+tracks/48/imported = true
+tracks/48/enabled = true
+tracks/48/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightToeBase_023")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = PackedFloat32Array(0, 1, -3.93391e-06, 23.1083, 2.5034e-05)
+tracks/49/type = "rotation_3d"
+tracks/49/imported = true
+tracks/49/enabled = true
+tracks/49/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightToeBase_023")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = PackedFloat32Array(0, 1, 0.303835, 0.0114004, -0.00363669, 0.952649)
+tracks/50/type = "position_3d"
+tracks/50/imported = true
+tracks/50/enabled = true
+tracks/50/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightToe_End_024")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = PackedFloat32Array(0, 1, -36.6627, -19.1365, 7.07715)
+tracks/51/type = "rotation_3d"
+tracks/51/imported = true
+tracks/51/enabled = true
+tracks/51/path = NodePath("Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D:mixamorig_RightToe_End_024")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = PackedFloat32Array(0, 1, 0.0790484, -0.670163, -0.700984, 0.230769)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_57lnv"]
 _data = {
@@ -2687,6 +2736,21 @@ _data = {
 "RESET": SubResource("Animation_6ugws"),
 "mixamo_com": SubResource("Animation_u8lv2")
 }
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2yn4p"]
+size = Vector3(86.8068, 21.0334, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y1f76"]
+size = Vector3(86.8068, 21.0334, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w7ylq"]
+size = Vector3(110.852, 21.0334, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m1g5p"]
+size = Vector3(110.852, 21.0334, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_crktj"]
+size = Vector3(170.513, 21.0334, 1)
 
 [sub_resource type="Animation" id="Animation_d8r5y"]
 resource_name = "Finish"
@@ -3433,7 +3497,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152.016, -17.282, -90.4274)
 curve = SubResource("Curve3D_ys14q")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Scene/FliesPath1"]
-transform = Transform3D(-0.997918, -0.00223856, -0.0643763, 0, 0.999396, -0.0347517, 0.0644152, -0.0346797, -0.997315, -1.11298, -2.44746, -0.457588)
+transform = Transform3D(-0.997917, -0.00223856, -0.0643762, 0, 0.999396, -0.0347517, 0.0644152, -0.0346797, -0.997314, -1.11298, -2.44746, -0.457588)
 script = ExtResource("29_2inc6")
 
 [node name="LightFly" parent="Scene/FliesPath1/PathFollow3D" instance=ExtResource("30_fdp0v")]
@@ -3456,7 +3520,7 @@ script = ExtResource("29_2inc6")
 skeleton = NodePath("../..")
 
 [node name="PathFollow3D4" type="PathFollow3D" parent="Scene/FliesPath1"]
-transform = Transform3D(-0.163671, 0.977801, 0.130826, -0.880521, -0.0849959, -0.466323, -0.444851, -0.191519, 0.874887, -112.706, 8.46043, 0.165807)
+transform = Transform3D(-0.659126, 0.69621, 0.28433, 0.100011, 0.455873, -0.884407, -0.745352, -0.5545, -0.370107, -112.317, 9.81793, 10.2543)
 progress = 136.095
 script = ExtResource("29_2inc6")
 
@@ -3464,7 +3528,7 @@ script = ExtResource("29_2inc6")
 skeleton = NodePath("../..")
 
 [node name="PathFollow3D5" type="PathFollow3D" parent="Scene/FliesPath1"]
-transform = Transform3D(-0.162071, 0.98107, 0.106002, -0.969483, -0.138284, -0.202435, -0.183945, -0.135576, 0.973541, -112.162, 10.6862, -11.5416)
+transform = Transform3D(0.638194, 0.193041, 0.74528, -0.285028, 0.958511, -0.00419746, -0.715169, -0.209747, 0.666737, -116.289, 11.82, 11.0718)
 progress = 149.022
 script = ExtResource("29_2inc6")
 
@@ -3472,7 +3536,7 @@ script = ExtResource("29_2inc6")
 skeleton = NodePath("../..")
 
 [node name="PathFollow3D6" type="PathFollow3D" parent="Scene/FliesPath1"]
-transform = Transform3D(0.57849, -0.781609, 0.233316, -0.814669, -0.567926, 0.117362, 0.0407753, -0.257969, -0.965288, -131.745, 5.31784, 5.52934)
+transform = Transform3D(-0.909442, -0.297061, -0.290979, -0.314153, 0.949287, 0.0127471, 0.272437, 0.103005, -0.956639, -129.243, 11.6634, 13.8714)
 progress = 194.375
 script = ExtResource("29_2inc6")
 
@@ -3480,7 +3544,7 @@ script = ExtResource("29_2inc6")
 skeleton = NodePath("../..")
 
 [node name="PathFollow3D7" type="PathFollow3D" parent="Scene/FliesPath1"]
-transform = Transform3D(0.246337, -0.322997, -0.913778, 0.630716, 0.769295, -0.101897, 0.735877, -0.551234, 0.393225, -121.099, 19.0183, 7.2642)
+transform = Transform3D(0.391469, -0.318588, 0.86328, -0.776976, -0.617076, 0.124605, 0.493012, -0.719528, -0.489101, -140.186, 5.51924, 10.5442)
 progress = 236.442
 script = ExtResource("29_2inc6")
 
@@ -3488,7 +3552,7 @@ script = ExtResource("29_2inc6")
 skeleton = NodePath("../..")
 
 [node name="PathFollow3D8" type="PathFollow3D" parent="Scene/FliesPath1"]
-transform = Transform3D(0.246337, -0.322997, -0.913778, 0.630715, 0.769295, -0.101897, 0.735877, -0.551233, 0.393225, -105.023, 20.8458, 0.302335)
+transform = Transform3D(0.516545, -0.50945, -0.688216, -0.131497, 0.747015, -0.651672, 0.846101, 0.427116, 0.318877, -134.316, 18.0205, 12.9331)
 progress = 253.955
 script = ExtResource("29_2inc6")
 
@@ -3496,7 +3560,7 @@ script = ExtResource("29_2inc6")
 skeleton = NodePath("../..")
 
 [node name="PathFollow3D9" type="PathFollow3D" parent="Scene/FliesPath1"]
-transform = Transform3D(0.144162, 0.18128, -0.972807, 0.63773, 0.734675, 0.231411, 0.756649, -0.653748, -0.00969514, -52.8957, 9.87062, -0.973656)
+transform = Transform3D(-0.0461352, 0.226973, -0.972807, -0.152584, 0.960814, 0.231411, 0.987213, 0.15911, -0.00969502, -83.5513, 17.163, -1.27917)
 progress = 307.866
 script = ExtResource("29_2inc6")
 
@@ -3504,7 +3568,7 @@ script = ExtResource("29_2inc6")
 skeleton = NodePath("../..")
 
 [node name="PathFollow3D10" type="PathFollow3D" parent="Scene/FliesPath1"]
-transform = Transform3D(0.144162, 0.18128, -0.972807, 0.63773, 0.734676, 0.231411, 0.756649, -0.653749, -0.00969514, -24.495, 3.11466, -0.690614)
+transform = Transform3D(-0.0461352, 0.226973, -0.972807, -0.152584, 0.960815, 0.231411, 0.987213, 0.159111, -0.00969502, -55.4104, 10.4688, -0.998718)
 progress = 337.042
 script = ExtResource("29_2inc6")
 
@@ -3865,6 +3929,7 @@ skeleton = NodePath("../../../FliesPath1")
 
 [node name="SpinnerLight" type="Path3D" parent="Scene"]
 transform = Transform3D(0.114955, 0.0563669, 0.0527006, 3.40502e-12, -0.46351, 0.185332, 0.0217563, -0.297829, -0.278457, 0, -10.2257, -121.082)
+visible = false
 curve = SubResource("Curve3D_2fpgs")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Scene/SpinnerLight"]
@@ -3878,6 +3943,7 @@ skeleton = NodePath("../../../FliesPath1")
 
 [node name="SpinnerLight2" type="Path3D" parent="Scene"]
 transform = Transform3D(-0.111303, -0.170481, -0.00468243, -0.0287455, 0.43469, -0.192622, 0.0217563, -0.297829, -0.278457, 0, -7.69139, -135.828)
+visible = false
 curve = SubResource("Curve3D_2fpgs")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Scene/SpinnerLight2"]
@@ -3974,7 +4040,7 @@ transform = Transform3D(-0.540651, 0.055135, -0.839438, -0.0451585, 0.994509, 0.
 curve = SubResource("Curve3D_tfol0")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Scene/CaveBug2"]
-transform = Transform3D(0.941061, 0.0135631, -0.337958, 0, 0.999191, 0.0401, 0.338231, -0.0377367, 0.940301, 17.7316, 10.0102, -24.1667)
+transform = Transform3D(0.941061, 0.0135631, -0.337957, 0, 0.99919, 0.0401, 0.338231, -0.0377366, 0.9403, 17.7316, 10.0102, -24.1667)
 script = ExtResource("29_2inc6")
 SPEED = 3.0
 
@@ -3983,7 +4049,7 @@ transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 0)
 skeleton = NodePath("../../../FliesPath1")
 
 [node name="PathFollow3D2" type="PathFollow3D" parent="Scene/CaveBug2"]
-transform = Transform3D(0.350567, -0.339686, 0.872762, -0.932429, -0.213711, 0.291361, 0.0875469, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
+transform = Transform3D(0.350567, -0.339686, 0.872762, -0.932428, -0.213711, 0.291361, 0.0875468, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
 progress = 93.3312
 script = ExtResource("29_2inc6")
 SPEED = 3.0
@@ -4033,19 +4099,20 @@ libraries = {
 [node name="RedExtra" type="Node3D" parent="Scene" node_paths=PackedStringArray("on", "off")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -151.004, -18.478, -82.2046)
 script = ExtResource("39_06woj")
-on = [NodePath("../SpinnerLight")]
+on = [NodePath("../SpinnerLight"), NodePath("../SpinnerLight2")]
 off = [NodePath("../EntranceLight")]
 
 [node name="RedPickup" parent="Scene" node_paths=PackedStringArray("extra_trigger") instance=ExtResource("39_7hluf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150.978, -18.4779, -82.1922)
 extra_trigger = NodePath("../RedExtra")
 
-[node name="GreenExtra" type="Node3D" parent="Scene" node_paths=PackedStringArray("stuff", "buganim", "presanctum")]
+[node name="GreenExtra" type="Node3D" parent="Scene" node_paths=PackedStringArray("stuff", "buganim", "presanctum", "sanctum_puzzle")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -151.004, -18.478, -82.2046)
 script = ExtResource("40_dwwf8")
 stuff = [NodePath("../CaveBug2"), NodePath("../CaveBug")]
 buganim = NodePath("../CaveLight/BugNoise/AnimationPlayer")
 presanctum = NodePath("../PreLightSanctum")
+sanctum_puzzle = NodePath("../SanctumPuzzle")
 
 [node name="GreenPickup" parent="Scene" node_paths=PackedStringArray("extra_trigger") instance=ExtResource("39_7hluf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -151.004, -18.478, -82.2046)
@@ -4058,14 +4125,16 @@ mesh = SubResource("SphereMesh_02qgx")
 [node name="OmniLight3D" parent="Scene/GreenPickup" index="2"]
 light_color = Color(0, 1, 0, 1)
 
-[node name="BlueExtra" type="Node3D" parent="Scene" node_paths=PackedStringArray("on")]
+[node name="BlueExtra" type="Node3D" parent="Scene" node_paths=PackedStringArray("on", "sanctum_puzzle")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -151.004, -18.478, -82.2046)
 script = ExtResource("42_4hb6p")
 on = [NodePath("../EntranceLight")]
+sanctum_puzzle = NodePath("../SanctumPuzzle")
 
-[node name="BluePickup" parent="Scene" instance=ExtResource("39_7hluf")]
+[node name="BluePickup" parent="Scene" node_paths=PackedStringArray("extra_trigger") instance=ExtResource("39_7hluf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00864625, -13.3597, -299.643)
 flag = 2
+extra_trigger = NodePath("../BlueExtra")
 
 [node name="MeshInstance3D" parent="Scene/BluePickup" index="0"]
 mesh = SubResource("SphereMesh_7day4")
@@ -4371,23 +4440,29 @@ environment = ExtResource("3_jua2l")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.7, -19.9983, -83.709)
 collision_mask = 2147483648
 script = ExtResource("6_yv3wu")
-ghosts = [NodePath("WalkGhost"), NodePath("WalkGhost2"), NodePath("WalkGhost3"), NodePath("WalkGhost4")]
+ghosts = [NodePath("ghost6"), NodePath("ghost"), NodePath("ghost5"), NodePath("ghost2"), NodePath("ghost4"), NodePath("ghost3")]
 whisper = ExtResource("8_8y0h2")
-
-[node name="WalkGhost" parent="Scene/GhostTrigger" instance=ExtResource("8_tqyha")]
-
-[node name="WalkGhost2" parent="Scene/GhostTrigger" instance=ExtResource("8_tqyha")]
-transform = Transform3D(1, 0, 0, 0, 1.21687, 0, 0, 0, 1.19872, 2.89716, 0, -0.972664)
-
-[node name="WalkGhost3" parent="Scene/GhostTrigger" instance=ExtResource("8_tqyha")]
-transform = Transform3D(-1, 0, 1.04795e-07, 0, 1.21687, 0, -8.74228e-08, 0, -1.19872, -1.99749, 0, 4.10863)
-
-[node name="WalkGhost4" parent="Scene/GhostTrigger" instance=ExtResource("8_tqyha")]
-transform = Transform3D(-1, 0, 1.04795e-07, 0, 1.21687, 0, -8.74228e-08, 0, -1.19872, 6.89323, 0, 4.26569)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/GhostTrigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.71, 2.0943, 1.35596)
 shape = SubResource("BoxShape3D_6wwtk")
+
+[node name="ghost" parent="Scene/GhostTrigger" instance=ExtResource("46_dbkb6")]
+
+[node name="ghost2" parent="Scene/GhostTrigger" instance=ExtResource("46_dbkb6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8438, -2.10015, 1.19694)
+
+[node name="ghost3" parent="Scene/GhostTrigger" instance=ExtResource("46_dbkb6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25569, 0, -0.197632)
+
+[node name="ghost4" parent="Scene/GhostTrigger" instance=ExtResource("46_dbkb6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12.8369, 0, 3.37867)
+
+[node name="ghost5" parent="Scene/GhostTrigger" instance=ExtResource("46_dbkb6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.18587, 0, 3.09281)
+
+[node name="ghost6" parent="Scene/GhostTrigger" instance=ExtResource("46_dbkb6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.13681, 0, 3.37624)
 
 [node name="PreLightSanctum" type="Node3D" parent="Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -171.184)
@@ -4406,10 +4481,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -92.8551)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Scene/PreLightSanctum/Warning/Spook"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.0772, 43.0125)
-stream = ExtResource("8_8y0h2")
+stream = ExtResource("39_mkxbh")
 attenuation_model = 3
-volume_db = 3.0
-pitch_scale = 0.5
+pitch_scale = 0.3
 bus = &"SFX"
 
 [node name="warning" type="Node3D" parent="Scene/PreLightSanctum/Warning/Spook"]
@@ -4866,10 +4940,345 @@ speed_scale = 2.0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Scene/PreLightSanctum/Death/Death"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -31.4234)
-stream = ExtResource("8_8y0h2")
+stream = ExtResource("39_mkxbh")
 attenuation_model = 3
-volume_db = 5.0
-pitch_scale = 0.5
+pitch_scale = 0.3
+
+[node name="SanctumPuzzle" type="Node3D" parent="Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -192.807)
+script = ExtResource("50_5rpru")
+
+[node name="Death" type="Area3D" parent="Scene/SanctumPuzzle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.38107)
+collision_mask = 2147483648
+monitoring = false
+script = ExtResource("48_fislt")
+
+[node name="Death" type="Node3D" parent="Scene/SanctumPuzzle/Death"]
+
+[node name="warning" type="Node3D" parent="Scene/SanctumPuzzle/Death/Death"]
+transform = Transform3D(-8.74228e-08, 0, -2, 0.392611, 1.96109, -1.71616e-08, 1.96109, -0.392611, -8.57218e-08, 0, -13.7691, 0)
+visible = false
+
+[node name="Sketchfab_model" type="Node3D" parent="Scene/SanctumPuzzle/Death/Death/warning"]
+transform = Transform3D(1, 0, 0, 0, -3.57628e-07, 1, 0, -1, -3.57628e-07, 0, 0, 0)
+
+[node name="5a217e1fd7414c28be4c41644e7cadb1_fbx" type="Node3D" parent="Scene/SanctumPuzzle/Death/Death/warning/Sketchfab_model"]
+transform = Transform3D(1, 0, 0, 0, -3.57628e-07, -1, 0, 1, -3.57628e-07, 0, 0, 0)
+
+[node name="Object_2" type="Node3D" parent="Scene/SanctumPuzzle/Death/Death/warning/Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx"]
+
+[node name="RootNode" type="Node3D" parent="Scene/SanctumPuzzle/Death/Death/warning/Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2"]
+
+[node name="Object_4" type="Node3D" parent="Scene/SanctumPuzzle/Death/Death/warning/Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode"]
+
+[node name="Base Low" type="Node3D" parent="Scene/SanctumPuzzle/Death/Death/warning/Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4"]
+transform = Transform3D(18.5445, 0, 0, 0, -6.63203e-06, 18.5445, 0, -18.5445, -6.63203e-06, 0, 0, 0)
+
+[node name="Object_6" type="Node3D" parent="Scene/SanctumPuzzle/Death/Death/warning/Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4"]
+transform = Transform3D(18.5445, 0, 0, 0, -6.63203e-06, 18.5445, 0, -18.5445, -6.63203e-06, 0, 0, 0)
+
+[node name="Skeleton3D" type="Skeleton3D" parent="Scene/SanctumPuzzle/Death/Death/warning/Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4"]
+bones/0/name = "_rootJoint"
+bones/0/parent = -1
+bones/0/rest = Transform3D(1, 2.92898e-16, 3.42285e-08, -8.78695e-16, 1, 1.71143e-08, -3.42285e-08, -1.71143e-08, 1, 0, 0, 0)
+bones/0/enabled = true
+bones/0/position = Vector3(-68.3288, 5.36685, 0.174058)
+bones/0/rotation = Quaternion(0.491665, 0.508335, -0.499885, 0.499976)
+bones/0/scale = Vector3(0.0717271, 0.0717271, 0.0717271)
+bones/1/name = "mixamorig_Hips_00"
+bones/1/parent = 0
+bones/1/rest = Transform3D(1, -7.69278e-23, -4.50954e-09, -1.74807e-17, 1, -3.87639e-09, 4.50954e-09, 3.87639e-09, 1, 0.0120395, 6.97298, -0.126996)
+bones/1/enabled = true
+bones/1/position = Vector3(0.169998, 124.59, -0.947131)
+bones/1/rotation = Quaternion(-0.102687, -0.0345703, -0.00994285, 0.994063)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/name = "mixamorig_Spine_01"
+bones/2/parent = 1
+bones/2/rest = Transform3D(1, 1.42328e-09, 5.59968e-08, -4.10339e-09, 0.998852, 0.0478912, -5.58644e-08, -0.0478912, 0.998853, 1.64624e-08, 11.519, -0.552291)
+bones/2/enabled = true
+bones/2/position = Vector3(3.20531e-06, 11.519, -0.552316)
+bones/2/rotation = Quaternion(0.0201667, 0.0111985, 0.00772707, 0.999704)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/name = "mixamorig_Spine1_02"
+bones/3/parent = 2
+bones/3/rest = Transform3D(1, 5.34576e-16, 8.19564e-08, -1.1452e-15, 1, 7.45058e-09, -8.19564e-08, -7.45058e-09, 1, -9.80542e-10, 13.4543, 6.11979e-07)
+bones/3/enabled = true
+bones/3/position = Vector3(-0.295784, 30.1521, 3.09556)
+bones/3/rotation = Quaternion(0.111984, 0.00585247, -0.000895174, 0.993692)
+bones/3/scale = Vector3(1, 1, 1)
+bones/4/name = "mixamorig_Spine2_03"
+bones/4/parent = 3
+bones/4/rest = Transform3D(1, -8.70152e-17, -6.92876e-08, 8.70152e-17, 1, -3.01454e-24, 6.92876e-08, -3.01454e-24, 1, -1.18979e-09, 15.3763, 7.9178e-07)
+bones/4/enabled = true
+bones/4/position = Vector3(-0.304192, 30.5471, -0.627703)
+bones/4/rotation = Quaternion(0.207744, 0.00544387, -0.00125799, 0.978167)
+bones/4/scale = Vector3(1, 1, 1)
+bones/5/name = "mixamorig_Neck_04"
+bones/5/parent = 4
+bones/5/rest = Transform3D(1, -4.71012e-09, 2.09717e-08, 5.70907e-09, 0.998853, -0.0478912, -2.0722e-08, 0.0478912, 0.998853, 1.21048e-10, 17.2984, -6.39566e-07)
+bones/5/enabled = true
+bones/5/position = Vector3(-0.424937, 9.18166, -16.3589)
+bones/5/rotation = Quaternion(-0.277548, 0.00606314, -0.0276001, 0.960296)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/name = "mixamorig_Head_05"
+bones/6/parent = 5
+bones/6/rest = Transform3D(1, -4.44864e-16, -1.19209e-07, -5.29396e-23, 1, -3.73179e-09, 1.19209e-07, 3.73179e-09, 1, -1.76312e-08, 0.701034, 0.145731)
+bones/6/enabled = true
+bones/6/position = Vector3(-0.901784, 13.4981, -2.84418)
+bones/6/rotation = Quaternion(0.0447161, -0.64843, -0.75996, 0.000712598)
+bones/6/scale = Vector3(-1.00036, -1.1249, -2.18613)
+bones/7/name = "mixamorig_HeadTop_End_06"
+bones/7/parent = 6
+bones/7/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.223267, -187.607, 4.97079)
+bones/7/enabled = true
+bones/7/position = Vector3(-1.65403e-06, 30.3096, 6.30081)
+bones/7/rotation = Quaternion(0, 0, 0, 1)
+bones/7/scale = Vector3(1, 1, 1)
+bones/8/name = "mixamorig_LeftShoulder_07"
+bones/8/parent = 4
+bones/8/rest = Transform3D(0.00544858, 0.892213, -0.451582, -6.54459e-05, -0.451589, -0.892226, -0.999985, 0.00489092, -0.00240207, 6.48218, 13.8887, 0.0344114)
+bones/8/enabled = true
+bones/8/position = Vector3(6.48218, 13.8888, 0.0344226)
+bones/8/rotation = Quaternion(0.606589, 0.408356, -0.590109, 0.34215)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/name = "mixamorig_LeftArm_08"
+bones/9/parent = 8
+bones/9/rest = Transform3D(0.935549, 0.219461, 0.276741, -3.50177e-07, 0.78353, -0.621354, -0.353198, 0.581307, 0.73303, 8.01682e-06, 14.9112, 6.71297e-06)
+bones/9/enabled = true
+bones/9/position = Vector3(1.02318, 14.4879, -0.894601)
+bones/9/rotation = Quaternion(0.163344, -0.425717, 0.627014, 0.631615)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/name = "mixamorig_LeftForeArm_09"
+bones/10/parent = 9
+bones/10/rest = Transform3D(0.843074, -0.510364, -0.169571, 0.517864, 0.855463, 4.80562e-07, 0.145062, -0.0878152, 0.985518, -7.62939e-06, 31.0326, 1.50204e-05)
+bones/10/enabled = true
+bones/10/position = Vector3(28.5381, 58.9075, 15.5036)
+bones/10/rotation = Quaternion(0.0795726, -0.104775, 0.82353, 0.551804)
+bones/10/scale = Vector3(1, 1, 1)
+bones/11/name = "mixamorig_LeftHand_010"
+bones/11/parent = 10
+bones/11/rest = Transform3D(1, 1.75089e-07, -1.49012e-08, -1.75089e-07, 1, 1.21072e-07, 1.49012e-08, -1.21072e-07, 1, -6.85453e-06, 32.1791, 4.92632e-05)
+bones/11/enabled = true
+bones/11/position = Vector3(30.9329, 73.0452, -14.4971)
+bones/11/rotation = Quaternion(-0.632085, 0.449932, -0.0803846, 0.625754)
+bones/11/scale = Vector3(1, 1, 1)
+bones/12/name = "mixamorig_RightShoulder_011"
+bones/12/parent = 4
+bones/12/rest = Transform3D(-0.0541295, -0.892213, 0.44836, 0.0006513, -0.44905, -0.893507, 0.998534, -0.048073, 0.0248879, -6.48219, 13.9076, -0.360464)
+bones/12/enabled = true
+bones/12/position = Vector3(-6.48214, 13.9076, -0.360489)
+bones/12/rotation = Quaternion(0.587179, -0.419929, 0.593166, 0.356419)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/name = "mixamorig_RightArm_012"
+bones/13/parent = 12
+bones/13/rest = Transform3D(0.971757, -0.142321, -0.188238, -2.23517e-07, 0.79767, -0.603094, 0.235985, 0.586061, 0.775141, -4.27663e-06, 14.9112, 1.65254e-05)
+bones/13/enabled = true
+bones/13/position = Vector3(0.998907, 15.2426, 0.958495)
+bones/13/rotation = Quaternion(0.0928957, -0.671813, 0.730498, 0.0800632)
+bones/13/scale = Vector3(1, 1, 1)
+bones/14/name = "mixamorig_RightForeArm_013"
+bones/14/parent = 13
+bones/14/rest = Transform3D(0.892438, 0.45115, 0.00420924, -0.451154, 0.892446, 1.97208e-07, -0.00375643, -0.00189919, 0.999991, 5.72205e-06, 30.7893, -1.78814e-07)
+bones/14/enabled = true
+bones/14/position = Vector3(-27.883, 60.2367, 15.465)
+bones/14/rotation = Quaternion(0.193543, 0.0233266, -0.0686963, 0.978406)
+bones/14/scale = Vector3(1, 1, 1)
+bones/15/name = "mixamorig_RightHand_014"
+bones/15/parent = 14
+bones/15/rest = Transform3D(1, -4.20958e-07, -2.08616e-07, 4.20958e-07, 1, -3.76254e-07, 2.08616e-07, 3.76254e-07, 1, -1.34408e-05, 31.8881, 8.70228e-06)
+bones/15/enabled = true
+bones/15/position = Vector3(-28.4722, 76.9018, -0.387129)
+bones/15/rotation = Quaternion(-0.317999, -0.200502, 0.0743926, 0.923656)
+bones/15/scale = Vector3(1, 1, 1)
+bones/16/name = "mixamorig_LeftUpLeg_015"
+bones/16/parent = 1
+bones/16/rest = Transform3D(-0.983083, 0.18318, -2.83471e-07, -0.183173, -0.98304, -0.00902169, -0.00165287, -0.00886899, 0.999959, 12.3462, -6.39384, 0.399258)
+bones/16/enabled = true
+bones/16/position = Vector3(12.3421, -6.02382, 0.587155)
+bones/16/rotation = Quaternion(0.152492, 0.912902, 0.378225, 0.0173567)
+bones/16/scale = Vector3(1, 1, 1)
+bones/17/name = "mixamorig_LeftLeg_016"
+bones/17/parent = 16
+bones/17/rest = Transform3D(0.99973, 0.0227801, 0.00465435, -0.0232507, 0.97949, 0.200146, 4.62634e-07, -0.2002, 0.979755, 4.99873e-06, 58.2359, 3.03263e-07)
+bones/17/enabled = true
+bones/17/position = Vector3(-3.87696, 54.4259, -12.2382)
+bones/17/rotation = Quaternion(-0.86044, 0.127995, 0.133292, 0.474861)
+bones/17/scale = Vector3(1, 1, 1)
+bones/18/name = "mixamorig_LeftFoot_017"
+bones/18/parent = 17
+bones/18/rest = Transform3D(0.899872, -0.379718, -0.214581, -1.56462e-06, 0.491981, -0.870606, 0.436154, 0.783434, 0.442719, 4.53182e-05, 53.397, -2.14577e-06)
+bones/18/enabled = true
+bones/18/position = Vector3(5.77864e-05, 53.397, -2.00519e-05)
+bones/18/rotation = Quaternion(0.704514, -0.255866, 0.0426895, 0.660583)
+bones/18/scale = Vector3(1, 1, 1)
+bones/19/name = "mixamorig_LeftToeBase_018"
+bones/19/parent = 18
+bones/19/rest = Transform3D(0.999866, 0.00979258, 0.0131194, -1.8198e-06, 0.801442, -0.598073, -0.0163711, 0.597992, 0.801335, 6.19888e-06, 22.5208, 9.53674e-06)
+bones/19/enabled = true
+bones/19/position = Vector3(2.43465e-05, 22.5208, 2.76047e-05)
+bones/19/rotation = Quaternion(0.315075, 0.00776859, -0.00258011, 0.949031)
+bones/19/scale = Vector3(1, 1, 1)
+bones/20/name = "mixamorig_LeftToe_End_019"
+bones/20/parent = 19
+bones/20/rest = Transform3D(-0.875589, -0.24705, 0.415101, 0.427292, 0.00469905, 0.904101, -0.225309, 0.968991, 0.101448, 36.8348, -19.3062, 8.28692)
+bones/20/enabled = true
+bones/20/position = Vector3(-0.000118256, 9.80994, 1.43051e-05)
+bones/20/rotation = Quaternion(1.43051e-06, 1.04308e-06, 5.06639e-07, 1)
+bones/20/scale = Vector3(1, 1, 1)
+bones/21/name = "mixamorig_RightUpLeg_020"
+bones/21/parent = 1
+bones/21/rest = Transform3D(-0.983088, -0.183149, 3.18512e-07, 0.183111, -0.982875, -0.020675, 0.00378693, -0.0203252, 0.999786, -12.3462, -6.39383, 0.777992)
+bones/21/enabled = true
+bones/21/position = Vector3(-12.3421, -6.76383, 0.590078)
+bones/21/rotation = Quaternion(-0.138262, 0.343544, 0.928027, 0.0403366)
+bones/21/scale = Vector3(1, 1, 1)
+bones/22/name = "mixamorig_RightLeg_021"
+bones/22/parent = 21
+bones/22/rest = Transform3D(0.999721, -0.0231385, -0.00474072, 0.0236192, 0.979379, 0.200644, 3.55532e-07, -0.2007, 0.979653, -5.47268e-06, 58.2456, 1.10736e-06)
+bones/22/enabled = true
+bones/22/position = Vector3(4.71061, 52.7651, -12.5898)
+bones/22/rotation = Quaternion(-0.100061, 0.00953082, 0.0697059, 0.992491)
+bones/22/scale = Vector3(1, 1, 1)
+bones/23/name = "mixamorig_RightFoot_022"
+bones/23/parent = 22
+bones/23/rest = Transform3D(0.907947, 0.371661, 0.193652, 1.3411e-06, 0.462079, -0.886839, -0.419086, 0.805203, 0.419542, 2.28733e-06, 53.5361, -1.58548e-05)
+bones/23/enabled = true
+bones/23/position = Vector3(6.30896e-05, 53.536, 1.6738e-05)
+bones/23/rotation = Quaternion(0.742724, 0.270318, 0.0543356, 0.610194)
+bones/23/scale = Vector3(1, 1, 1)
+bones/24/name = "mixamorig_RightToeBase_023"
+bones/24/parent = 23
+bones/24/rest = Transform3D(0.999714, 0.0138566, 0.0195112, -1.30991e-06, 0.815342, -0.57898, -0.023931, 0.578814, 0.815108, -3.93391e-06, 23.1083, 2.5034e-05)
+bones/24/enabled = true
+bones/24/position = Vector3(-6.09933e-05, 23.1082, -1.78817e-06)
+bones/24/rotation = Quaternion(0.308993, 0.0142709, -0.00405926, 0.950949)
+bones/24/scale = Vector3(1, 1, 1)
+bones/25/name = "mixamorig_RightToe_End_024"
+bones/25/parent = 24
+bones/25/rest = Transform3D(-0.880994, 0.217581, -0.42013, -0.429482, 0.00474572, 0.903063, 0.198483, 0.976031, 0.0892659, -36.6627, -19.1365, 7.07715)
+bones/25/enabled = true
+bones/25/position = Vector3(-9.15527e-05, 9.75989, 8.58307e-06)
+bones/25/rotation = Quaternion(6.25849e-07, -4.54485e-07, -5.17815e-07, -1)
+bones/25/scale = Vector3(1, 1, 1)
+
+[node name="Object_7" type="MeshInstance3D" parent="Scene/SanctumPuzzle/Death/Death/warning/Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D"]
+mesh = SubResource("ArrayMesh_28y2q")
+skin = SubResource("Skin_uoowi")
+
+[node name="Object_7_001" type="MeshInstance3D" parent="Scene/SanctumPuzzle/Death/Death/warning/Sketchfab_model/5a217e1fd7414c28be4c41644e7cadb1_fbx/Object_2/RootNode/Object_4/Skeleton3D"]
+layers = 2
+mesh = SubResource("ArrayMesh_4w2rc")
+skin = SubResource("Skin_uoowi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scene/SanctumPuzzle/Death/Death/warning"]
+libraries = {
+"": SubResource("AnimationLibrary_57lnv")
+}
+speed_scale = 2.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Scene/SanctumPuzzle/Death/Death"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -31.4234)
+stream = ExtResource("39_mkxbh")
+attenuation_model = 3
+pitch_scale = 0.3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/SanctumPuzzle/Death"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.3376, -4.94455, -1.46198)
+shape = SubResource("BoxShape3D_2yn4p")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Scene/SanctumPuzzle/Death"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.6563, -4.94455, -1.46198)
+shape = SubResource("BoxShape3D_y1f76")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Scene/SanctumPuzzle/Death"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.0707, -4.94455, -32.465)
+shape = SubResource("BoxShape3D_w7ylq")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Scene/SanctumPuzzle/Death"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.4114, -4.94455, -32.465)
+shape = SubResource("BoxShape3D_m1g5p")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Scene/SanctumPuzzle/Death"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3211, -4.94455, -62.1395)
+shape = SubResource("BoxShape3D_crktj")
+
+[node name="Blood" type="Node3D" parent="Scene/SanctumPuzzle"]
+
+[node name="Decal" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.227892, 0, -0.973686, 0, 1, 0, 0.973686, 0, -0.227892, 15.6908, -15.025, 0.224609)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal2" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.656428, 0, -0.754389, 0, 1, 0, 0.754389, 0, 0.656428, 44.367, -15.025, 0.224609)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal3" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.779677, 0, -0.626182, 0, 1, 0, 0.626182, 0, -0.779677, 74.1293, -15.025, 0.224609)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal4" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.805784, 0, -0.592211, 0, 1, 0, 0.592211, 0, 0.805784, -45.9346, -15.025, 0.224609)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal5" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.971388, 0, 0.237499, 0, 1, 0, -0.237499, 0, 0.971388, -74.6567, -15.025, 0.224609)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal6" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.869823, 0, 0.493365, 0, 1, 0, -0.493365, 0, 0.869823, -15.5282, -15.025, -27.7062)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal7" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.744685, 0, -0.667417, 0, 1, 0, 0.667417, 0, -0.744685, 44.367, -15.025, -27.7062)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal8" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.103887, 0, -0.994589, 0, 1, 0, 0.994589, 0, -0.103887, 74.1293, -15.025, -27.7062)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal9" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.15164, 0, -0.988436, 0, 1, 0, 0.988436, 0, 0.15164, -45.9346, -15.025, -27.7062)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal10" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.706267, 0, 0.707945, 0, 1, 0, -0.707945, 0, 0.706267, -74.6567, -15.025, -27.7062)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal11" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.999834, 0, -0.0182547, 0, 1, 0, 0.0182547, 0, -0.999834, -15.5282, -15.025, -57.6087)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal12" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.999912, 0, 0.0132994, 0, 1, 0, -0.0132994, 0, -0.999912, 44.367, -15.025, -57.6087)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal13" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.828286, 0, -0.560306, 0, 1, 0, 0.560306, 0, -0.828286, 74.1293, -15.025, -57.6087)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal14" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(0.966984, 0, -0.254839, 0, 1, 0, 0.254839, 0, 0.966984, -45.9346, -15.025, -57.6087)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal15" type="Decal" parent="Scene/SanctumPuzzle/Blood"]
+transform = Transform3D(-0.989541, 0, 0.144253, 0, 1, 0, -0.144253, 0, -0.989541, 13.0509, -15.025, -57.6087)
+size = Vector3(4.59839, 0.287598, 3.89783)
+texture_albedo = ExtResource("31_wp3va")
 
 [node name="ShaderFinish" type="AnimationPlayer" parent="."]
 libraries = {
@@ -4883,6 +5292,7 @@ libraries = {
 [connection signal="body_entered" from="Scene/GhostTrigger" to="Scene/GhostTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Scene/PreLightSanctum/Warning" to="Scene/PreLightSanctum/Warning" method="_on_body_entered"]
 [connection signal="body_entered" from="Scene/PreLightSanctum/Death" to="Scene/PreLightSanctum/Death" method="_on_body_entered"]
+[connection signal="body_entered" from="Scene/SanctumPuzzle/Death" to="Scene/SanctumPuzzle/Death" method="_on_body_entered"]
 
 [editable path="Character"]
 [editable path="Scene/OutdoorArea"]

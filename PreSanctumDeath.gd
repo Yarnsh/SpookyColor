@@ -16,10 +16,11 @@ func _process(delta):
 	if char != null:
 		death.global_position = char.global_position
 		if Time.get_ticks_msec() - start > 2250:
-			char.kill("The darkness is not your friend.", null)
+			char.kill("The denizens of this place know better than you.", null)
 
 
 func _on_body_entered(body):
+	print("die")
 	call_deferred("set_monitoring", false)
 	char = body
 	anim.play("Object_4Action_001")
