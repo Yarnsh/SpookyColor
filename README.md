@@ -32,3 +32,6 @@ Buzzed_09.mp3 by lazr2012 -- https://freesound.org/s/170685/ -- License: Creativ
 
 whisper.wav:
 Four_Voices_Whispering_4.wav by geoneo0 -- https://freesound.org/s/193809/ -- License: Creative Commons 0
+
+birds.wav:
+Binaural Birds LOOP 1.wav by maarten91 -- https://freesound.org/s/468449/ -- License: Creative Commons 0 (Shortened)
