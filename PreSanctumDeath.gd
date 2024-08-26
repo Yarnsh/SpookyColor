@@ -3,6 +3,8 @@ extends Area3D
 @onready var death = $Death
 @onready var anim = $Death/warning/AnimationPlayer
 @onready var sound = $Death/AudioStreamPlayer3D
+@export var death_text = "The mistakes of those before you mark the path."
+@export var killnoise : AudioStream
 var char = null
 var start = 0
 
@@ -16,7 +18,7 @@ func _process(delta):
 	if char != null:
 		death.global_position = char.global_position
 		if Time.get_ticks_msec() - start > 2250:
-			char.kill("The mistakes of those before you mark the path.", null)
+			char.kill(death_text, killnoise, 0)
 
 
 func _on_body_entered(body):

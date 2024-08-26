@@ -454,6 +454,7 @@ size_flags_vertical = 4
 text = "Back to Menu"
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="Menus/DeathScene"]
+bus = &"SFX"
 
 [node name="Credits" type="PanelContainer" parent="Menus"]
 visible = false

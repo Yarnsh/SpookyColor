@@ -10,9 +10,10 @@ extends PanelContainer
 
 var show_start = 0
 
-func start_death(description, sound):
+func start_death(description, sound, db):
 	hide_all()
 	if sound != null:
+		death_sound.volume_db = db
 		death_sound.stream = sound
 		death_sound.play()
 	description_label.text = description

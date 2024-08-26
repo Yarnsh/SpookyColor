@@ -11,3 +11,5 @@ func trigger(char):
 	buganim.play("BugsLeave")
 	presanctum.disable()
 	sanctum_puzzle.enable()
+	if char != null:
+		char.nail_toggle = false

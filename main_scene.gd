@@ -109,12 +109,16 @@ func save_flags(flags):
 	file.store_var(flags, true)
 	file.close()
 
-func show_death(description, sound):
+func show_death(description, sound, db):
 	call_deferred("stop_game")
-	death.start_death(description, sound)
+	death.start_death(description, sound, db)
 	set_mode(4)
 
 func show_credits():
 	call_deferred("stop_game")
 	credits.start_credits()
 	set_mode(5)
+	main.resume_button.text = "Continue"
+	main.resume_button.disabled = true
+	loaded_flags = {}
+	save_flags({})

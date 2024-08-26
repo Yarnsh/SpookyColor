@@ -3,6 +3,7 @@ extends Node3D
 @export var on : Array[Node3D]
 @export var off: Array[Node3D]
 @export var sanctum_puzzle : Node3D
+@export var statues : Node3D
 
 func trigger(char):
 	for thing in on:
@@ -12,3 +13,4 @@ func trigger(char):
 	sanctum_puzzle.disable()
 	if char != null:
 		char.cam.set_popup("I think it's time to leave")
+	statues.set_state(3)
