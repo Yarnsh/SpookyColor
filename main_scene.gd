@@ -43,6 +43,7 @@ func start_game(flags):
 	stop_game()
 	AudioServer.set_bus_effect_enabled(1, 0, false)
 	
+	loaded_flags = flags
 	game_scene = game_prefab.instantiate()
 	add_child(game_scene)
 	game_scene.apply_flags(flags)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://1neqraec1bd8"]
+[gd_scene load_steps=30 format=3 uid="uid://1neqraec1bd8"]
 
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_nh6pq"]
 [ext_resource type="Script" path="res://test_cam.gd" id="2_de5r1"]
@@ -6,6 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://m5hb13jjfmqg" path="res://SFX/footstep.wav" id="3_o0l5i"]
 [ext_resource type="Script" path="res://PlayerNail.gd" id="3_w2jul"]
 [ext_resource type="Script" path="res://Spin.gd" id="4_6os5a"]
+[ext_resource type="Texture2D" uid="uid://d4g7m3kicxryq" path="res://black.png" id="7_dupmq"]
+[ext_resource type="AudioStream" uid="uid://2u0rsi05whd6" path="res://SFX/intro.wav" id="8_hgucp"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_i3vru"]
 radius = 0.1
@@ -204,6 +206,67 @@ _data = {
 radius = 0.3
 height = 1.8
 
+[sub_resource type="Animation" id="Animation_vkwvf"]
+resource_name = "intro"
+length = 18.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IntroVeil:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 17.3, 18.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("IntroSound:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_sfkh4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IntroVeil:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("IntroSound:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2ftd4"]
+_data = {
+"RESET": SubResource("Animation_sfkh4"),
+"intro": SubResource("Animation_vkwvf")
+}
+
 [node name="Character" type="CharacterBody3D"]
 collision_layer = 5
 script = ExtResource("1_nh6pq")
@@ -354,3 +417,21 @@ bus = &"SFX"
 
 [node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
 bus = &"SFX"
+
+[node name="IntroVeil" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_dupmq")
+expand_mode = 1
+
+[node name="Intro" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2ftd4")
+}
+
+[node name="IntroSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_hgucp")

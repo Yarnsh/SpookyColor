@@ -36,6 +36,20 @@ const CUTSCENE_STATE = 1
 var state = NORMAL_STATE
 var cutscene_nail = false
 
+@onready var intro_veil = $IntroVeil
+@onready var intro = $Intro
+
+func _ready():
+	if !main_scene.loaded_flags.get("nail_taken", false):
+		intro_veil.show()
+		intro.play("intro")
+		state = CUTSCENE_STATE
+		intro.connect("animation_finished", intro_done)
+
+func intro_done(something):
+	intro_veil.hide()
+	state = NORMAL_STATE
+
 func play_sfx(sound, db):
 	sfx_player.stream = sound
 	sfx_player.volume_db = db
