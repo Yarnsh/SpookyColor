@@ -9,7 +9,7 @@ ocean_loop.wav:
 rowboat.glb: 
 - "Rowboat" (https://skfb.ly/6RsZn) by Emiliano.Herrera.Galindo is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
-base_humanoid_model.glb (TODO: list all modified derivatives)
+npc.glb, final_spook.glb, warning.glb:
 - "Base Humanoid Model" (https://skfb.ly/6UHUE) by C. Anastasiadis is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 door_open.wav:
