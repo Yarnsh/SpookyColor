@@ -552,6 +552,7 @@ texture = SubResource("PlaceholderTexture2D_sr8wp")
 [node name="SubViewport" type="SubViewport" parent="Attract"]
 
 [node name="AttractScene" type="Node3D" parent="Attract/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -500, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Attract/SubViewport/AttractScene"]
 mesh = SubResource("PlaneMesh_upnnw")
@@ -571,12 +572,11 @@ current = true
 curve = SubResource("Curve3D_qdxor")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Attract/SubViewport/AttractScene/Path3D"]
-transform = Transform3D(0.0135327, 0.359387, -0.93309, 1.49011e-08, 0.933175, 0.35942, 0.999908, -0.00486392, 0.0126283, -0.731096, 2.62246, 1.57121)
+transform = Transform3D(0.0135373, 0.359383, -0.933091, 0, 0.933177, 0.359416, 0.999908, -0.00486553, 0.0126327, -0.731096, 2.62246, 1.57121)
 script = ExtResource("16_835u4")
 SPEED = 0.5
 
 [node name="LightFly" parent="Attract/SubViewport/AttractScene/Path3D/PathFollow3D" instance=ExtResource("15_p7cj1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 skeleton = NodePath("../../..")
 
 [connection signal="pressed" from="Menus/Main/VBoxContainer/VBoxContainer/Continue" to="Menus/Main" method="resume"]
