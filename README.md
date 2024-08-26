@@ -48,3 +48,7 @@ fall_death.wav:
 
 drown.wav:
 - water bubble effect by rubberduck9999 -- https://freesound.org/s/676310/ -- License: Creative Commons 0 (Converted to wav)
+
+intro.wav:
+- Waves with splashes by arnaud coutancier -- https://freesound.org/s/436030/ -- License: Attribution NonCommercial 3.0
+- Axe pacts Wood 09 w Crash by PNMCarrieRailfan -- https://freesound.org/s/682383/ -- License: Attribution NonCommercial 4.0 (These two combined and modified)
