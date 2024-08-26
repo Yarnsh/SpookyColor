@@ -47,4 +47,4 @@ fall_death.wav:
 - smack.wav by webGeek -- https://freesound.org/s/147989/ -- License: Attribution 3.0 (These two combined)
 
 drown.wav:
-- water bubble effect by rubberduck9999 -- https://freesound.org/s/676310/ -- License: Creative Commons 0
+- water bubble effect by rubberduck9999 -- https://freesound.org/s/676310/ -- License: Creative Commons 0 (Converted to wav)
