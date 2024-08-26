@@ -4,9 +4,10 @@ var character
 var interacting = false
 var textbox = 0
 var text_list = [
-	"You made it",
-	"This is it, inside is what we need",
-	"Go, remove the nail sealing this place and bring us back our sun"
+	"You have made it my child",
+	"This is it, inside lies your destiny",
+	"Go forth and do the good lord's work",
+	"Bright light back to his beautiful creation"
 ]
 
 # Called when the node enters the scene tree for the first time.

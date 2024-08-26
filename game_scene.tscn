@@ -3174,7 +3174,7 @@ shape = SubResource("ConcavePolygonShape3D_vucnf")
 visible = false
 
 [node name="NPCGuy" parent="Scene" instance=ExtResource("14_hfvps")]
-transform = Transform3D(0.925031, 0, -0.379892, 0, 1, 0, 0.379892, 0, 0.925031, -5.07526, 0.923083, 29.2897)
+transform = Transform3D(0.925031, 0, -0.379892, 0, 1, 0, 0.379892, 0, 0.925031, -4.73237, 0.39103, 26.6844)
 
 [node name="StaffSlot" type="StaticBody3D" parent="Scene" node_paths=PackedStringArray("DoorL", "DoorR")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.1369)
@@ -4134,7 +4134,7 @@ transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 0)
 skeleton = NodePath("../../../FliesPath1")
 
 [node name="PathFollow3D2" type="PathFollow3D" parent="Scene/CaveBug2"]
-transform = Transform3D(0.350566, -0.339686, 0.872762, -0.932427, -0.213711, 0.291361, 0.0875466, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
+transform = Transform3D(0.350566, -0.339686, 0.872762, -0.932426, -0.213711, 0.291361, 0.0875466, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
 progress = 93.3312
 script = ExtResource("29_2inc6")
 SPEED = 3.0

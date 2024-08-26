@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c04apo0523qdo"]
 
 [ext_resource type="Script" path="res://IntroductionGuy.gd" id="1_thj8h"]
-[ext_resource type="PackedScene" uid="uid://dcnh5g3gqmhs8" path="res://Models/base_humanoid_model.glb" id="2_rxv26"]
+[ext_resource type="PackedScene" uid="uid://bo1qbd1e4cal2" path="res://Models/npc.glb" id="2_v6n48"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_jii7f"]
 height = 2.31243
@@ -10,9 +10,9 @@ height = 2.31243
 collision_layer = 3
 script = ExtResource("1_thj8h")
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_rxv26")]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, -1.70628, 0)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.702761, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0335113, 0)
 shape = SubResource("CylinderShape3D_jii7f")
+
+[node name="npc" parent="." instance=ExtResource("2_v6n48")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
