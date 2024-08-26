@@ -57,13 +57,13 @@
 [ext_resource type="AudioStream" uid="uid://d3j2wrij667yi" path="res://SFX/crack.wav" id="53_0p3tk"]
 [ext_resource type="Script" path="res://StatueManager.gd" id="53_ulcvg"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_1a7j4"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_38u6q"]
 viewport_path = NodePath("Color")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_5k33x"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_u7g4a"]
 viewport_path = NodePath("Resolution")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_87njy"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_wawi6"]
 viewport_path = NodePath("Spectrum")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i863q"]
@@ -72,9 +72,9 @@ shader = ExtResource("4_ocbyf")
 shader_parameter/global_spectrum = Vector3(0, 0, 0)
 shader_parameter/min_res_scale = 0.1
 shader_parameter/max_res_scale = 1.0
-shader_parameter/base = SubResource("ViewportTexture_1a7j4")
-shader_parameter/resolution = SubResource("ViewportTexture_5k33x")
-shader_parameter/spectrum = SubResource("ViewportTexture_87njy")
+shader_parameter/base = SubResource("ViewportTexture_38u6q")
+shader_parameter/resolution = SubResource("ViewportTexture_u7g4a")
+shader_parameter/spectrum = SubResource("ViewportTexture_wawi6")
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gjgu0"]
 

@@ -50,7 +50,7 @@ func _physics_process(delta):
 	var now = Time.get_ticks_msec()
 	
 	# debug stuff
-	if Input.is_action_pressed("speed_up"):
+	if Global.debug and Input.is_action_pressed("speed_up"):
 		SPEED = 22.0
 	else:
 		SPEED = 4.0

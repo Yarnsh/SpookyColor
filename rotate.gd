@@ -1,7 +1,5 @@
-extends Node
+extends Node3D
 
-var now = 0
-var debug = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,4 +8,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	now = Time.get_ticks_msec()
+	rotate_y(delta * 0.25)

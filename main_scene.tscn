@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://hghf53tjyueh"]
+[gd_scene load_steps=27 format=3 uid="uid://hghf53tjyueh"]
 
 [ext_resource type="Script" path="res://main_scene.gd" id="1_7rukl"]
 [ext_resource type="PackedScene" uid="uid://cwl2us1o2q61h" path="res://game_scene.tscn" id="2_bflre"]
@@ -9,12 +9,55 @@
 [ext_resource type="Script" path="res://PopupPanel.gd" id="6_xu1ap"]
 [ext_resource type="Script" path="res://DeathScene.gd" id="8_6hb5i"]
 [ext_resource type="Script" path="res://Credits.gd" id="9_2pnau"]
+[ext_resource type="Shader" path="res://final.gdshader" id="10_86oep"]
+[ext_resource type="Texture2D" uid="uid://7f61nalhli3o" path="res://Models/Boulder_granite5-albedo.png" id="11_4vy7r"]
+[ext_resource type="Texture2D" uid="uid://d4g7m3kicxryq" path="res://black.png" id="11_meubk"]
+[ext_resource type="Texture2D" uid="uid://dq7nulqwvgw10" path="res://Models/Boulder_granite5-Normal-dx.png" id="12_qvcqe"]
+[ext_resource type="Texture2D" uid="uid://gmw5olh1lei2" path="res://Models/Boulder_granite5-Roughness.png" id="13_xyn5j"]
+[ext_resource type="PackedScene" uid="uid://dh60lsq8p6n1h" path="res://Actors/statue_1.tscn" id="14_vh75m"]
+[ext_resource type="Environment" uid="uid://d2jew0e44lnph" path="res://default_env.tres" id="15_jynde"]
+[ext_resource type="PackedScene" uid="uid://dabcd1mi7d86" path="res://Actors/light_fly.tscn" id="15_p7cj1"]
+[ext_resource type="Script" path="res://PathFollow3D.gd" id="16_835u4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ev5d"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqcix"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1a7j4"]
+viewport_path = NodePath("Attract/SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s0pr2"]
+resource_local_to_scene = true
+shader = ExtResource("10_86oep")
+shader_parameter/global_spectrum = Vector3(0, 0, 0)
+shader_parameter/min_res_scale = 0.1
+shader_parameter/max_res_scale = 0.1
+shader_parameter/base = SubResource("ViewportTexture_1a7j4")
+shader_parameter/resolution = ExtResource("11_meubk")
+shader_parameter/spectrum = ExtResource("11_meubk")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sr8wp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3uo0"]
+albedo_texture = ExtResource("11_4vy7r")
+roughness_texture = ExtResource("13_xyn5j")
+normal_enabled = true
+normal_texture = ExtResource("12_qvcqe")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_upnnw"]
+material = SubResource("StandardMaterial3D_b3uo0")
+size = Vector2(40, 40)
+
+[sub_resource type="Curve3D" id="Curve3D_qdxor"]
+bake_interval = 172.46
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.731096, 2.62246, 1.57121, 0, 0, 0, 0, 0, 0, 1.21151, 1.87419, 1.54491, 0, 0, 0, 0, 0, 0, 2.30757, 3.25672, 0.785664, 0, 0, 0, 0, 0, 0, -0.492211, 0.949551, -2.29484, 0, 0, 0, 0, 0, 0, -1.9109, 2.86868, -1.75876, 0, 0, 0, 0, 0, 0, -2.88878, 1.4574, -0.790004, 0, 0, 0, 0, 0, 0, -1.63633, 3.2726, -0.356961, 0, 0, 0, 0, 0, 0, -0.509756, 1.81191, 1.05014, 0, 0, 0, 0, 0, 0, -0.731096, 2.62246, 1.57121),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 9
 
 [node name="MainScene" type="Node3D"]
 script = ExtResource("1_7rukl")
@@ -496,6 +539,45 @@ Special thanks to Pirgah for helping me survive Blender's headaches
 Thanks for playing ╰(✿´⌣`✿)╯♡
 [/center]"
 fit_content = true
+
+[node name="Attract" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_s0pr2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_sr8wp")
+
+[node name="SubViewport" type="SubViewport" parent="Attract"]
+
+[node name="AttractScene" type="Node3D" parent="Attract/SubViewport"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Attract/SubViewport/AttractScene"]
+mesh = SubResource("PlaneMesh_upnnw")
+
+[node name="statue1" parent="Attract/SubViewport/AttractScene" instance=ExtResource("14_vh75m")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="Attract/SubViewport/AttractScene/statue1"]
+transform = Transform3D(0.824077, 0, 0.566478, 0, 1, 0, -0.566478, 0, 0.824077, 0, 3.45848, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Attract/SubViewport/AttractScene/statue1/Node3D"]
+transform = Transform3D(2, 0, 0, 0, 1.86005, 0.734983, 0, -0.734983, 1.86005, -3.65579, 3.38752, 10.0471)
+environment = ExtResource("15_jynde")
+current = true
+
+[node name="Path3D" type="Path3D" parent="Attract/SubViewport/AttractScene"]
+curve = SubResource("Curve3D_qdxor")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Attract/SubViewport/AttractScene/Path3D"]
+transform = Transform3D(0.0135327, 0.359387, -0.93309, 1.49011e-08, 0.933175, 0.35942, 0.999908, -0.00486392, 0.0126283, -0.731096, 2.62246, 1.57121)
+script = ExtResource("16_835u4")
+SPEED = 0.5
+
+[node name="LightFly" parent="Attract/SubViewport/AttractScene/Path3D/PathFollow3D" instance=ExtResource("15_p7cj1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+skeleton = NodePath("../../..")
 
 [connection signal="pressed" from="Menus/Main/VBoxContainer/VBoxContainer/Continue" to="Menus/Main" method="resume"]
 [connection signal="pressed" from="Menus/Main/VBoxContainer/VBoxContainer/NewGame" to="Menus/Main" method="new_game"]

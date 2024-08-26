@@ -89,7 +89,8 @@ func _input(event):
 		elif mode == 3:
 			set_mode(2)
 	
-	if event.is_action_pressed("PreGreen"):
+	# debug
+	if Global.debug and event.is_action_pressed("PreGreen"):
 		game_scene.update_player_stuff()
 		save_flags(game_scene.get_flags())
 
