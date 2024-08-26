@@ -35,3 +35,6 @@ Four_Voices_Whispering_4.wav by geoneo0 -- https://freesound.org/s/193809/ -- Li
 
 birds.wav:
 Binaural Birds LOOP 1.wav by maarten91 -- https://freesound.org/s/468449/ -- License: Creative Commons 0 (Shortened)
+
+statue1.glb:
+"Statue" (https://skfb.ly/opuMP) by DJMaesen is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). (This file was modified from it's original form)
