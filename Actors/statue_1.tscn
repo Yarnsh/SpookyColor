@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://dh60lsq8p6n1h"]
 
-[ext_resource type="Texture2D" uid="uid://7f61nalhli3o" path="res://Models/Boulder_granite5-albedo.png" id="1_mngnx"]
-[ext_resource type="Texture2D" uid="uid://dq7nulqwvgw10" path="res://Models/Boulder_granite5-Normal-dx.png" id="2_yh13g"]
-[ext_resource type="Texture2D" uid="uid://gmw5olh1lei2" path="res://Models/Boulder_granite5-Roughness.png" id="3_22nvq"]
+[ext_resource type="Texture2D" uid="uid://cqfaiyavw7pu" path="res://Models/OutdoorArea_granite-grey-albedo.png" id="1_alpcs"]
+[ext_resource type="Texture2D" uid="uid://dvptlyjg1udvk" path="res://Models/OutdoorArea_granite-grey-normal.png" id="2_wyadd"]
+[ext_resource type="Texture2D" uid="uid://cwrlwgi76k2sc" path="res://Models/OutdoorArea_granite-grey-metalness-granite-grey-rough.png" id="3_xlkpd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v15rb"]
 resource_name = "staue1"
@@ -44,10 +44,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hgoiy")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qt8li"]
-albedo_texture = ExtResource("1_mngnx")
-roughness_texture = ExtResource("3_22nvq")
+albedo_texture = ExtResource("1_alpcs")
+roughness_texture = ExtResource("3_xlkpd")
 normal_enabled = true
-normal_texture = ExtResource("2_yh13g")
+normal_texture = ExtResource("2_wyadd")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_556nx"]
 size = Vector3(2.78247, 7.09576, 3.32382)

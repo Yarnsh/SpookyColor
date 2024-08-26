@@ -19,7 +19,7 @@ collision_layer = 2
 script = ExtResource("1_71idu")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-layers = 7
+layers = 5
 mesh = SubResource("SphereMesh_uw0jt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

@@ -10,10 +10,10 @@
 [ext_resource type="Script" path="res://DeathScene.gd" id="8_6hb5i"]
 [ext_resource type="Script" path="res://Credits.gd" id="9_2pnau"]
 [ext_resource type="Shader" path="res://final.gdshader" id="10_86oep"]
-[ext_resource type="Texture2D" uid="uid://7f61nalhli3o" path="res://Models/Boulder_granite5-albedo.png" id="11_4vy7r"]
 [ext_resource type="Texture2D" uid="uid://d4g7m3kicxryq" path="res://black.png" id="11_meubk"]
-[ext_resource type="Texture2D" uid="uid://dq7nulqwvgw10" path="res://Models/Boulder_granite5-Normal-dx.png" id="12_qvcqe"]
-[ext_resource type="Texture2D" uid="uid://gmw5olh1lei2" path="res://Models/Boulder_granite5-Roughness.png" id="13_xyn5j"]
+[ext_resource type="Texture2D" uid="uid://cqfaiyavw7pu" path="res://Models/OutdoorArea_granite-grey-albedo.png" id="12_su30r"]
+[ext_resource type="Texture2D" uid="uid://dvptlyjg1udvk" path="res://Models/OutdoorArea_granite-grey-normal.png" id="13_yh8ja"]
+[ext_resource type="Texture2D" uid="uid://cwrlwgi76k2sc" path="res://Models/OutdoorArea_granite-grey-metalness-granite-grey-rough.png" id="14_gclk6"]
 [ext_resource type="PackedScene" uid="uid://dh60lsq8p6n1h" path="res://Actors/statue_1.tscn" id="14_vh75m"]
 [ext_resource type="Environment" uid="uid://d2jew0e44lnph" path="res://default_env.tres" id="15_jynde"]
 [ext_resource type="PackedScene" uid="uid://dabcd1mi7d86" path="res://Actors/light_fly.tscn" id="15_p7cj1"]
@@ -41,10 +41,10 @@ shader_parameter/spectrum = ExtResource("11_meubk")
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sr8wp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3uo0"]
-albedo_texture = ExtResource("11_4vy7r")
-roughness_texture = ExtResource("13_xyn5j")
+albedo_texture = ExtResource("12_su30r")
+roughness_texture = ExtResource("14_gclk6")
 normal_enabled = true
-normal_texture = ExtResource("12_qvcqe")
+normal_texture = ExtResource("13_yh8ja")
 uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_upnnw"]

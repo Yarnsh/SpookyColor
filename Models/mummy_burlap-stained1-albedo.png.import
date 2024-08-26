@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckltg0elk8kav"
-path.s3tc="res://.godot/imported/mummy_burlap-stained1-albedo.png-bb634a893ea07def12aec1dd6e60f53b.s3tc.ctex"
+path="res://.godot/imported/mummy_burlap-stained1-albedo.png-bb634a893ea07def12aec1dd6e60f53b.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "b0ede0c9fba8fdccaae4122184d36ccb"
@@ -15,13 +14,13 @@ generator_parameters={
 [deps]
 
 source_file="res://Models/mummy_burlap-stained1-albedo.png"
-dest_files=["res://.godot/imported/mummy_burlap-stained1-albedo.png-bb634a893ea07def12aec1dd6e60f53b.s3tc.ctex"]
+dest_files=["res://.godot/imported/mummy_burlap-stained1-albedo.png-bb634a893ea07def12aec1dd6e60f53b.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.7
+compress/lossy_quality=0.5
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

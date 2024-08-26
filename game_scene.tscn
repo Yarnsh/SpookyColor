@@ -4134,7 +4134,7 @@ transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 0)
 skeleton = NodePath("../../../FliesPath1")
 
 [node name="PathFollow3D2" type="PathFollow3D" parent="Scene/CaveBug2"]
-transform = Transform3D(0.350566, -0.339686, 0.872762, -0.932427, -0.213711, 0.291361, 0.0875467, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
+transform = Transform3D(0.350566, -0.339686, 0.872762, -0.932427, -0.213711, 0.291361, 0.0875466, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
 progress = 93.3312
 script = ExtResource("29_2inc6")
 SPEED = 3.0

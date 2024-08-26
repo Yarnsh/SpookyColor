@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bti46i4nr60ii"
-path.s3tc="res://.godot/imported/OutdoorArea_armani-marble_albedo.png-a11d3f3a6a9f22fe345730a55a4cfcbb.s3tc.ctex"
+path="res://.godot/imported/OutdoorArea_armani-marble_albedo.png-a11d3f3a6a9f22fe345730a55a4cfcbb.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "d63f4c74e447f97632105afd6f9cad14"
@@ -15,13 +14,13 @@ generator_parameters={
 [deps]
 
 source_file="res://Models/OutdoorArea_armani-marble_albedo.png"
-dest_files=["res://.godot/imported/OutdoorArea_armani-marble_albedo.png-a11d3f3a6a9f22fe345730a55a4cfcbb.s3tc.ctex"]
+dest_files=["res://.godot/imported/OutdoorArea_armani-marble_albedo.png-a11d3f3a6a9f22fe345730a55a4cfcbb.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.7
+compress/lossy_quality=0.5
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0

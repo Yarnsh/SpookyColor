@@ -3,10 +3,9 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cw4ow1vdwsd02"
-path.s3tc="res://.godot/imported/mummy_burlap-stained1-Normal-ogl.png-e1ac9f5230dea7ec9d0089a79289f91e.s3tc.ctex"
+path="res://.godot/imported/mummy_burlap-stained1-Normal-ogl.png-e1ac9f5230dea7ec9d0089a79289f91e.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
 "md5": "562be66db3feb2c02fb044f33c26f4f6"
@@ -15,13 +14,13 @@ generator_parameters={
 [deps]
 
 source_file="res://Models/mummy_burlap-stained1-Normal-ogl.png"
-dest_files=["res://.godot/imported/mummy_burlap-stained1-Normal-ogl.png-e1ac9f5230dea7ec9d0089a79289f91e.s3tc.ctex"]
+dest_files=["res://.godot/imported/mummy_burlap-stained1-Normal-ogl.png-e1ac9f5230dea7ec9d0089a79289f91e.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
-compress/lossy_quality=0.7
+compress/lossy_quality=0.5
 compress/hdr_compression=1
 compress/normal_map=1
 compress/channel_pack=0
