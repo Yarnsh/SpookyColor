@@ -1,7 +1,7 @@
 extends Node
 
 var now = 0
-var debug = false
+const debug = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
