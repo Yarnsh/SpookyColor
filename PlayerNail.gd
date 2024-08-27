@@ -68,7 +68,7 @@ func set_flags(red, green, blue):
 		col.b = 0.0
 		light.light_color.b = 0.0
 	
-	power.mesh.surface_get_material(0).albedo_color = col
+	power.mesh.surface_get_material(0).set_shader_parameter("albedo", col)
 	if col == Color.BLACK:
 		outline.hide()
 		power.hide()

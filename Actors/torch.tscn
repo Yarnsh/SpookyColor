@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cy2u6717tawsd"]
+[gd_scene load_steps=9 format=3 uid="uid://cy2u6717tawsd"]
 
 [ext_resource type="PackedScene" uid="uid://1tpl4jnx5ptk" path="res://Models/torch.glb" id="1_pogum"]
+[ext_resource type="Script" path="res://Actors/AlwaysUp.gd" id="2_31mbs"]
 [ext_resource type="Script" path="res://LightFixer.gd" id="2_smu0u"]
 
 [sub_resource type="Curve" id="Curve_onfwk"]
@@ -34,7 +35,11 @@ rings = 6
 
 [node name="torch" parent="." instance=ExtResource("1_pogum")]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="Node3D" type="Node3D" parent="torch"]
+script = ExtResource("2_31mbs")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="torch/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.244992, 0)
 layers = 1048575
 light_color = Color(1, 0.767805, 0.589157, 1)
 light_bake_mode = 0

@@ -7,7 +7,7 @@ var text_list = [
 	"You have made it my child",
 	"This is it, inside lies your destiny",
 	"Go forth and do the good lord's work",
-	"Bright light back to his beautiful creation"
+	"Bring light back to his beautiful creation"
 ]
 
 # Called when the node enters the scene tree for the first time.
