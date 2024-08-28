@@ -26,11 +26,16 @@ Global="*res://global.gd"
 window/size/viewport_width=854
 window/size/viewport_height=480
 window/size/resizable=false
+window/stretch/scale=2.0
 window/stretch/scale_mode="integer"
 
 [dotnet]
 
 project/assembly_name="SpookyColor"
+
+[gui]
+
+theme/custom_font="res://BaskervvilleSC-Regular.ttf"
 
 [input]
 

@@ -17,12 +17,14 @@ extends Node3D
 @onready var spinner = $Scene/Spinner
 @onready var ocean_sounds = $Scene/OceanSounds
 @onready var finish_trigger = $Scene/Finish
+@onready var post_green_trigger = $Scene/PostGreenCheckpoint
 
 var outdoor_visuals = true
 var nail_taken = false
 var door_locked = false
 var colors = [false, false, false]
 var spinner_solved = false
+var post_green = false
 
 func update_player_stuff():
 	player_pos = ($Character).global_position
@@ -55,18 +57,23 @@ func apply_flags(flags):
 	if colors[0]:
 		red_pickup.set_finished()
 		character.set_flag(0)
+	
+	spinner_solved = flags.get("spinner_solved", false)
+	if spinner_solved:
+		spinner.set_finished()
+	
 	if colors[1]:
 		green_pickup.set_finished()
 		character.set_flag(1)
+	
+	if flags.get("post_green", false):
+		post_green_trigger.set_deferred("monitoring", false)
+	
 	if colors[2]:
 		blue_pickup.set_finished()
 		character.set_flag(2)
 	if colors[0] and colors[1] and colors[2]:
 		start_exit_sequence()
-	
-	spinner_solved = flags.get("spinner_solved", false)
-	if spinner_solved:
-		spinner.set_finished()
 
 func get_flags():
 	return {
@@ -76,11 +83,11 @@ func get_flags():
 		"nail_taken": nail_taken,
 		"door_locked": door_locked,
 		"colors": colors,
-		"spinner_solved": spinner_solved
+		"spinner_solved": spinner_solved,
+		"post_green": post_green
 	}
 
 func start_exit_sequence():
-	print("ENDING TIME")
 	nail_slot.unlock()
 	ocean_sounds.ending = true
 	ocean_sounds.volume_db = -40.0

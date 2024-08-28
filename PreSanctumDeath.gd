@@ -3,7 +3,7 @@ extends Area3D
 @onready var death = $Death
 @onready var anim = $Death/warning/AnimationPlayer
 @onready var sound = $Death/AudioStreamPlayer3D
-@export var death_text = "The mistakes of those before you mark the path."
+@export var death_text = "The mistakes of those before you should be heeded."
 @export var killnoise : AudioStream
 var char = null
 var start = 0

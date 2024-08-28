@@ -46,7 +46,7 @@ func sun_done(something):
 	character.final_anim.play("hide")
 	final_spook_anim.play("Object_4Action")
 	final_spook_anim.animation_finished.connect(finish)
-	final_spook.show()
+	final_spook.call_deferred("show")
 	final_noise.play()
 
 func finish(something):
