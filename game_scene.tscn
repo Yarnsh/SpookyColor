@@ -1,4 +1,4 @@
-[gd_scene load_steps=166 format=3 uid="uid://cwl2us1o2q61h"]
+[gd_scene load_steps=167 format=3 uid="uid://cwl2us1o2q61h"]
 
 [ext_resource type="Script" path="res://game_scene.gd" id="1_hm2jl"]
 [ext_resource type="Script" path="res://ScreenResolutionHandling.gd" id="1_yuvdf"]
@@ -2862,6 +2862,9 @@ size = Vector3(110.852, 21.0334, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_crktj"]
 size = Vector3(170.513, 21.0334, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_rd6h4"]
+size = Vector3(31.1351, 21.0334, 1)
+
 [sub_resource type="Animation" id="Animation_d8r5y"]
 resource_name = "Finish"
 length = 40.0
@@ -3736,92 +3739,62 @@ size = Vector3(0.865601, 0.287598, 1.8031)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal5" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(-0.787839, 0, -0.615882, 0, 1, 0, 0.615882, 0, -0.787839, 146.324, -19.9627, -83.4066)
+transform = Transform3D(-0.787839, 0, -0.615882, 0, 1, 0, 0.615882, 0, -0.787839, 148.509, -19.9627, -86.5201)
 size = Vector3(2.42838, 0.287598, 1.8031)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal9" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(-0.180605, 0, -0.983556, 0, 1, 0, 0.983556, 0, -0.180605, 147.332, -19.9627, -81.3409)
+transform = Transform3D(-0.0718045, 0.947388, -0.311931, 0.983444, 0.0150791, -0.180584, -0.16638, -0.319733, -0.932785, 145.175, -19.9627, -79.8814)
 size = Vector3(2.01595, 0.287598, 4.90643)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal13" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(-0.132533, 0, -0.991179, 0, 1, 0, 0.991179, 0, -0.132533, 134.815, -19.9627, -82.4313)
+transform = Transform3D(0.982472, 0.132533, 0.13109, -0.132256, 5.78111e-09, 0.991216, 0.131369, -0.991179, 0.0175283, 134.815, -19.5006, -81.2037)
 size = Vector3(2.01595, 0.287598, 4.90643)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal14" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(-0.132533, 0, -0.991179, 0, 1, 0, 0.991179, 0, -0.132533, 132.082, -19.9627, -82.4313)
+transform = Transform3D(0.0212147, -0.156424, 0.987462, -0.999202, 0.0301357, 0.0262408, -0.0338626, -0.98723, -0.15566, 132.082, -19.5006, -81.1317)
 size = Vector3(2.01595, 0.287598, 4.90643)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal15" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(0.0293348, 0, 0.99957, 0, 1, 0, -0.99957, 0, 0.0293348, 128.09, -19.9627, -82.006)
+transform = Transform3D(-0.687218, -0.017172, 0.726248, 0.725869, 0.0237834, 0.687422, -0.0290771, 0.99957, -0.00387972, 128.09, -19.5006, -81.0731)
 size = Vector3(1.361, 0.287598, 3.38669)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal16" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(0.0293348, 0, 0.99957, 0, 1, 0, -0.99957, 0, 0.0293348, 123.405, -19.9627, -81.9128)
+transform = Transform3D(-0.990789, -0.0293348, -0.1322, -0.132256, 5.78111e-09, 0.991216, -0.0290771, 0.99957, -0.00387972, 123.405, -19.5006, -81.0823)
 size = Vector3(1.15303, 0.287598, 2.65147)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal17" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(0.0293348, 0, 0.99957, 0, 1, 0, -0.99957, 0, 0.0293348, 119.241, -19.9627, -82.3841)
+transform = Transform3D(0.138894, 0.000196601, -0.990308, -0.989881, -0.0293341, -0.13884, -0.0290771, 0.99957, -0.00387972, 119.241, -18.9641, -81.1013)
 size = Vector3(1.15303, 0.287598, 2.65147)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal18" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(0.0293348, 0, 0.99957, 0, 1, 0, -0.99957, 0, 0.0293348, 110.356, -19.9627, -82.0566)
+transform = Transform3D(-0.0131056, 0.0034998, 0.999908, 0.393754, -0.919178, 0.00837809, 0.919123, 0.393827, 0.0106683, 110.356, -18.8746, -80.7533)
 size = Vector3(0.937845, 0.287598, 3.77154)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal19" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(0.0293348, 0, 0.99957, 0, 1, 0, -0.99957, 0, 0.0293348, 93.8048, -19.9627, -82.3607)
-size = Vector3(0.937845, 0.287598, 2.63076)
+transform = Transform3D(-0.846451, -0.0225581, 0.531989, 0.531673, 0.0187527, 0.846743, -0.0290771, 0.99957, -0.00387972, 93.6068, -19.1197, -81.2864)
+size = Vector3(1.67876, 0.287598, 2.19624)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal20" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(-0.0845822, 0, 0.996417, 0, 1, 0, -0.996417, 0, -0.0845822, 79.9155, -19.9627, -82.2531)
-size = Vector3(0.937845, 0.287598, 2.63076)
+transform = Transform3D(-0.987664, 0.0845822, -0.131783, -0.132256, 5.78111e-09, 0.991216, 0.0838392, 0.996417, 0.0111865, 79.0379, -19.6182, -81.0927)
+size = Vector3(2.71502, 0.287598, 2.63076)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal21" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(-0.0845822, 0, 0.996417, 0, 1, 0, -0.996417, 0, -0.0845822, 58.7178, -19.9627, -82.2531)
+transform = Transform3D(0.301488, -0.0146643, -0.953358, -0.949777, 0.0833013, -0.301637, 0.0838392, 0.996416, 0.0111865, 58.7178, -19.0859, -81.1672)
 size = Vector3(0.937845, 0.287598, 2.63076)
 texture_albedo = ExtResource("31_wp3va")
 
-[node name="Decal22" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(0.751909, 0, -0.659267, 0, 1, 0, 0.659267, 0, 0.751909, 43.9333, -19.9627, -83.0658)
-size = Vector3(2.62533, 0.287598, 1.51948)
-texture_albedo = ExtResource("31_wp3va")
-
-[node name="Decal25" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(0.751909, 0, -0.659267, 0, 1, 0, 0.659267, 0, 0.751909, 31.305, -19.226, -94.0925)
-size = Vector3(12.5456, 1.76086, 1.51948)
-texture_albedo = ExtResource("31_wp3va")
-
-[node name="Decal26" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(0.654226, 0, -0.756299, 0, 1, 0, 0.756299, 0, 0.654226, 21.735, -17.0697, -103.35)
-size = Vector3(12.5456, 1.76086, 1.51948)
-texture_albedo = ExtResource("31_wp3va")
-
-[node name="Decal27" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(0.654226, 0, -0.756299, 0, 1, 0, 0.756299, 0, 0.654226, 13.3432, -15.4347, -113.654)
-size = Vector3(12.5456, 1.76086, 1.51948)
-texture_albedo = ExtResource("31_wp3va")
-
-[node name="Decal28" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(0.654226, 0, -0.756299, 0, 1, 0, 0.756299, 0, 0.654226, 6.49387, -15.1408, -122.066)
-size = Vector3(6.59514, 0.644257, 1.51948)
-texture_albedo = ExtResource("31_wp3va")
-
-[node name="Decal23" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(0.751909, 0, -0.659267, 0, 1, 0, 0.659267, 0, 0.751909, 42.179, -19.9627, -84.8587)
-size = Vector3(4.97184, 0.287598, 1.02732)
-texture_albedo = ExtResource("31_wp3va")
-
 [node name="Decal24" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(0.751909, 0, -0.659267, -0.657166, 0.0797814, -0.749512, 0.0525972, 0.996812, 0.0599883, 45.5157, -19.9295, -83.0626)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 46.0415, -18.9935, -83.1674)
 size = Vector3(1.49776, 0.287598, 1.02732)
 texture_albedo = ExtResource("31_wp3va")
 
@@ -3835,14 +3808,84 @@ transform = Transform3D(0.00137872, 1.09072e-11, -0.999999, 0.822719, 0.568447, 
 size = Vector3(1.23006, 0.287598, 4.90643)
 texture_albedo = ExtResource("31_wp3va")
 
+[node name="Decal27" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(-0.982472, -0.132533, -0.13109, -0.13413, 0.014237, 0.990862, -0.129455, 0.991076, -0.031764, 82.3095, -18.5737, -83.259)
+size = Vector3(2.01595, 0.287598, 4.90643)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal28" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(-0.0212146, 0.156424, -0.987462, -0.998612, 0.0443129, 0.0284738, 0.0482113, 0.986695, 0.155267, 85.0425, -18.5748, -83.331)
+size = Vector3(2.01595, 0.287598, 4.90643)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal34" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(0.687218, 0.017172, -0.726248, 0.726212, 0.00942346, 0.687407, 0.018648, -0.999808, -0.00599458, 89.0345, -18.5756, -83.3896)
+size = Vector3(1.361, 0.287598, 3.38669)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal35" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(0.990789, 0.0293348, 0.132199, -0.131825, -0.0143575, 0.991169, 0.0309738, -0.999467, -0.0103582, 93.7195, -18.5755, -83.3805)
+size = Vector3(1.15303, 0.287598, 2.65147)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal36" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(-0.138894, -0.000196597, 0.990308, -0.989361, -0.0436886, -0.13877, 0.0432924, -0.999045, 0.00587357, 97.8835, -18.0387, -83.3692)
+size = Vector3(1.15303, 0.287598, 2.65147)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal37" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(0.0131056, -0.00349972, -0.999908, 0.380511, -0.92474, 0.0082239, -0.924684, -0.380584, -0.0107876, 106.768, -17.9542, -83.7184)
+size = Vector3(0.937845, 0.287598, 3.77154)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal38" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(0.846451, 0.0225581, -0.53199, 0.532036, 0.00439328, 0.846711, 0.0214373, -0.999736, -0.008283, 123.518, -18.1916, -83.1818)
+size = Vector3(1.67876, 0.287598, 2.19624)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal39" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(0.987664, -0.0845822, 0.131782, -0.133447, -0.0143122, 0.990953, -0.0819309, -0.996314, -0.0254229, 138.087, -18.6928, -83.3684)
+size = Vector3(2.71502, 0.287598, 2.63076)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal40" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(-0.301488, 0.0146643, 0.953358, -0.950884, 0.0689805, -0.301767, -0.0701883, -0.99751, -0.00685278, 158.407, -18.1595, -83.3015)
+size = Vector3(0.937845, 0.287598, 2.63076)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal41" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(-1, 1.25571e-09, 8.74137e-08, -8.74228e-08, -0.0143637, -0.999897, 0, -0.999896, 0.0143637, 171.083, -18.0384, -81.3029)
+size = Vector3(1.49776, 0.287598, 1.02732)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal42" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(-0.00137881, 1.80766e-09, 0.999999, 0.999786, -0.0206631, 0.00137851, 0.0206631, 0.999787, 2.84886e-05, 76.3705, -18.1328, -83.3304)
+size = Vector3(1.23006, 0.287598, 4.90643)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal43" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(-0.00137879, -5.07341e-08, 0.999999, 0.814469, 0.580206, 0.00112301, -0.580206, 0.81447, -0.000799938, 80.5245, -18.1308, -83.1908)
+size = Vector3(1.23006, 0.287598, 4.90643)
+texture_albedo = ExtResource("31_wp3va")
+
 [node name="Decal12" type="Decal" parent="Scene/BloodDecals"]
 transform = Transform3D(0.00137872, 1.09072e-11, -0.999999, 0.999398, -0.0346728, 0.00137789, -0.0346727, -0.999399, -4.78037e-05, 133.394, -19.0588, -83.3111)
 size = Vector3(1.23006, 0.287598, 4.90643)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal8" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(-0.787839, 0, -0.615882, 0, 1, 0, 0.615882, 0, -0.787839, 150.908, -19.3922, -81.2875)
+transform = Transform3D(-0.787839, 0, -0.615882, 0, 1, 0, 0.615882, 0, -0.787839, 152.495, -19.3922, -79.2281)
 size = Vector3(2.41487, 1.42847, 3.70135)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal22" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(-0.748725, 0, 0.662882, 0, 1, 0, -0.662882, 0, -0.748725, 152.813, -19.3922, -83.315)
+size = Vector3(2.41487, 1.42847, 3.70135)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal23" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(-0.999939, 0, 0.0111173, 0, 1, 0, -0.0111173, 0, -0.999939, 151.617, -19.3922, -85.0003)
+size = Vector3(2.41487, 1.42847, 2.95907)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal6" type="Decal" parent="Scene/BloodDecals"]
@@ -3851,8 +3894,18 @@ size = Vector3(2.42838, 0.287598, 3.44366)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Decal7" type="Decal" parent="Scene/BloodDecals"]
-transform = Transform3D(-0.161462, -0.965064, 0.206352, 0.791142, -0.00158344, 0.611629, -0.589935, 0.262009, 0.763759, 156.807, -18.4098, -84.2941)
-size = Vector3(2.42838, 0.287598, 3.44366)
+transform = Transform3D(-0.0990389, -0.987131, 0.125551, 0.791142, -0.00158346, 0.611629, -0.60356, 0.159904, 0.781118, 156.654, -18.41, -84.2692)
+size = Vector3(2.42838, 0.598389, 3.44366)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal25" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(-0.0990389, -0.987131, 0.125551, 0.425051, -0.156048, -0.891617, 0.899734, -0.034939, 0.435035, 156.654, -18.41, -81.983)
+size = Vector3(2.42838, 0.598389, 3.44366)
+texture_albedo = ExtResource("31_wp3va")
+
+[node name="Decal26" type="Decal" parent="Scene/BloodDecals"]
+transform = Transform3D(-0.878967, 0.164133, -0.447746, 0.425051, -0.156048, -0.891617, -0.216214, -0.974017, 0.0673962, 155.552, -18.4783, -87.0848)
+size = Vector3(2.90397, 1.01941, 3.44366)
 texture_albedo = ExtResource("31_wp3va")
 
 [node name="Spinner" type="Node3D" parent="Scene" node_paths=PackedStringArray("DoorL", "DoorR")]
@@ -4162,7 +4215,7 @@ transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 0)
 skeleton = NodePath("../../../FliesPath1")
 
 [node name="PathFollow3D2" type="PathFollow3D" parent="Scene/CaveBug2"]
-transform = Transform3D(0.350565, -0.339686, 0.872762, -0.932425, -0.213711, 0.291361, 0.0875464, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
+transform = Transform3D(0.350565, -0.339686, 0.872762, -0.932425, -0.213711, 0.291361, 0.0875465, -0.915936, -0.391656, 46.1159, 8.07695, -54.9672)
 progress = 93.3312
 script = ExtResource("29_2inc6")
 SPEED = 3.0
@@ -5367,6 +5420,10 @@ shape = SubResource("BoxShape3D_m1g5p")
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="Scene/SanctumPuzzle/Death"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3211, -4.94455, -62.1395)
 shape = SubResource("BoxShape3D_crktj")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Scene/SanctumPuzzle/Death"]
+transform = Transform3D(0.00825534, 0, -0.999966, 0, 1, 0, 0.999966, 0, 0.00825534, -29.6764, -4.94455, -14.7826)
+shape = SubResource("BoxShape3D_rd6h4")
 
 [node name="Blood" type="Node3D" parent="Scene/SanctumPuzzle"]
 
